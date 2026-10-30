@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "shockaudit-stage6-assessment-unavailable-evidence-v1",
+  "legacyCompatibilityOnly": true,
+  "controlId": "U1-find-assessment-unavailable",
+  "mode": "find",
+  "result": "fail",
+  "startedAt": "1970-01-01T00:00:00.000Z",
+  "completedAt": null,
+  "endpointClass": "isolated-candidate",
+  "endpoint": "REDACT_ORIGIN_UNTIL_PUBLICATION_APPROVAL",
+  "targetReleaseVersion": "0.3.13",
+  "appVersion": "OBSERVED_PACKAGE_VERSION",
+  "workflowVersion": "2.1",
+  "commit": "FULL_REVIEWED_COMMIT",
+  "chatgptSurface": "SIGNED_IN_SURFACE_AND_PLAN",
+  "model": "DISPLAYED_MODEL_NAME",
+  "reasoningProvider": "chatgpt-host",
+  "openAiApiUsed": false,
+  "cloudflareWorkersAiUsed": false,
+  "freshConversation": true,
+  "faultMethod": "DOCUMENTED_PRIVATE_OPERATOR_METHOD_WITHOUT_PUBLIC_HOOK",
+  "publicFaultHookAdded": false,
+  "hiddenPromptTypedByResearcher": false,
+  "canonicalEvidence": {
+    "terminalStatus": "service-unavailable",
+    "deliveryAttempts": 1,
+    "transportFailureOnly": false,
+    "terminalStatusPersisted": false,
+    "currentTargetBound": false,
+    "pendingOrValidatingAbsent": false,
+    "semanticValidationFailureAbsent": false,
+    "affectedRequestCount": 1,
+    "affectedRequestIdsHash": "sha256:SANITIZED_AFFECTED_REQUEST_IDS_HASH",
+    "sanitizedStateHash": "sha256:SANITIZED_CANONICAL_STATE_HASH"
+  },
+  "continuation": {
+    "action": "find-continue-without-assessment",
+    "targetGate": "find-source-backed-tentative-selection",
+    "targetGatePassed": false,
+    "researcherReasonProvided": false,
+    "researcherAcknowledgmentProvided": false,
+    "researcherReasonHash": "sha256:SANITIZED_REASON_HASH",
+    "researcherAcknowledgmentHash": "sha256:SANITIZED_ACKNOWLEDGMENT_HASH",
+    "finalGatePassed": false,
+    "observedAt": null
+  },
+  "handoff": {
+    "schemaVersion": "screen-02-to-screen-03-event-v4",
+    "dispositionStatus": "unavailable",
+    "validAssessmentReceiptPresent": false,
+    "sanitizedHandoffHash": "sha256:SANITIZED_HANDOFF_HASH",
+    "fabricatedAssessmentFieldsAbsent": {
+      "assessmentIdAbsent": false,
+      "judgmentAbsent": false,
+      "componentsAbsent": false,
+      "assessmentEvidenceClaimsAbsent": false
+    },
+    "mandatoryScreen03Checks": [
+      "Verify study fit against the confirmed Screen 1 scope.",
+      "Verify the outcome pathway without inspecting realized outcome values.",
+      "Verify the event version, timing, and source-backed factual record.",
+      "Verify the covered population, geography, and organization-level exposure boundary.",
+      "Verify measurement feasibility and the availability of pre-event exposure indicators.",
+      "Document the main validity concern and every unresolved source gap."
+    ]
+  },
+  "outcomeValuesInspected": false,
+  "scoresOrCausalClaimsPresent": false,
+  "redactions": {
+    "accessTokensAbsent": false,
+    "capabilityTokensAbsent": false,
+    "signingMaterialAbsent": false,
+    "responseKeysAbsent": false,
+    "stateEnvelopesAbsent": false,
+    "rawRunIdsAbsent": false,
+    "verifiedBy": "OPERATOR_OR_REVIEWER",
+    "verifiedAt": null
+  },
+  "deviations": [],
+  "artifactHashes": []
+}

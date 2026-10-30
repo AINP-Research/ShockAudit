@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "shockaudit-screen23-signed-in-on-candidate-v1",
+  "candidateCommit": "FULL_CANDIDATE_COMMIT",
+  "appVersion": "PACKAGE_VERSION",
+  "reviewer": "SIGNED_IN_ON_MODE_REVIEWER",
+  "reviewedAt": null,
+  "endpointClass": "isolated-on-candidate",
+  "endpointReference": "PRIVATE_ON_CANDIDATE_ENDPOINT_REFERENCE",
+  "screen2ExpansionMode": "on",
+  "findBaselinePrefixPreserved": false,
+  "auditBaselinePrefixPreserved": false,
+  "findContextLanePassed": false,
+  "auditContextLanePassed": false,
+  "screen03FreshContextLanePassed": false,
+  "contextExcludedFromCandidatesMatchesAndEvidence": false,
+  "contextFailureFallbackPassed": false,
+  "privacyBoundaryPassed": false
+}

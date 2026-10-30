@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "shockaudit-screen2-broader-discovery-evidence-v1",
+  "candidateCommit": "FULL_CANDIDATE_COMMIT",
+  "appVersion": "PACKAGE_VERSION",
+  "reviewer": "DISCOVERY_REVIEWER",
+  "reviewedAt": null,
+  "endpointClass": "production",
+  "productionEndpoint": "PRODUCTION_ENDPOINT_REFERENCE",
+  "exactHeadVerified": false,
+  "frozenExecutionRecord": {
+    "path": "reports/screen2-broader-discovery.json",
+    "sha256": "sha256:COMPUTE_FROM_SANITIZED_EXECUTION_RECORD",
+    "reviewerApproved": false
+  },
+  "journeys": {
+    "gaming": {
+      "caseId": "US-FTC-ESRB-COPPA",
+      "mode": "find",
+      "visibleFindControlUsed": false,
+      "controllingPrimarySourceRetrieved": false,
+      "sourceBackedQualificationPassed": false,
+      "candidateRenderedInOriginalPanel": false,
+      "candidateSelectedInOriginalPanel": false,
+      "screen3HandoffVerified": false,
+      "discoveredBeyondPriorRegistryAndConnectorResults": false
+    },
+    "energy": {
+      "caseId": "US-FERC-ORDER-841",
+      "mode": "find",
+      "visibleFindControlUsed": false,
+      "controllingPrimarySourceRetrieved": false,
+      "sourceBackedQualificationPassed": false,
+      "candidateRenderedInOriginalPanel": false,
+      "candidateSelectedInOriginalPanel": false,
+      "screen3HandoffVerified": false
+    }
+  },
+  "emptyResultsRecovery": {
+    "initialQualifiedCountWasZero": false,
+    "widerSearchActionWasVisible": false,
+    "widerSearchCompleted": false,
+    "sourceBackedCandidateRendered": false,
+    "blankResultPanelPrevented": false,
+    "honestShortfallRetainedWhenStillEmpty": false
+  },
+  "sourcePolicy": {
+    "newOfficialRouteFamiliesExercised": 0,
+    "previouslyUnregisteredCandidateIdentities": 0,
+    "fixedQualificationAppliedToEveryCandidate": false,
+    "secondaryLeadsRequiredPrimaryEvidence": false,
+    "sourceCoordinatesVerified": false,
+    "metadataOnlyCandidatesPromoted": 0,
+    "secondaryMetadataPromotedToEvidence": 0
+  }
+}

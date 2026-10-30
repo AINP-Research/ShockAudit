@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "shockaudit-screen2-network-egress-security-evidence-v1",
+  "candidateCommit": "FULL_CANDIDATE_COMMIT",
+  "appVersion": "PACKAGE_VERSION",
+  "reviewer": "NETWORK_SECURITY_REVIEWER",
+  "reviewedAt": null,
+  "executionEnvironment": "production-equivalent-isolated-network-harness",
+  "exactHeadVerified": false,
+  "productionTransportPathExercised": false,
+  "frozenExecutionRecord": {
+    "path": "reports/screen2-network-egress-security.json",
+    "sha256": "sha256:COMPUTE_FROM_SANITIZED_EXECUTION_RECORD",
+    "reviewerApproved": false
+  },
+  "dnsResolution": {
+    "authoritativeResolutionBeforeEveryRequest": false,
+    "allAddressAnswersValidated": false,
+    "literalPrivateAndSpecialUseRejected": false,
+    "resolvedPrivateAndSpecialUseRejected": false,
+    "mixedPublicPrivateAnswersRejected": false,
+    "resolutionFailureRejected": false
+  },
+  "redirectSecurity": {
+    "everyHopReresolved": false,
+    "everyHopAddressValidated": false,
+    "dnsRebindingBetweenHopsRejected": false
+  },
+  "peerBinding": {
+    "connectedPeerAddressObserved": false,
+    "peerAddressRequiredFromTransport": false,
+    "peerAddressMatchedValidatedResolution": false,
+    "peerMismatchRejected": false,
+    "missingPeerIdentityRejected": false
+  },
+  "coverage": {
+    "literalIpv4PrivateAndSpecialUseCases": 0,
+    "literalIpv6PrivateAndSpecialUseCases": 0,
+    "resolvedIpv4PrivateAndSpecialUseCases": 0,
+    "resolvedIpv6PrivateAndSpecialUseCases": 0,
+    "mixedAddressAnswerCases": 0,
+    "dnsRebindingCases": 0,
+    "peerMismatchCases": 0,
+    "allowedPublicIpv4ControlCases": 0,
+    "allowedPublicIpv6ControlCases": 0,
+    "unexpectedOutboundRequests": 0
+  },
+  "privacyBoundaryPassed": false
+}

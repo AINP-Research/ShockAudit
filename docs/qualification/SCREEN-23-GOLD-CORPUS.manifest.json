@@ -1,0 +1,81 @@
+{
+  "$schema": "./SCREEN-23-GOLD-CORPUS.schema.json",
+  "schemaVersion": "shockaudit-screen23-gold-corpus-v1",
+  "corpusId": "screen23-eight-case-v1",
+  "status": "definition-only",
+  "sourcePacketPolicy": "Frozen packets and independently authored answer keys are release evidence; this repository definition contains no source passages.",
+  "cases": [
+    {
+      "caseId": "EU-GDPR",
+      "label": "GDPR lifecycle",
+      "jurisdiction": "European Union",
+      "eventFamily": "regulation",
+      "requiredModes": ["find", "audit"],
+      "requiredSourceFamilies": ["EU Publications Office CELLAR"],
+      "requiredFeatures": ["publication", "application", "national-implementation", "enforcement", "later-change"]
+    },
+    {
+      "caseId": "UK-COMMENCEMENT",
+      "label": "UK statute and commencement instrument",
+      "jurisdiction": "United Kingdom",
+      "eventFamily": "regulation",
+      "requiredModes": ["find"],
+      "requiredSourceFamilies": ["legislation.gov.uk"],
+      "requiredFeatures": ["enactment", "commencement", "implementation"]
+    },
+    {
+      "caseId": "US-FR-RULE",
+      "label": "United States federal rule lifecycle",
+      "jurisdiction": "United States (federal)",
+      "eventFamily": "regulation",
+      "requiredModes": ["audit"],
+      "requiredSourceFamilies": ["Federal Register"],
+      "requiredFeatures": ["proposal", "final-publication", "effective", "compliance", "enforcement"]
+    },
+    {
+      "caseId": "HURRICANE-FEMA-GDACS",
+      "label": "Hurricane across FEMA and GDACS",
+      "jurisdiction": "United States and global record",
+      "eventFamily": "disaster",
+      "requiredModes": ["find"],
+      "requiredSourceFamilies": ["OpenFEMA", "GDACS"],
+      "requiredFeatures": ["onset", "declaration", "cross-source-identity"]
+    },
+    {
+      "caseId": "EARTHQUAKE-USGS-GDACS",
+      "label": "Earthquake across USGS and GDACS",
+      "jurisdiction": "Global",
+      "eventFamily": "disaster",
+      "requiredModes": ["find"],
+      "requiredSourceFamilies": ["USGS", "GDACS"],
+      "requiredFeatures": ["onset", "magnitude", "cross-source-identity"]
+    },
+    {
+      "caseId": "US-CA-CCPA",
+      "label": "California Consumer Privacy Act",
+      "jurisdiction": "California, United States",
+      "eventFamily": "regulation",
+      "requiredModes": ["audit"],
+      "requiredSourceFamilies": ["California official source"],
+      "requiredFeatures": ["state-law-identity", "no-federal-proxy", "effective", "enforcement"]
+    },
+    {
+      "caseId": "US-CA-CPRA",
+      "label": "CPRA amendment and related-version case",
+      "jurisdiction": "California, United States",
+      "eventFamily": "regulation",
+      "requiredModes": ["audit"],
+      "requiredSourceFamilies": ["California official source"],
+      "requiredFeatures": ["amendment", "related-version", "effective", "later-change"]
+    },
+    {
+      "caseId": "MULTILINGUAL-AMBIGUOUS",
+      "label": "Long multilingual document with ambiguous dates",
+      "jurisdiction": "Reviewer-selected non-US jurisdiction",
+      "eventFamily": "regulation",
+      "requiredModes": ["find"],
+      "requiredSourceFamilies": ["Reviewer-approved official source"],
+      "requiredFeatures": ["long-document", "multilingual", "ambiguous-date", "no-date-guessing"]
+    }
+  ]
+}
