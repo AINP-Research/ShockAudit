@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ShockAudit: a workspace for designing and auditing natural experiments."
+    />
+    <title>ShockAudit</title>
+    <style id="shockaudit-bootstrap-style">
+      html, body, #root { min-height: 100%; }
+      body {
+        margin: 0;
+        background: #0f1115;
+        color: #f5f7fa;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      [data-shockaudit-bootstrap] {
+        box-sizing: border-box;
+        min-height: 16rem;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+        text-align: center;
+      }
+      [data-shockaudit-bootstrap] strong { display: block; margin-bottom: .5rem; }
+      [data-shockaudit-bootstrap] p { margin: 0; max-width: 42rem; line-height: 1.5; color: #b7bec8; }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <main data-shockaudit-bootstrap>
+        <div>
+          <strong>Loading ShockAudit workspace…</strong>
+          <p data-shockaudit-bootstrap-message>The secure MCP connection is ready; the interactive workspace is starting.</p>
+        </div>
+      </main>
+    </div>
+    <script>
+      window.setTimeout(() => {
+        const bootstrap = document.querySelector("[data-shockaudit-bootstrap]");
+        const message = document.querySelector("[data-shockaudit-bootstrap-message]");
+        if (bootstrap && message) {
+          message.textContent = "ShockAudit's interface did not finish starting. The MCP connection may still be available; refresh the app connection or inspect the component console for a UI initialization error.";
+        }
+      }, 12000);
+    </script>
+    <script type="module" src="/src/ui/main.tsx"></script>
+  </body>
+</html>
