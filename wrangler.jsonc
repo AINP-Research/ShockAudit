@@ -1,0 +1,59 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "shockaudit",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2026-07-28",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": [
+      "/mcp",
+      "/mcp/*",
+      "/health",
+      "/assets/*",
+      "/.well-known/oauth-protected-resource",
+      "/.well-known/oauth-protected-resource/mcp",
+    ],
+  },
+  "vars": {
+    // Supported-source expansion is bounded. The protected baseline remains
+    // first and is unchanged when expansion is unavailable.
+    "SCREEN02_SEARCH_EXPANSION_MODE": "on",
+    // The repository-managed source-backed event index is the dependable
+    // first discovery source; live routes supplement it independently.
+    "SCREEN02_PUBLIC_EVENT_INDEX_MODE": "on",
+    // Current Screen 3 runs render the saved Screen 2 shock glance immediately.
+    // Historical contracts remain registered for restoration, but the current
+    // overview never starts their host-render route.
+    "SCREEN03_HOST_NATIVE_DEFAULT": "off",
+    // The one-submission host-task engine remains fail-closed. Enablement
+    // requires a genuine same-panel trace against the existing app identity.
+    "SHOCKAUDIT_HOST_REASONING_MODE": "experimental-off",
+    // Direct OpenAI reasoning is enabled on the existing production Worker.
+    // Provider, model, reasoning effort, and service tier remain fixed in code.
+    "SHOCKAUDIT_SCREEN5_OPENAI_MODE": "production",
+  },
+  "secrets": {
+    // The value is configured only as an encrypted Cloudflare Worker secret.
+    "required": ["OPENAI_API_KEY", "OPENSTATES_API_KEY"],
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "MCP_RUNTIME",
+        "class_name": "ShockAuditMcp",
+      },
+    ],
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["ShockAuditMcp"],
+    },
+  ],
+  "observability": {
+    "enabled": true,
+  },
+}
