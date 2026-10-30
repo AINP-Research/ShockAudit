@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "shockaudit-stage6-negative-security-evidence-v1",
+  "controlId": "N1-private-state-nondisclosure",
+  "result": "fail",
+  "startedAt": "1970-01-01T00:00:00.000Z",
+  "completedAt": null,
+  "endpointClass": "isolated-candidate",
+  "endpoint": "REDACT_ORIGIN_UNTIL_PUBLICATION_APPROVAL",
+  "targetReleaseVersion": "0.3.13",
+  "appVersion": "OBSERVED_PACKAGE_VERSION",
+  "workflowVersion": "2.1",
+  "commit": "FULL_REVIEWED_COMMIT",
+  "chatgptSurface": "SIGNED_IN_SURFACE_AND_PLAN",
+  "model": "DISPLAYED_MODEL_NAME",
+  "reasoningProvider": "chatgpt-host",
+  "openAiApiUsed": false,
+  "cloudflareWorkersAiUsed": false,
+  "freshConversation": true,
+  "promptArtifact": "PRIVATE_ARTIFACT_REFERENCE",
+  "observations": {
+    "assistantTextAbsent": false,
+    "modelContextAbsent": false,
+    "publicToolOutputAbsent": false,
+    "copiedToolArgumentsAbsent": false,
+    "capabilityAndReceiptMaterialAbsent": false
+  },
+  "reviewer": "OPERATOR_OR_REVIEWER",
+  "reviewedAt": null,
+  "deviations": [],
+  "artifactHashes": []
+}

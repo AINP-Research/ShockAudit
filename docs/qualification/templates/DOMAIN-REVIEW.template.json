@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "shockaudit-screen23-domain-review-v1",
+  "candidateCommit": "FULL_CANDIDATE_COMMIT",
+  "appVersion": "PACKAGE_VERSION",
+  "reviewer": "REVIEW_COORDINATOR",
+  "reviewedAt": null,
+  "independentDomainResearchers": 0,
+  "dimensionMeans": {
+    "identity": 0,
+    "timing": 0,
+    "coverage": 0,
+    "downstreamActionability": 0
+  },
+  "minimumItemRating": 0,
+  "criticalFalsehoods": 0
+}

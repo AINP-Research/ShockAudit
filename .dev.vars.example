@@ -1,0 +1,14 @@
+GOVINFO_API_KEY=
+CONGRESS_API_KEY=
+REGULATIONS_API_KEY=
+LEGISCAN_API_KEY=
+TAVILY_API_KEY=
+BRAVE_API_KEY=
+OPENALEX_API_KEY=
+
+# Direct Screen 5 is OpenAI-only. Provider, model, reasoning effort, service
+# tier, and store:false are fixed in code. Keep the real key only in ignored,
+# untracked .dev.vars and retain the explicit local-preview opt-in.
+OPENAI_API_KEY=
+OPENSTATES_API_KEY=
+SHOCKAUDIT_SCREEN5_OPENAI_MODE=local-preview

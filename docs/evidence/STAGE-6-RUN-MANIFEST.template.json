@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "shockaudit-stage6-run-evidence-v1",
+  "caseId": "F1",
+  "mode": "find",
+  "result": "fail",
+  "startedAt": "1970-01-01T00:00:00.000Z",
+  "completedAt": null,
+  "endpointClass": "isolated-candidate",
+  "endpoint": "REDACT_ORIGIN_UNTIL_PUBLICATION_APPROVAL",
+  "targetReleaseVersion": "0.3.13",
+  "appVersion": "OBSERVED_PACKAGE_VERSION",
+  "workflowVersion": "2.1",
+  "commit": "FULL_REVIEWED_COMMIT",
+  "chatgptSurface": "SIGNED_IN_SURFACE_AND_PLAN",
+  "model": "DISPLAYED_MODEL_NAME",
+  "freshConversation": true,
+  "seriesAttempt": 1,
+  "consecutiveSeries": false,
+  "faultOverlay": "NONE_OR_CASE_SPECIFIC_FAULT",
+  "promptArtifact": "PRIVATE_ARTIFACT_REFERENCE",
+  "hostReasoning": {
+    "provider": "chatgpt-host",
+    "openAiApiUsed": false,
+    "cloudflareWorkersAiUsed": false,
+    "researcherTypedHiddenPrompt": false,
+    "screen01": {
+      "automaticMessageUsed": true,
+      "signedReceiptValidated": false,
+      "proposalRemainedUnconfirmedUntilResearcherAction": false
+    },
+    "screen02": {
+      "automaticMessageUsed": true,
+      "signedReceiptValidated": false,
+      "factsAndOrderingUnchangedByHost": false
+    },
+    "screen03": {
+      "automaticMessageUsed": true,
+      "signedReceiptValidated": false,
+      "sourcePacketBound": false,
+      "noncanonicalReaderHelpOnly": false,
+      "evidenceDecisionsAndLockUnchanged": false
+    }
+  },
+  "preparedRequest": {
+    "mode": "find-candidate",
+    "requestedPartIds": [],
+    "preparedAt": "1970-01-01T00:00:00.000Z",
+    "sanitizedFingerprint": "sha256:SANITIZED_REQUEST_HASH"
+  },
+  "assessmentCompletion": {
+    "path": "chatgpt-host",
+    "origin": "chatgpt-host",
+    "hostFollowUpMessageUsed": true,
+    "compatibilitySubmitToolUsed": true,
+    "model": "chatgpt-host",
+    "requestStatus": "completed",
+    "fallbackTriggerStatus": null,
+    "lateReceiptNonMutating": null,
+    "completedAt": null,
+    "sanitizedArtifact": "PRIVATE_ARTIFACT_REFERENCE"
+  },
+  "receipt": {
+    "disposition": null,
+    "revision": null,
+    "reason": null,
+    "sanitizedReceiptArtifact": "PRIVATE_ARTIFACT_REFERENCE"
+  },
+  "validation": {
+    "acceptedPartIds": [],
+    "failedPartIds": [],
+    "retryChain": []
+  },
+  "widget": {
+    "beforeArtifact": "PRIVATE_ARTIFACT_REFERENCE",
+    "afterArtifact": "PRIVATE_ARTIFACT_REFERENCE",
+    "finalArtifact": "PRIVATE_ARTIFACT_REFERENCE"
+  },
+  "screen01ToScreen02": {
+    "scopeConfirmed": false,
+    "actionLabel": "Continue to shock feasibility",
+    "openedOnFirstAttempt": false,
+    "expectedMode": "find",
+    "observedMode": null,
+    "screen2Visible": false,
+    "diagnosticReferencesAbsent": false,
+    "diagnosticReferences": [],
+    "baselinePreserved": false,
+    "firstNativeAction": {
+      "name": "find-search",
+      "passed": false,
+      "observedAt": null
+    }
+  },
+  "finalGate": {
+    "name": "find-continuation",
+    "passed": false,
+    "observedAt": null
+  },
+  "screen01BaselineHash": "sha256:SANITIZED_IMMUTABLE_BASELINE_HASH",
+  "faultDemonstrated": false,
+  "outcomeValuesInspected": false,
+  "scoresOrCausalClaimsPresent": false,
+  "redactions": {
+    "accessTokensAbsent": false,
+    "capabilityTokensAbsent": false,
+    "signingMaterialAbsent": false,
+    "responseKeysAbsent": false,
+    "stateEnvelopesAbsent": false,
+    "rawRunIdsAbsent": false,
+    "verifiedBy": "OPERATOR_OR_REVIEWER",
+    "verifiedAt": null
+  },
+  "deviations": [],
+  "artifactHashes": []
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "shockaudit-screen23-signed-in-candidate-v1",
+  "candidateCommit": "FULL_CANDIDATE_COMMIT",
+  "appVersion": "PACKAGE_VERSION",
+  "reviewer": "SIGNED_IN_REVIEWER",
+  "reviewedAt": null,
+  "endpointClass": "production",
+  "ordinaryCasesPassed": 0,
+  "unsupportedCasesPassed": 0,
+  "screen03RenderedAndOperatedInEveryOrdinaryCase": false,
+  "findEventRecordsApproved": 0,
+  "auditEventRecordsApproved": 0,
+  "liveVerifierRounds": 0,
+  "liveVerifierRoundsPassed": 0,
+  "privacyBoundaryPassed": false
+}

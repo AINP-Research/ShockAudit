@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "screen04-generated-csv-fixture-v1",
+  "purpose": "Generate a CSV that exceeds the Stage A maximumFileBytes boundary without committing a multi-megabyte repository file.",
+  "fileName": "screen04-oversized-generated.csv",
+  "headers": ["unit_id", "year", "group", "covered"],
+  "dataRow": ["A", "2020", "T", "yes"],
+  "repeatDataRowUntilMinimumBytes": 2097153,
+  "expectedError": {
+    "code": "SCREEN04_FILE_LIMIT_EXCEEDED",
+    "stageALimitBytes": 2097152,
+    "mustRejectBeforeRowParsing": true
+  }
+}

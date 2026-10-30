@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "shockaudit-screen23-human-usability-v1",
+  "candidateCommit": "FULL_CANDIDATE_COMMIT",
+  "appVersion": "PACKAGE_VERSION",
+  "reviewer": "STUDY_REVIEWER",
+  "reviewedAt": null,
+  "nonEngineeringParticipants": 0,
+  "ownerUserIncluded": false,
+  "independentResearchers": 0,
+  "unaidedTaskSuccessRate": 0,
+  "taskSuccessRates": [0, 0, 0, 0, 0, 0, 0],
+  "medianSus": 0,
+  "meanComprehension": 0,
+  "criticalMisconceptions": 0
+}

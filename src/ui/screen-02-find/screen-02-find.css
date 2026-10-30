@@ -1,0 +1,1312 @@
+.s2-find {
+  width: min(100%, 1380px);
+  min-width: 0;
+  padding: 30px 42px
+    calc(
+      88px + var(--host-safe-bottom, 0px) + env(safe-area-inset-bottom, 0px)
+    );
+  margin: 0 auto;
+  color: var(--ink);
+}
+
+.s2-find-workspace-lock {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.s2-find-sealed {
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+}
+
+.s2-find-sealed h2,
+.s2-find-sealed p {
+  margin: 0;
+}
+
+.s2-find-sealed p {
+  margin-top: 0.35rem;
+}
+
+.s2-find-sealed .s2-find-button {
+  margin-top: 0.85rem;
+}
+
+.s2-find h1,
+.s2-find h2,
+.s2-find h3,
+.s2-find h4,
+.s2-find p,
+.s2-find dl,
+.s2-find ol,
+.s2-find ul {
+  margin-top: 0;
+}
+
+.s2-find-header,
+.s2-find-section-heading,
+.s2-find-detail__header,
+.s2-find-detail-actions,
+.s2-find-decision,
+.s2-find-decision__actions,
+.s2-find-study__actions,
+.s2-find-search-actions {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.s2-find-header h1 {
+  margin: 7px 0 0;
+  font-size: clamp(36px, 4vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.s2-find-header p {
+  max-width: 820px;
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.s2-find-badge,
+.s2-find-provenance {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-weight: 720;
+}
+
+.s2-find-badge {
+  padding: 6px 10px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.s2-find-badge--status {
+  flex: none;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.s2-find-provenance {
+  padding: 4px 8px;
+  border: 1px solid color-mix(in srgb, var(--blue) 30%, var(--border));
+  background: color-mix(in srgb, var(--blue-soft) 52%, var(--surface));
+  color: var(--blue);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+
+.s2-find-study,
+.s2-find-search,
+.s2-find-detail,
+.s2-find-decision,
+.s2-find-coverage,
+.s2-find-aggregate-notice,
+.s2-find-no-result,
+.s2-find-unassessed {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.s2-find-retention {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 15px;
+  margin-top: 18px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--blue-soft) 27%, var(--surface));
+}
+
+.s2-find-retention strong {
+  flex: none;
+  color: var(--blue);
+  font-size: 12px;
+}
+
+.s2-find-retention p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.s2-find-study {
+  margin-top: 24px;
+  padding: 18px 20px;
+}
+
+.s2-find-study h2,
+.s2-find-comparison h2,
+.s2-find-decision h2,
+.s2-find-no-result h2,
+.s2-find-unassessed h2 {
+  margin-bottom: 0;
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.s2-find-study .s2-find-section-heading p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.s2-find-study__actions {
+  flex: none;
+}
+
+.s2-find-study-grid,
+.s2-find-active-criteria,
+.s2-find-factual-record dl,
+.s2-find-assessment-grid,
+.s2-find-coverage dl {
+  display: grid;
+  gap: 10px;
+}
+
+.s2-find-study-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 16px 0 0;
+}
+
+.s2-find-study-grid > div,
+.s2-find-active-criteria > div,
+.s2-find-factual-record dl > div {
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.s2-find dt {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 760;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.s2-find dd {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.s2-find-active-criteria {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 10px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.s2-find-active-criteria > div {
+  background: color-mix(in srgb, var(--blue-soft) 30%, var(--surface));
+}
+
+.s2-find-search {
+  margin-top: 16px;
+  overflow: clip;
+}
+
+.s2-find-search > summary,
+.s2-find-coverage summary,
+.s2-find-inline-form summary {
+  color: var(--blue);
+  font-weight: 720;
+  cursor: pointer;
+}
+
+.s2-find-search > summary {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  background: color-mix(in srgb, var(--blue-soft) 25%, var(--surface));
+  font-size: 14px;
+}
+
+.s2-find-search form {
+  padding: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.s2-find-search form > p {
+  margin-bottom: 13px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.s2-find-search-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.s2-find-search-grid label {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--paper);
+}
+
+.s2-find-search-grid label > strong {
+  font-size: 14px;
+}
+
+.s2-find-search-grid label > span {
+  min-height: 3em;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.s2-find textarea {
+  width: 100%;
+  min-height: 76px;
+  resize: vertical;
+  padding: 10px 11px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.s2-find-search-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 13px 0 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--blue);
+  background: var(--blue-soft);
+  font-size: 13px;
+}
+
+.s2-find-search-actions {
+  justify-content: flex-start;
+  margin-top: 14px;
+}
+
+.s2-find-button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 15px;
+  border: 1px solid var(--blue);
+  border-radius: 8px;
+  background: var(--blue);
+  color: var(--on-blue);
+  font-size: 14px;
+  font-weight: 720;
+  line-height: 1.25;
+  text-align: center;
+  cursor: pointer;
+}
+
+.s2-find-button--secondary,
+.s2-find-button--quiet {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.s2-find-button--quiet {
+  color: var(--muted);
+}
+
+.s2-find-button:hover:not(:disabled) {
+  filter: brightness(0.96);
+}
+
+.s2-find-button:disabled {
+  border-color: var(--border);
+  background: var(--rail);
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: 0.76;
+}
+
+.s2-find-aggregate-notice {
+  margin-top: 18px;
+  padding: 13px 15px;
+  border-left: 4px solid var(--warning);
+}
+
+.s2-find-aggregate-notice p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.s2-find-assisted-disclosure {
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--blue);
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.s2-find-assisted-disclosure strong {
+  color: var(--ink);
+}
+
+.s2-find-comparison {
+  margin-top: 25px;
+}
+
+.s2-find-comparison__heading p {
+  margin: 5px 0 13px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.s2-find-comparison__workspace {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(520px, 1.55fr);
+  align-items: start;
+  gap: 18px;
+}
+
+.s2-find-qualified-sections {
+  display: grid;
+  gap: 18px;
+}
+
+.s2-find-qualified-sections h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.s2-find-qualified-sections section > p {
+  margin: -2px 0 9px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.s2-find-candidate-list {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.s2-find-candidate-list__item {
+  min-width: 0;
+}
+
+.s2-find-candidate-row {
+  width: 100%;
+  min-height: 98px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 5px 10px;
+  padding: 13px 14px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--rail) 65%, var(--surface));
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 130ms ease,
+    transform 130ms ease,
+    box-shadow 130ms ease;
+}
+
+.s2-find-candidate-row:hover {
+  border-color: color-mix(in srgb, var(--blue) 58%, var(--border));
+  transform: translateY(-1px);
+}
+
+.s2-find-candidate-row--open {
+  border-color: var(--blue);
+  background: color-mix(in srgb, var(--blue-soft) 56%, var(--surface));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue) 18%, transparent);
+}
+
+.s2-find-candidate-row--selected {
+  border-left: 5px solid var(--success);
+}
+
+.s2-find-candidate-row__heading {
+  min-width: 0;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 8px;
+  grid-column: 1 / -1;
+}
+
+.s2-find-candidate-row__heading strong {
+  font-size: 15px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.s2-find-candidate-row__heading b {
+  flex: none;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--success) 14%, var(--surface));
+  color: var(--success);
+  font-size: 10px;
+}
+
+.s2-find-candidate-row__date,
+.s2-find-candidate-row__status,
+.s2-find-candidate-row__source {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.s2-find-candidate-row__status {
+  color: var(--ink);
+  font-weight: 680;
+}
+
+.s2-find-candidate-row__source {
+  grid-column: 1 / -1;
+}
+
+.s2-find-candidate-row__concern small {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.025em;
+  line-height: 1.25;
+}
+
+.s2-find-candidate-row__concern {
+  grid-column: 1 / -1;
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.s2-find-candidate-row__concern > span {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.s2-find-detail {
+  min-width: 0;
+  padding: 21px;
+}
+
+.s2-find-detail--empty {
+  min-height: 270px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.s2-find-detail--empty p {
+  margin: 7px 0 0;
+  color: var(--muted);
+}
+
+.s2-find-detail__header h2 {
+  margin: 8px 0 0;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
+}
+
+.s2-find-detail__header p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.s2-find-factual-record,
+.s2-find-assessment,
+.s2-find-detail-section,
+.s2-find-detail-actions {
+  margin-top: 18px;
+  padding-top: 17px;
+  border-top: 1px solid var(--border);
+}
+
+.s2-find-factual-record h3,
+.s2-find-assessment h3,
+.s2-find-detail-section h3 {
+  margin: 8px 0 0;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.s2-find-factual-record > p,
+.s2-find-section-heading > div > p,
+.s2-find-detail-section > p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.s2-find-factual-record dl {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 14px 0 0;
+}
+
+.s2-find-qualification__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 13px 0 0;
+}
+
+.s2-find-qualification__grid > div {
+  padding: 10px 11px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--paper);
+}
+
+.s2-find-qualification__grid dt {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.s2-find-qualification__grid dd {
+  margin: 4px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.s2-find-factual-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.s2-find-factual-notes > section {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.s2-find-factual-notes h4,
+.s2-find-criterion-evidence h4 {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.s2-find-factual-notes ul {
+  display: grid;
+  gap: 6px;
+  padding-left: 19px;
+  margin: 8px 0 0;
+}
+
+.s2-find-factual-notes li,
+.s2-find-factual-notes p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.s2-find-factual-notes p {
+  margin: 8px 0 0;
+}
+
+.s2-find-assessment {
+  border-top-color: color-mix(in srgb, var(--blue) 34%, var(--border));
+}
+
+.s2-find-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 12px 0 0;
+  padding: 9px 11px;
+  border-left: 3px solid var(--blue);
+  background: color-mix(in srgb, var(--blue-soft) 48%, var(--surface));
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.s2-find-button > .s2-find-spinner {
+  margin-right: 8px;
+  border-color: color-mix(in srgb, currentColor 28%, transparent);
+  border-top-color: currentColor;
+}
+
+.s2-find-assessment-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 13px;
+}
+
+.s2-find-assessment-component {
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.s2-find-assessment-component h4,
+.s2-find-next-checks h4 {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.s2-find-assessment-component p,
+.s2-find-next-checks p,
+.s2-find-assessment__waiting {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.s2-find-assessment-component p strong {
+  color: var(--ink);
+}
+
+.s2-find-assessment-context {
+  padding: 8px 9px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--blue-soft) 45%, var(--surface));
+}
+
+.s2-find-assessment-component .s2-find-outcome-hypothesis-note {
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.s2-find-next-checks {
+  margin-top: 14px;
+}
+
+.s2-find-next-checks ol {
+  display: grid;
+  gap: 7px;
+  padding-left: 22px;
+  margin: 8px 0 0;
+}
+
+.s2-find-next-checks li {
+  padding-left: 3px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.s2-find-assessment > .s2-find-button {
+  margin-top: 12px;
+}
+
+.s2-find-criterion-findings,
+.s2-find-source-list,
+.s2-find-coverage ul,
+.s2-find-unassessed ul {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 11px 0 0;
+  list-style: none;
+}
+
+.s2-find-criterion-finding,
+.s2-find-source,
+.s2-find-coverage li,
+.s2-find-unassessed li {
+  padding: 11px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.s2-find-criterion-finding > div {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+}
+
+.s2-find-criterion-finding > div > strong {
+  flex: none;
+}
+
+.s2-find-criterion-finding > div > span,
+.s2-find-criterion-finding > p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.s2-find-criterion-finding > p {
+  margin: 6px 0 0;
+}
+
+.s2-find-criterion-finding > p b {
+  color: var(--ink);
+}
+
+.s2-find-researcher-decision {
+  padding: 8px 9px;
+  border-left: 3px solid var(--success);
+  background: color-mix(in srgb, var(--success) 8%, var(--surface));
+}
+
+.s2-find-researcher-decision strong {
+  display: block;
+  color: var(--success);
+}
+
+.s2-find-criterion-evidence {
+  margin-top: 10px;
+}
+
+.s2-find-criterion-evidence > p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.s2-find-criterion-evidence .s2-find-source-list {
+  margin-top: 7px;
+}
+
+.s2-find-source {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.s2-find-source > span {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.s2-find-source a,
+.s2-find-source > span > strong {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 720;
+  overflow-wrap: anywhere;
+}
+
+.s2-find-source small,
+.s2-find-source > b {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.s2-find-source > b {
+  flex: none;
+}
+
+.s2-find-detail-actions {
+  align-items: flex-start;
+}
+
+.s2-find-detail-actions > div {
+  display: grid;
+  justify-items: end;
+  gap: 7px;
+  margin-left: auto;
+}
+
+.s2-find-inline-form {
+  min-width: 230px;
+}
+
+.s2-find-inline-form summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.s2-find-inline-form form {
+  display: grid;
+  gap: 9px;
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.s2-find-inline-form label {
+  display: grid;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.s2-find-disabled-reason {
+  max-width: 390px;
+  margin: 0;
+  color: var(--warning);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.s2-find-no-result,
+.s2-find-unassessed,
+.s2-find-decision,
+.s2-find-coverage {
+  margin-top: 18px;
+  padding: 17px 18px;
+}
+
+.s2-find-no-result p,
+.s2-find-unassessed > p,
+.s2-find-decision p,
+.s2-find-coverage > p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.s2-find-no-result .s2-find-button {
+  margin-top: 13px;
+}
+
+.s2-find-unassessed li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.s2-find-unassessed li span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.s2-find-decision {
+  align-items: center;
+  flex-wrap: wrap;
+  border-color: color-mix(in srgb, var(--success) 32%, var(--border));
+}
+
+.s2-find-decision .s2-find-provenance {
+  border-color: color-mix(in srgb, var(--success) 35%, var(--border));
+  background: color-mix(in srgb, var(--success) 9%, var(--surface));
+  color: var(--success);
+}
+
+.s2-find-decision h2 {
+  margin-top: 7px;
+  overflow-wrap: anywhere;
+}
+
+.s2-find-decision__actions {
+  flex: none;
+  align-items: center;
+}
+
+.s2-find-assessment-exception {
+  width: 100%;
+  flex-basis: 100%;
+  border: 1px solid color-mix(in srgb, var(--warning) 55%, var(--border));
+  border-radius: 9px;
+  background: var(--warning-soft);
+  overflow: clip;
+}
+
+.s2-find-assessment-exception > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 720;
+  cursor: pointer;
+}
+
+.s2-find-assessment-exception[open] {
+  padding: 14px;
+}
+
+.s2-find-assessment-exception[open] > summary {
+  margin: -14px -14px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.s2-find-assessment-exception ul {
+  padding-left: 20px;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.s2-find-assessment-exception form,
+.s2-find-assessment-exception form > label:first-child {
+  display: grid;
+  gap: 7px;
+}
+
+.s2-find-assessment-exception form > label:first-child {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.s2-find-assessment-exception__acknowledgment {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 4px 0 10px;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.s2-find-assessment-exception__acknowledgment input {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  margin: 1px 0 0;
+}
+
+.s2-find-coverage > p {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 680;
+}
+
+.s2-find-coverage details {
+  margin-top: 9px;
+}
+
+.s2-find-coverage details > summary {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.s2-find-coverage details:not([open]) > :not(summary) {
+  display: none;
+}
+
+.s2-find-coverage dl {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 7px 0 14px;
+}
+
+.s2-find-coverage dl > div {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.s2-find-coverage h3 {
+  margin: 14px 0 0;
+  font-size: 14px;
+}
+
+.s2-find-coverage li {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.s2-find-coverage li strong {
+  color: var(--ink);
+}
+
+.s2-find a:focus-visible,
+.s2-find summary:focus-visible,
+.s2-find button:focus-visible,
+.s2-find textarea:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1100px) {
+  .s2-find {
+    padding-inline: 28px;
+  }
+
+  .s2-find-study-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .s2-find-comparison__workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .s2-find {
+    padding: 22px 18px
+      calc(
+        76px + var(--host-safe-bottom, 0px) + env(safe-area-inset-bottom, 0px)
+      );
+  }
+
+  .s2-find-header,
+  .s2-find-section-heading,
+  .s2-find-detail__header,
+  .s2-find-detail-actions,
+  .s2-find-decision,
+  .s2-find-study__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .s2-find-badge--status {
+    align-self: flex-start;
+  }
+
+  .s2-find-study__actions,
+  .s2-find-decision__actions {
+    width: 100%;
+  }
+
+  .s2-find-study__actions .s2-find-button,
+  .s2-find-decision__actions .s2-find-button,
+  .s2-find-detail-actions > div,
+  .s2-find-detail-actions .s2-find-button,
+  .s2-find-inline-form {
+    width: 100%;
+  }
+
+  .s2-find-study-grid,
+  .s2-find-active-criteria,
+  .s2-find-search-grid,
+  .s2-find-factual-record dl,
+  .s2-find-factual-notes,
+  .s2-find-assessment-grid,
+  .s2-find-qualification__grid,
+  .s2-find-coverage dl {
+    grid-template-columns: 1fr;
+  }
+
+  .s2-find-search-grid label > span {
+    min-height: 0;
+  }
+
+  .s2-find-detail-actions > div {
+    justify-items: stretch;
+    margin-left: 0;
+  }
+
+  .s2-find-source {
+    flex-direction: column;
+  }
+
+  .s2-find-unassessed li {
+    grid-template-columns: 1fr;
+  }
+
+  .s2-find-unassessed li .s2-find-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .s2-find {
+    padding-inline: 14px;
+  }
+
+  .s2-find-header h1 {
+    font-size: 34px;
+  }
+
+  .s2-find-study,
+  .s2-find-detail,
+  .s2-find-decision,
+  .s2-find-coverage,
+  .s2-find-no-result,
+  .s2-find-unassessed {
+    padding-inline: 14px;
+  }
+
+  .s2-find-search-actions,
+  .s2-find-decision__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .s2-find-search-actions .s2-find-button,
+  .s2-find-decision__actions .s2-find-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .s2-find-candidate-row {
+    animation: none;
+    transition: none;
+  }
+
+  .s2-find-candidate-row:hover {
+    transform: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .s2-find-button {
+    border-color: ButtonText;
+    background: ButtonFace;
+    color: ButtonText;
+  }
+
+  .s2-find-button:disabled {
+    border-color: GrayText;
+    background: Canvas;
+    color: GrayText;
+    opacity: 1;
+  }
+
+  .s2-find-badge,
+  .s2-find-provenance,
+  .s2-find-candidate-row--open,
+  .s2-find-candidate-row--selected,
+  .s2-find-status,
+  .s2-find-assisted-disclosure,
+  .s2-find-aggregate-notice,
+  .s2-find-decision {
+    border: 2px solid CanvasText;
+  }
+
+  .s2-find-candidate-row--open,
+  .s2-find-candidate-row--selected {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
+  }
+}
+
+[data-theme="dark"] .s2-find-study-grid > div,
+[data-theme="dark"] .s2-find-active-criteria > div,
+[data-theme="dark"] .s2-find-search-grid label,
+[data-theme="dark"] .s2-find-factual-record dl > div,
+[data-theme="dark"] .s2-find-qualification__grid > div,
+[data-theme="dark"] .s2-find-assessment-component,
+[data-theme="dark"] .s2-find-criterion-finding,
+[data-theme="dark"] .s2-find-source,
+[data-theme="dark"] .s2-find-coverage li,
+[data-theme="dark"] .s2-find-unassessed li {
+  background: color-mix(in srgb, var(--rail) 76%, var(--surface));
+}
+.s2-find-qualification__diagnostics,
+.s2-find-industry-interpretation,
+.s2-find-search-shortfall {
+  margin-top: 12px;
+}
+
+.s2-find-profile-clarification {
+  margin-block: 12px;
+  padding: 12px 14px;
+  border-inline-start: 4px solid var(--warning);
+}
+
+.s2-find-profile-alternatives {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
+  margin-block: 10px;
+}
+
+.s2-find-profile-alternatives button {
+  display: grid;
+  text-align: start;
+}
+
+.s2-find-host-task {
+  align-items: center;
+  border: 1px solid var(--color-border-secondary, #d8d8d2);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-block: 16px;
+  padding: 16px;
+}
+
+.s2-find-host-task h2,
+.s2-find-host-task p { margin: 0; }
+.s2-find-host-task button { min-height: 44px; }
+
+.s2-find-host-review-candidates {
+  display: grid;
+  gap: 12px;
+  padding-inline-start: 20px;
+}
+
+.s2-find-host-review-candidates h3 { font-size: 14px; margin: 0 0 6px; }
+.s2-find-host-review-candidates dl { display: grid; gap: 6px; margin: 0; }
+.s2-find-host-review-candidates dt { font-weight: 700; }
+.s2-find-host-review-candidates dd { margin: 0; }
+
+.s2-find-search-funnel {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.s2-find-search-funnel > div {
+  border: 1px solid var(--color-border-secondary, #d8d8d2);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.s2-find-search-funnel dd {
+  margin-inline-start: 0;
+}
+
+.s2-find-search-shortfall {
+  border-inline-start: 4px solid var(--color-border-warning, #9b6b00);
+  padding-inline-start: 12px;
+}

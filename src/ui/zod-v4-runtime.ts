@@ -1,0 +1,92 @@
+import {
+  any as anySchema,
+  array,
+  boolean,
+  config,
+  custom,
+  describe,
+  discriminatedUnion,
+  enum as enumSchema,
+  intersection,
+  iso,
+  literal,
+  looseObject,
+  never,
+  null as nullSchema,
+  number,
+  object,
+  optional,
+  preprocess,
+  record,
+  safeParse,
+  string,
+  toJSONSchema,
+  undefined as undefinedSchema,
+  union,
+  unknown,
+} from "zod";
+
+/**
+ * Exact browser runtime surface used by the pinned MCP Apps SDK. The SDK
+ * imports `zod/v4` as a namespace, which otherwise retains Zod's complete
+ * locale catalog even though no locale is read by the app protocol schemas.
+ * Keep this list aligned with runtime property access in the pinned
+ * `@modelcontextprotocol/sdk` and `@modelcontextprotocol/ext-apps` packages.
+ */
+export {
+  anySchema as any,
+  array,
+  boolean,
+  config,
+  custom,
+  describe,
+  discriminatedUnion,
+  enumSchema as enum,
+  intersection,
+  iso,
+  literal,
+  looseObject,
+  never,
+  nullSchema as null,
+  number,
+  object,
+  optional,
+  preprocess,
+  record,
+  safeParse,
+  string,
+  toJSONSchema,
+  undefinedSchema as undefined,
+  union,
+  unknown,
+};
+
+export const z = Object.freeze({
+  any: anySchema,
+  array,
+  boolean,
+  config,
+  custom,
+  describe,
+  discriminatedUnion,
+  enum: enumSchema,
+  intersection,
+  iso,
+  literal,
+  looseObject,
+  never,
+  null: nullSchema,
+  number,
+  object,
+  optional,
+  preprocess,
+  record,
+  safeParse,
+  string,
+  toJSONSchema,
+  undefined: undefinedSchema,
+  union,
+  unknown,
+});
+
+export default z;

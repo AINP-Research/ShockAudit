@@ -1,0 +1,885 @@
+{
+  "schema": "shockaudit-acceptance-evidence-v1",
+  "catalog": {
+    "path": "tests/acceptance/handoff/09-acceptance-cases.json",
+    "sha256": "97ba4f8df3e15588155276c161fdec8b16b0afa2a853560d5d094218e22a5235",
+    "caseCount": 85
+  },
+  "fixtures": {
+    "path": "tests/acceptance/handoff/10-synthetic-fixtures.json",
+    "sha256": "bdb5db99f1dc41bd14603c72f8258238fa65a64a685a62bc7e0c5197f7e8a600",
+    "fixtureCount": 27,
+    "mutationCount": 30,
+    "providerCallsAuthorized": false
+  },
+  "statusDefinitions": {
+    "FULL_AUTOMATED": "Specific executable assertions cover every catalog assertion; a broad suite pass, inventory check, source-text check, or SSR-only check is insufficient.",
+    "PARTIAL": "One or more substantive assertions are automated, but a catalog assertion, fixture parameter, bridge path, or end-state check is still missing.",
+    "BROWSER_BLOCKED": "The case requires real browser interaction or visual evidence; source and SSR tests are supporting evidence only and Chromium did not execute.",
+    "LOCAL_PERSISTENCE_PENDING": "Unit/in-memory coverage exists, but the required isolated Wrangler mutation, process restart, and recovery run has not yet been executed.",
+    "OWNER_BLOCKED": "The case requires the authenticated original owner state or signed-in panel, which is unavailable in this environment.",
+    "LIVE_NOT_RUN": "The case requires separately authorized live provider/source calls and semantic review; no such calls were made.",
+    "DELIVERY_NOT_AUTHORIZED": "Publication or owner update for the new tree is outside the current authorization."
+  },
+  "evidenceClasses": {
+    "EXECUTABLE": "The named test executes production code and asserts the mapped behavior.",
+    "SSR_SUPPORT": "The named test server-renders a production component but does not exercise a browser.",
+    "STATIC_SUPPORT": "The named test inspects source structure or inventory and cannot prove runtime behavior.",
+    "DISCOVERED_NOT_RUN": "The named browser test exists, but was not executed in this acceptance run.",
+    "IN_MEMORY_ONLY": "The named test uses an in-memory store and does not prove process-restart persistence."
+  },
+  "executionRecords": [
+    {
+      "id": "local-persistence-restart-2026-09-25",
+      "command": "npm run check:local-persistence",
+      "result": "PASS",
+      "scope": "An isolated credential-free Wrangler durable runtime created one synthetic workflow, stopped, restarted against the same temporary persistence path, and authenticated a read whose run ID, revision, state fingerprint, and original input matched.",
+      "testedCommit": "PENDING_FINAL_TESTED_COMMIT",
+      "testedTree": "PENDING_FINAL_TESTED_TREE",
+      "providerCalls": 0,
+      "sourceCalls": 0,
+      "limitations": "This execution did not checkpoint a receipt, partial search, proposal, hold, scheduler callback, lease expiry, cleanup, two-tab race, or in-flight task across restart."
+    }
+  ],
+  "cases": [
+    {
+      "id": "AC001",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/scripts/integrated-repair-runner.test.ts", "testName": "binds verification to a clean exact published branch, commit, and tree", "class": "STATIC_SUPPORT" },
+        { "path": "tests/scripts/integrated-repair-runner.test.ts", "testName": "verifies the built UI and backend identities actually served on loopback", "class": "STATIC_SUPPORT" }
+      ],
+      "gap": "Run an executable stale-process/newer-ref mismatch case and assert the reported source, UI, response, commit, and tree identities without resetting the newer work."
+    },
+    {
+      "id": "AC002",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen5-openai-ledger.test.ts", "testName": "migrates an untouched v1 allowance while preserving usage and an unknown hold", "class": "EXECUTABLE" },
+        { "path": "tests/core/six-screen-workflow.test.ts", "testName": "preserves the exact original shock input and unrelated study fields through correction", "class": "EXECUTABLE" }
+      ],
+      "gap": "Add one repeated full-record migration test over FX15/FX21 that proves focal text, historical charge, uncertain hold, and every scientific field are unchanged on the second migration."
+    },
+    {
+      "id": "AC003",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/acceptance/ph1-recovery-readiness.test.ts", "testName": "AC003 / FX02 / FX14 classifies Screen 4 discovery as long-running", "class": "EXECUTABLE" },
+        { "path": "tests/acceptance/ph1-recovery-readiness.test.ts", "testName": "AC003 / FX06 / MU04 classifies a committed Screen 4 discovery as recoverable", "class": "EXECUTABLE" }
+      ],
+      "gap": "Parameterize every long operation over both bridge paths and add the newer-unrelated-revision negative assertion."
+    },
+    {
+      "id": "AC004",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/ui/six-screen-analysis-result-state.test.ts", "testName": "keeps receipt, validated artifact, and completed output distinct", "class": "EXECUTABLE" },
+        { "path": "tests/ui/six-screen-analysis-result-state.test.ts", "testName": "does not turn unknown dispatch or unavailable configuration into a result", "class": "EXECUTABLE" }
+      ],
+      "gap": "Drive FX05/FX06/FX08/FX23 through the canonical runtime and prove only a validated completed-empty receipt yields complete_zero; waiting, failed, stale, and absent output must remain non-complete."
+    },
+    {
+      "id": "AC005",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/six-screen-workflow-optional-isolation.test.ts", "testName": "projects only a safe recovery summary through the strict registered status tool", "class": "EXECUTABLE" },
+        { "path": "tests/scripts/production-matrix-diagnostics.test.ts", "testName": "redacts identifiers and fingerprints embedded in diagnostic prose without erasing evidence categories", "class": "EXECUTABLE" }
+      ],
+      "gap": "Add an FX03/FX09 matrix that asserts distinct failure stages and verifies each safe reference resolves to the saved authorized diagnosis while raw payloads and keys remain absent."
+    },
+    {
+      "id": "AC006",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/six-screen-analysis-delivery-recovery.test.ts", "testName": "restores saved %s output over %s without another call", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-screen3-recovery.test.ts", "testName": "saves a sourced critique and reopens the same scientific task offline", "class": "IN_MEMORY_ONLY" }
+      ],
+      "gap": "Assert the recovered FX02 critique is the current visible result and that both provider invocation and token reservation deltas are exactly zero on both bridge paths."
+    },
+    {
+      "id": "AC007",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/six-screen-screen6-runtime.test.ts", "testName": "quarantines an unusable returned supplement and does not request it again", "class": "EXECUTABLE" },
+        { "path": "tests/core/screen6-current-plan.test.ts", "testName": "offers receipt revalidation locally even when no new model allowance remains", "class": "EXECUTABLE" }
+      ],
+      "gap": "Add the unchanged-invalid-receipt loop assertion and a changed-validator case that runs exactly once while retaining the original receipt provenance."
+    },
+    {
+      "id": "AC008",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen5-openai-provider.test.ts", "testName": "rejects a %s Responses outcome explicitly", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-openai-runtime.test.ts", "testName": "normalizes a mechanical Stage A candidate ID without another provider call", "class": "EXECUTABLE" },
+        { "path": "tests/core/screen6-current-plan.test.ts", "testName": "admits bounded prospective supplements and rejects invented results or IDs", "class": "EXECUTABLE" }
+      ],
+      "gap": "Exercise FX04 as an incomplete provider response and assert the typed incomplete outcome, no invented fields, no valid-zero fallback, and no automatic retry."
+    },
+    {
+      "id": "AC009",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen5-openai-provider.test.ts", "testName": "rejects a %s Responses outcome explicitly", "class": "EXECUTABLE" }
+      ],
+      "gap": "Add an FX23 provider-refusal test that preserves the refusal as its own outcome, never emits an empty completed plan/critique, and performs no uncontrolled follow-up request."
+    },
+    {
+      "id": "AC010",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/six-screen-workflow-optional-isolation.test.ts", "testName": "keeps genuine current and historical Screen 6 wires bound to their receipts", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-workflow-optional-isolation.test.ts", "testName": "quarantines a Screen 6 supplement that differs from valid receipt content", "class": "EXECUTABLE" }
+      ],
+      "gap": "Remove the original frozen packet in an FX02/FX22 historical record and assert revalidation is blocked without substituting current claims while the original receipt and limitation remain retained."
+    },
+    {
+      "id": "AC011",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/six-screen-analysis-delivery-recovery.test.ts", "testName": "restores saved %s output over %s without another call", "class": "EXECUTABLE" },
+        { "path": "tests/ui/six-screen-host-task-bridge.test.ts", "testName": "requires a saved-status check when a transport interruption has an unknown outcome", "class": "EXECUTABLE" }
+      ],
+      "gap": "Inject loss after each durable checkpoint on both bridges, not only final delivery, and assert complete results apply once while partial/unknown stages never auto-replay dispatch."
+    },
+    {
+      "id": "AC012",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/ui/six-screen-host-task-bridge.test.ts", "testName": "recovers a committed authenticated workflow result from a lost direct receipt", "class": "EXECUTABLE" },
+        { "path": "tests/ui/host-task-post-render.test.tsx", "testName": "never acknowledges failed persistence or a navigation/stale settlement", "class": "EXECUTABLE" }
+      ],
+      "gap": "Force the widget-state write itself to fail after canonical success and assert the saved result remains current with only a panel-reopen persistence warning and no provider-failure label."
+    },
+    {
+      "id": "AC013",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/core/six-screen-research-task.test.ts", "testName": "makes double-click/retry reservation idempotent and rejects operation-id conflicts", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-research-task-store.test.ts", "testName": "commits a reservation and result once across retry and stale delivery", "class": "IN_MEMORY_ONLY" }
+      ],
+      "gap": "Add one held-promise UI/runtime test proving rapid duplicate actions cause one reservation, one provider invocation, one application, immediate conflicting-button disablement, and still-available navigation."
+    },
+    {
+      "id": "AC014",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen5-openai-ledger.test.ts", "testName": "keeps an unknown outcome held across store recreation", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-screen4-interpretation-tools.test.ts", "testName": "observes an unknown dispatched outcome without repeating the provider request", "class": "EXECUTABLE" },
+        { "path": "tests/core/six-screen-research-task.test.ts", "testName": "conservatively charges an expired external lease before allowing another attempt", "class": "EXECUTABLE" }
+      ],
+      "gap": "Add scheduler/alarm replay coverage proving lease expiry itself cannot auto-redispatch the same model operation."
+    },
+    {
+      "id": "AC015",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen5-openai-ledger.test.ts", "testName": "serializes reservations, settles actual usage, and never lowers imported use", "class": "EXECUTABLE" }
+      ],
+      "gap": "Add the FX21 near-cap race where two concurrent reservations compete, exactly one is admitted, and the prior observed use plus 80,000-token hold remain unchanged."
+    },
+    {
+      "id": "AC016",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/six-screen-workflow-store.test.ts", "testName": "rejects stale state writes while a status read remains mutation-free", "class": "IN_MEMORY_ONLY" },
+        { "path": "tests/worker/screen5-openai-ledger.test.ts", "testName": "reads durable reservation evidence without creating or changing a hold", "class": "IN_MEMORY_ONLY" }
+      ],
+      "gap": "Assert status and local-recovery reads across FX02/FX06 cause zero source dispatches, model dispatches, reservations, and scientific mutations, while any local save is an explicit task step."
+    },
+    {
+      "id": "AC017",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/acceptance/ph1-recovery-readiness.test.ts", "testName": "AC017 / FX24 reports model readiness without inventing a Screen 5 job", "class": "EXECUTABLE" }
+      ],
+      "gap": "Open the actual Screen 3 and Screen 6 readiness projections and assert both use shared readiness without a Screen 5 job or false credential verification."
+    },
+    {
+      "id": "AC018",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen5-openai-ledger.test.ts", "testName": "fails closed when aggregate attempts cannot admit another call", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-openai-runtime.test.ts", "testName": "keeps one unchanged configuration-required OpenAI job without dispatch", "class": "EXECUTABLE" }
+      ],
+      "gap": "Add the FX21 UI/runtime assertion that an insufficient allowance reports the exact needed reservation and is never relabeled missing configuration, account reset, billing reset, or no results."
+    },
+    {
+      "id": "AC019",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/ui/host-task-reconciler.test.tsx", "testName": "deduplicates an interval read and a manual check", "class": "EXECUTABLE" },
+        { "path": "tests/ui/host-task-reconciler.test.tsx", "testName": "stops at timeout and permits only one explicit retry", "class": "EXECUTABLE" },
+        { "path": "tests/ui/host-task-lifecycle-source.test.ts", "testName": "rechecks canonical state on focus and visible-tab restoration", "class": "STATIC_SUPPORT" }
+      ],
+      "gap": "Connect the reconciler to every Screen 3–6 channel with delayed reads and assert compatible state restoration plus no hidden work on reads."
+    },
+    {
+      "id": "AC020",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/core/six-screen-research-task.test.ts", "testName": "cancels future work without deleting committed partial state or replenishing usage", "class": "EXECUTABLE" },
+        { "path": "tests/ui/six-screen-host-task-bridge.test.ts", "testName": "registers standards-host result and cancellation handlers before connect", "class": "EXECUTABLE" }
+      ],
+      "gap": "Cancel while a request is actually in flight and assert its late receipt/usage remain, every later unstarted step stays unrun, and cancellation is never described as free."
+    },
+    {
+      "id": "AC021",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/ui/six-screen-host-task-bridge.test.ts", "testName": "does not join conflicting canonical host-task wrappers", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-workflow-optional-isolation.test.ts", "testName": "fully validates current Screen 6 IDs and bounds historical wires", "class": "EXECUTABLE" }
+      ],
+      "gap": "Send the same invalid root/transport response through both standards and compatibility bridges after optional recovery and assert both reject the mismatched object."
+    },
+    {
+      "id": "AC022",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/ui/six-screen-app.test.tsx", "testName": "does not let an older canonical response replace a newer selection", "class": "SSR_SUPPORT" },
+        { "path": "tests/worker/six-screen-research-task-store.test.ts", "testName": "commits a reservation and result once across retry and stale delivery", "class": "IN_MEMORY_ONLY" }
+      ],
+      "gap": "Run FX26 with two compatible out-of-order tasks and assert both outputs persist and the older status cannot regress the accepted revision."
+    },
+    {
+      "id": "AC023",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/ui/six-screen-app.test.tsx", "testName": "hides a proof result after any frozen workflow coordinate changes", "class": "SSR_SUPPORT" },
+        { "path": "tests/worker/six-screen-intelligence-proof.test.ts", "testName": "rejects a source reference outside the frozen packet", "class": "EXECUTABLE" }
+      ],
+      "gap": "Complete an old scientific response after an FX22 edit and assert it validates only against its frozen packet, is archived, and never occupies the current result region."
+    },
+    {
+      "id": "AC024",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/core/screen6-current-plan.test.ts", "testName": "separates semantic dependencies without synthesizing a v24 recovery key", "class": "EXECUTABLE" },
+        { "path": "tests/ui/six-screen-app.test.tsx", "testName": "keeps navigation and unrelated study inputs available during model tasks", "class": "SSR_SUPPORT" }
+      ],
+      "gap": "Parameterize FX14 operational-only revisions across each scientific artifact and assert no semantic fingerprint or model generation changes while strict transport state remains valid."
+    },
+    {
+      "id": "AC025",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/core/screen6-current-plan.test.ts", "testName": "opens from saved facts without diagnostic input or model inference", "class": "EXECUTABLE" },
+        { "path": "tests/core/screen06-uncertainty-profile.test.ts", "testName": "opens from a current confirmed identity and preserves missing Screens 2–5 as gaps", "class": "EXECUTABLE" }
+      ],
+      "gap": "Mutate the FX07/FX14 completeness or coverage input without changing content and assert the dependent plan records the update rather than ignoring all status fields."
+    },
+    {
+      "id": "AC026",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/six-screen-openai-runtime.test.ts", "testName": "authorizes each revised mechanism job in-tool without PowerShell job coordinates", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-openai-runtime.test.ts", "testName": "preserves the finalized Screen 5 focal input while a changed Screen 2 context invalidates its result", "class": "EXECUTABLE" }
+      ],
+      "gap": "Assert a finalized focal edit creates a new bound S5 job and S6 outdated marker while S1–S4 research, old focal text, and old output remain retained."
+    },
+    {
+      "id": "AC027",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen04-study-first-investigation.test.ts", "testName": "reuses documentary occurrences after a method-only selection change without a source call", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-screen4-interpretation-tools.test.ts", "testName": "rebinds saved planned source steps after a method-only choice without fetching", "class": "EXECUTABLE" }
+      ],
+      "gap": "Use an FX25 comparator edit, retain occurrence evidence, refresh only comparison-dependent relevance, and keep prior assessments/predictions historical."
+    },
+    {
+      "id": "AC028",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen04-study-first-investigation.test.ts", "testName": "SRC4-02 plans distinct plain-language source queries without appending group and outcome fields", "class": "EXECUTABLE" },
+        { "path": "tests/worker/screen04-study-first-investigation.test.ts", "testName": "SRC4-03 scopes economic searches to a supplied industry across distinct synthetic policies", "class": "EXECUTABLE" }
+      ],
+      "gap": "Apply FX01/FX20 population and outcome edits and assert only genuinely dependent explanatory/query fields change, unchanged source bytes remain, and discovery reruns solely for authorized changed inputs."
+    },
+    {
+      "id": "AC029",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/core/six-screen-workflow.test.ts", "testName": "invalidates confirmation and archives downstream artifacts when identity evidence changes", "class": "EXECUTABLE" },
+        { "path": "tests/core/six-screen-evidence.test.ts", "testName": "does not let a model packet cite a source outside the frozen allowlist", "class": "EXECUTABLE" }
+      ],
+      "gap": "Attempt the explicit FX01-to-FX20 cross-policy citation mutation and assert rejection, archived Policy A output, and no inferred Policy B confirmation."
+    },
+    {
+      "id": "AC030",
+      "level": "controlled",
+      "status": "FULL_AUTOMATED",
+      "evidence": [
+        { "path": "tests/worker/six-screen-workflow-optional-isolation.test.ts", "testName": "keeps valid earlier analysis while quarantining a later malformed entry", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-workflow-optional-isolation.test.ts", "testName": "continues to reject new invalid optional output at the write boundary", "class": "EXECUTABLE" }
+      ],
+      "gap": null
+    },
+    {
+      "id": "AC031",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/six-screen-workflow-optional-isolation.test.ts", "testName": "rejects a changed root fingerprint and malformed official evidence without archiving", "class": "EXECUTABLE" }
+      ],
+      "gap": "Combine a corrupted authenticated root with a malformed optional entry and prove optional quarantine cannot bypass root rejection."
+    },
+    {
+      "id": "AC032",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/acceptance/ph1-ui-contracts.test.ts", "testName": "AC032 / FX06 / FX14 / MU13 scopes transient notices to their originating screen", "class": "STATIC_SUPPORT" }
+      ],
+      "gap": "Run real navigation with out-of-order completions and assert screen-local versus global rendered notices."
+    },
+    {
+      "id": "AC033",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/ui/six-screen-app.test.tsx", "testName": "preserves a dirty draft when canonical evidence arrives", "class": "SSR_SUPPORT" }
+      ],
+      "gap": "In a real browser, edit a dirty form, trigger recovery, navigate away/back, and prove the draft and viewed screen survive without silent submission."
+    },
+    {
+      "id": "AC034",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [],
+      "gap": "Add and run a browser test that keeps the labeled baseline readable while exactly one separate generated-result region updates."
+    },
+    {
+      "id": "AC035",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen3-contextualizer.test.ts", "testName": "requires all six dimensions and canonicalizes harmless wire variation", "class": "EXECUTABLE" },
+        { "path": "tests/worker/screen3-contextualizer.test.ts", "testName": "binds new documentary references to the exact admitted claims", "class": "EXECUTABLE" }
+      ],
+      "gap": "Use the declared amendment/timing fact absent from generic rules and assert that exact newly discovered issue is validated and retained with source and proposal references separated."
+    },
+    {
+      "id": "AC036",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/ui/six-screen-analysis-result-state.test.ts", "testName": "keeps receipt, validated artifact, and completed output distinct", "class": "EXECUTABLE" }
+      ],
+      "gap": "Render FX05 in a browser and assert the valid empty result is visible but never worded as approval, design validity, or no threats."
+    },
+    {
+      "id": "AC037",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/acceptance/ph1-ui-contracts.test.ts", "testName": "AC037 / FX01 / FX17 / MU09 / MU10 groups citations by document version identity", "class": "STATIC_SUPPORT" },
+        { "path": "tests/core/six-screen-policy-chronology.test.ts", "testName": "preserves claim-to-passage-to-version-to-source lineage and source roles", "class": "EXECUTABLE" }
+      ],
+      "gap": "Render FX01/FX17 and assert one top-level citation per known document/version while every distinct predicate, passage, qualification, opposing source, and DOC1-v2 link remains visible."
+    },
+    {
+      "id": "AC038",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/core/six-screen-causal-comparison.test.ts", "testName": "records researcher selection or explicit no-selection without certifying validity", "class": "EXECUTABLE" }
+      ],
+      "gap": "Run the compact Screen 3 UI with FX19 and assert no generated critique auto-selects a method and the full specification remains available."
+    },
+    {
+      "id": "AC039",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/acceptance/ph1-rendered-workflow.test.tsx", "testName": "AC039 / FX06 exposes a start action for a current-version planned Screen 4 task", "class": "SSR_SUPPORT" }
+      ],
+      "gap": "Click the action through the registered bridge, observe checkpoints, and reopen the published records in a real browser."
+    },
+    {
+      "id": "AC040",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/six-screen-research-task-store.test.ts", "testName": "retains a bounded ambiguous source hold without consuming unrelated step budget", "class": "EXECUTABLE" },
+        { "path": "tests/ui/six-screen-app.test.tsx", "testName": "recovers same-revision Screen 4 source checkpoints but not view-only changes", "class": "SSR_SUPPORT" }
+      ],
+      "gap": "Interrupt FX07 after a successful document/occurrence, resume only eligible pending work, and assert identical lineage plus cumulative counts."
+    },
+    {
+      "id": "AC041",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/six-screen-screen4-interpretation-tools.test.ts", "testName": "assesses the same current shortlist after visiting Screen 5 without reopening or rescanning Screen 4", "class": "EXECUTABLE" }
+      ],
+      "gap": "Distinguish first transition from sidebar/status entry: only the former may start authorized standard work; every read must stay search-free and preserve the missing planned-task action."
+    },
+    {
+      "id": "AC042",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [],
+      "gap": "Inject an FX10 presentation-only failure after records are durable and prove local repair displays them with exactly zero new source and model calls."
+    },
+    {
+      "id": "AC043",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/acceptance/ph1-rendered-workflow.test.tsx", "testName": "AC043 / FX10 / MU07 presents a source-documented shock before assessment", "class": "SSR_SUPPORT" }
+      ],
+      "gap": "Restore the occurrence from durable storage in a browser and exercise failed/partial relevance while keeping the source count, provenance, and source-documented card visible before assessment."
+    },
+    {
+      "id": "AC044",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/worker/six-screen-tools.test.ts", "testName": "keeps empty results and provider outages distinct through MCP without repeating source work on replay", "class": "EXECUTABLE" },
+        { "path": "tests/worker/screen04-govinfo-event-search.test.ts", "testName": "keeps unavailable credentials distinct from a completed empty search", "class": "EXECUTABLE" }
+      ],
+      "gap": "Render FX08 and FX09 in a browser and assert distinct status/coverage boundaries, including that outage is never shown as zero verified threats."
+    },
+    {
+      "id": "AC045",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen04-study-first-investigation.test.ts", "testName": "E01/E02/E04/E05/E09/E11 searches six branches plus finite reviewed/GovInfo routes, and keeps interpretation conditional", "class": "EXECUTABLE" },
+        { "path": "tests/worker/screen04-study-first-investigation.test.ts", "testName": "SRC4-11 reviews synthetic precision and recall separately across policy, hazard, and sector cases", "class": "EXECUTABLE" }
+      ],
+      "gap": "Execute the exact FX01/FX20 independent and comparison-side fixtures and assert the counted requests are the requests actually issued, with no policy-name special case."
+    },
+    {
+      "id": "AC046",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen04-study-first-investigation.test.ts", "testName": "SRC4-03 scopes economic searches to a supplied industry across distinct synthetic policies", "class": "EXECUTABLE" },
+        { "path": "tests/worker/screen04-study-first-investigation.test.ts", "testName": "E06 keeps a geography-only federal rule out of the main list", "class": "EXECUTABLE" }
+      ],
+      "gap": "Add FX18/FX20 cases for full industry-period-geography propagation, an unknown grid, distinct declared/extended windows, and no invented date or copied CCPA/manufacturing/ROA defaults."
+    },
+    {
+      "id": "AC047",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen04-govinfo-event-search.test.ts", "testName": "SRC4-02 follows at most one validated provider cursor and inspects beyond the first page", "class": "EXECUTABLE" },
+        { "path": "tests/worker/screen04-study-first-investigation.test.ts", "testName": "E13 bounds presentation at ten without padding or losing overflow lineage", "class": "EXECUTABLE" },
+        { "path": "tests/worker/screen04-govinfo-event-search.test.ts", "testName": "drops off-host links, duplicate records, and unverified document identities", "class": "EXECUTABLE" }
+      ],
+      "gap": "Add an FX17 projection/UI assertion that retained overflow is actually inspectable and the display count is never presented as total discovery."
+    },
+    {
+      "id": "AC048",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen04-study-first-investigation.test.ts", "testName": "E10/E12 distinguishes an incomplete route from a no-match and preserves successful reviewed-index coverage", "class": "EXECUTABLE" },
+        { "path": "tests/worker/screen04-govinfo-event-search.test.ts", "testName": "keeps unavailable credentials distinct from a completed empty search", "class": "EXECUTABLE" }
+      ],
+      "gap": "Assert the final coverage copy explicitly identifies the finite reviewed index and missing provider, and never claims live all-state coverage."
+    },
+    {
+      "id": "AC049",
+      "level": "controlled",
+      "status": "FULL_AUTOMATED",
+      "evidence": [
+        { "path": "tests/worker/screen04-govinfo-event-search.test.ts", "testName": "inspects an exact original law and preserves publication versus approval", "class": "EXECUTABLE" },
+        { "path": "tests/worker/crossref-contextual-discovery.test.ts", "testName": "keeps publication timing separate from event identity and evidence", "class": "EXECUTABLE" }
+      ],
+      "gap": null
+    },
+    {
+      "id": "AC050",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen04-study-first-investigation.test.ts", "testName": "does not turn an incidental CCPA compliance mention into a focal-policy stage and preserves same-day date roles", "class": "EXECUTABLE" },
+        { "path": "tests/worker/screen04-study-first-investigation.test.ts", "testName": "requires an evidenced action on the exact focal instrument for a related policy stage", "class": "EXECUTABLE" }
+      ],
+      "gap": "Assert the FX10 downstream-response path remains conditional/source-bound and cannot create a control variable or mutate Screen 2 silently."
+    },
+    {
+      "id": "AC051",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/ui/six-screen-app.test.tsx", "testName": "V02/E07 renders the study-first event list and six read-only inspector sections without review controls", "class": "SSR_SUPPORT" },
+        { "path": "tests/worker/six-screen-screen4-interpretation-tools.test.ts", "testName": "completes a high-yield relevance-bounded queue in one explicit action", "class": "EXECUTABLE" }
+      ],
+      "gap": "Run a browser assessment and verify the saved result attaches to the same event while assessed/pending counts and visible unassessed entries update together."
+    },
+    {
+      "id": "AC052",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/ui/six-screen-analysis-result-state.test.ts", "testName": "retains partial output through a failed remaining batch", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-screen4-interpretation-tools.test.ts", "testName": "creates, reads, analyzes, rejects undeclared fields, and reopens without fetches", "class": "EXECUTABLE" }
+      ],
+      "gap": "Fail a later FX25 relevance batch and assert source occurrences plus earlier good assessments survive with a typed failure/local-recovery state and no duplicate provider call."
+    },
+    {
+      "id": "AC053",
+      "level": "controlled",
+      "status": "FULL_AUTOMATED",
+      "evidence": [
+        { "path": "tests/core/six-screen-study-design-advice.test.ts", "testName": "G12/E01/H01 enters Screen 4 without fabricating a method decision and freezes an exact Screen 5 handoff", "class": "EXECUTABLE" },
+        { "path": "tests/core/six-screen-causal-comparison.test.ts", "testName": "uses the exact contextual label and makes no differential-group claim after explicit no-selection", "class": "EXECUTABLE" },
+        { "path": "tests/core/six-screen-causal-comparison.test.ts", "testName": "records researcher selection or explicit no-selection without certifying validity", "class": "EXECUTABLE" }
+      ],
+      "gap": null
+    },
+    {
+      "id": "AC054",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/acceptance/ph1-ui-contracts.test.ts", "testName": "AC054 / FX12 acknowledges direct Screen 5 work before the provider completes", "class": "STATIC_SUPPORT" }
+      ],
+      "gap": "Hold the provider promise in a browser, double-click, navigate, and reopen; verify visible preparation and conflicting-action disablement precede dispatch without claiming dispatch already occurred."
+    },
+    {
+      "id": "AC055",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/acceptance/ph1-ui-contracts.test.ts", "testName": "AC055 / FX11 distinguishes ready, retrieval, and rate-limit wait labels", "class": "STATIC_SUPPORT" }
+      ],
+      "gap": "Render and persist every phase in a browser, including next-eligible time, and run an authorized retrieval sequence without mistaking eligibility for consent."
+    },
+    {
+      "id": "AC056",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/ui/six-screen-app.test.tsx", "testName": "shows saved Stage A hypotheses while keeping source support pending", "class": "SSR_SUPPORT" }
+      ],
+      "gap": "Verify in a browser that provisional alternatives appear immediately after Stage A, remain explicitly labelled as hypotheses while literature is pending, and do not count the focal reference as an alternative or imply source support."
+    },
+    {
+      "id": "AC057",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/six-screen-openai-runtime.test.ts", "testName": "authorizes each revised mechanism job in-tool without PowerShell job coordinates", "class": "EXECUTABLE" },
+        { "path": "tests/ui/six-screen-app.test.tsx", "testName": "offers in-tool authorization for the current revised mechanism job", "class": "SSR_SUPPORT" }
+      ],
+      "gap": "Assert the exact edited focal wording binds the new job, the prior job remains historical, and S6 dependency state is updated without any external job-ID configuration."
+    },
+    {
+      "id": "AC058",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen05-study-first-mechanism.test.ts", "testName": "keeps a provider failure partial and metadata-only evidence unable to start synthesis", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-openai-runtime.test.ts", "testName": "retries total source failure from the saved Stage A plan", "class": "EXECUTABLE" },
+        { "path": "tests/ui/six-screen-mechanism-literature-plan-render.test.tsx", "testName": "renders metadata leads without implying that scholarly text was inspected", "class": "SSR_SUPPORT" }
+      ],
+      "gap": "Run FX27 through the full saved workspace and assert partial literature plus predictions retain access limitations and never become detailed support or a no-scholarship claim."
+    },
+    {
+      "id": "AC059",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/screen5-v13-contract.test.ts", "testName": "merges five validated batches into eleven stable cards and keyed cells", "class": "EXECUTABLE" },
+        { "path": "tests/core/six-screen-mechanism-literature-plan.test.ts", "testName": "records an explicit undecided state without manufacturing extra mechanisms", "class": "EXECUTABLE" }
+      ],
+      "gap": "Add FX11 redundant/ambiguous outputs and assert duplicates are merged or rejected with history, no quota filling occurs, and neither a forced sign nor a true-mechanism claim is emitted."
+    },
+    {
+      "id": "AC060",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/acceptance/ph1-rendered-workflow.test.tsx", "testName": "AC060 / FX13 keeps Screen 6 compact before model generation", "class": "SSR_SUPPORT" }
+      ],
+      "gap": "Run keyboard, responsive, and true-200%-zoom checks for hierarchy, the single action, and the readable expanded evidence disclosure."
+    },
+    {
+      "id": "AC061",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/core/screen6-current-plan.test.ts", "testName": "uses every validated contextual field in the visible and exported guidance", "class": "SSR_SUPPORT" },
+        { "path": "tests/browser/screen56-current-plan.spec.ts", "testName": "Screen 6 withholds details until one generated plan is saved, then exports it", "class": "DISCOVERED_NOT_RUN" }
+      ],
+      "gap": "Execute the browser spec and assert one current plan, no second near-duplicate baseline in the default view, concise priorities/dimensions, and proper limits."
+    },
+    {
+      "id": "AC062",
+      "level": "controlled",
+      "status": "FULL_AUTOMATED",
+      "evidence": [
+        { "path": "tests/acceptance/ph1-rendered-workflow.test.tsx", "testName": "AC062 / FX13 / FX17 / MU09 does not repeat full coverage text in main or readable export", "class": "EXECUTABLE" },
+        { "path": "tests/core/screen6-current-plan.test.ts", "testName": "keeps complete repeated legal propositions in evidence without copying them into main guidance", "class": "EXECUTABLE" }
+      ],
+      "gap": null
+    },
+    {
+      "id": "AC063",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/core/screen6-current-plan.test.ts", "testName": "keeps complete repeated legal propositions in evidence without copying them into main guidance", "class": "EXECUTABLE" },
+        { "path": "tests/worker/screen3-contextualizer.test.ts", "testName": "keeps operative duties and baseline despite many exceptions and reports omissions", "class": "EXECUTABLE" }
+      ],
+      "gap": "Apply the FX01/FX19 semantic-loss mutation and assert detection or an honest gap fallback, including that unknown eligibility never becomes false or zero."
+    },
+    {
+      "id": "AC064",
+      "level": "controlled",
+      "status": "FULL_AUTOMATED",
+      "evidence": [
+        { "path": "tests/core/screen06-uncertainty-profile.test.ts", "testName": "opens from a current confirmed identity and preserves missing Screens 2–5 as gaps", "class": "EXECUTABLE" },
+        { "path": "tests/core/screen06-uncertainty-profile.test.ts", "testName": "initializes all ten dimensions without diagnostics, results, scoring, or certification", "class": "EXECUTABLE" },
+        { "path": "tests/core/screen6-current-plan.test.ts", "testName": "admits bounded prospective supplements and rejects invented results or IDs", "class": "EXECUTABLE" }
+      ],
+      "gap": null
+    },
+    {
+      "id": "AC065",
+      "level": "controlled",
+      "status": "FULL_AUTOMATED",
+      "evidence": [
+        { "path": "tests/core/screen6-current-plan.test.ts", "testName": "reads historical v1 supplements with current local summaries and no extra request", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-workflow-optional-isolation.test.ts", "testName": "keeps genuine current and historical Screen 6 wires bound to their receipts", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-workflow-optional-isolation.test.ts", "testName": "fully validates current Screen 6 IDs and bounds historical wires", "class": "EXECUTABLE" }
+      ],
+      "gap": null
+    },
+    {
+      "id": "AC066",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/core/six-screen-causal-comparison.test.ts", "testName": "records researcher selection or explicit no-selection without certifying validity", "class": "EXECUTABLE" },
+        { "path": "tests/core/six-screen-study-design-advice.test.ts", "testName": "G12/E01/H01 enters Screen 4 without fabricating a method decision and freezes an exact Screen 5 handoff", "class": "EXECUTABLE" }
+      ],
+      "gap": "Render FX01/FX18 in a browser and verify proposed groups, explicit decision/no-selection, and readiness copy never imply sample exposure or force a method choice."
+    },
+    {
+      "id": "AC067",
+      "level": "controlled",
+      "status": "FULL_AUTOMATED",
+      "evidence": [
+        { "path": "tests/core/screen6-current-plan.test.ts", "testName": "uses every validated contextual field in the visible and exported guidance", "class": "EXECUTABLE" },
+        { "path": "tests/core/screen6-current-plan.test.ts", "testName": "reads historical v1 supplements with current local summaries and no extra request", "class": "EXECUTABLE" },
+        { "path": "tests/core/six-screen-workflow-research-export.test.ts", "testName": "creates a manifest-bound partial bundle after identity confirmation", "class": "EXECUTABLE" }
+      ],
+      "gap": null
+    },
+    {
+      "id": "AC068",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/core/six-screen-workflow.test.ts", "testName": "makes confirmation researcher-owned and blocks model or system confirmation", "class": "EXECUTABLE" },
+        { "path": "tests/core/six-screen-workflow.test.ts", "testName": "blocks Screen 2 until the exact displayed identity is confirmed", "class": "EXECUTABLE" },
+        { "path": "tests/core/six-screen-workflow.test.ts", "testName": "invalidates confirmation and archives downstream artifacts when identity evidence changes", "class": "EXECUTABLE" }
+      ],
+      "gap": "Add one integrated two-similar-stage sequence that rejects one identity, confirms the other, attempts a wrong-policy handoff, and asserts every researcher study field is byte-equivalent throughout."
+    },
+    {
+      "id": "AC069",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/worker/six-screen-workflow-store.test.ts", "testName": "preserves the named CCPA study through explicit confirmation and a usable retained-document Screen 2 handoff", "class": "IN_MEMORY_ONLY" },
+        { "path": "tests/worker/six-screen-workflow-store.test.ts", "testName": "rejects stale state writes while a status read remains mutation-free", "class": "IN_MEMORY_ONLY" },
+        { "path": "tests/ui/six-screen-app.test.tsx", "testName": "restores a canonical confirmed run into automatic bounded Screen 2 research", "class": "SSR_SUPPORT" }
+      ],
+      "gap": "Add one initial-entry/revisit sequence that proves the authorized standard plan starts once, later reads never replay search, and partial evidence remains byte-equivalent."
+    },
+    {
+      "id": "AC070",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/ui/six-screen-app.test.tsx", "testName": "restores exact source-linked timing claims without collapsing legal effect into implementation", "class": "SSR_SUPPORT" },
+        { "path": "tests/core/screen02-screen03-handoff.test.ts", "testName": "carries the exact Screen 1 baseline, one locked event, sources, methods, open work, and append-only history", "class": "EXECUTABLE" }
+      ],
+      "gap": "Run Screen 2 through partial Screen 3 handoff in a browser and verify chronology/version/source distinctions without an Event Card lock, dataset gate, or automatic legal-date choice."
+    },
+    {
+      "id": "AC071",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/core/six-screen-study-design-advice.test.ts", "testName": "binds Screen 3 science to the active shock construct, not historical wording or a progress revision", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-tools.test.ts", "testName": "accepts serialized create/read/update/resolve/confirm responses and reconciles replayed or delayed receipts", "class": "EXECUTABLE" }
+      ],
+      "gap": "Extend the legacy intendedConstruct fixture through Screens 4, 5, 6 and the readable export, including a focal-text edit, and assert that every downstream packet retains policySideConcept and the exact finalized focal wording unless the researcher explicitly promotes legacy text."
+    },
+    {
+      "id": "AC072",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/core/screen03-workflow.test.ts", "testName": "opens and integrates research for the maximum 100-source Audit v4 handoff", "class": "EXECUTABLE" },
+        { "path": "tests/worker/screen03-interpretation.test.ts", "testName": "keeps the serialized compact model packet within its UTF-8 byte budget", "class": "EXECUTABLE" },
+        { "path": "tests/worker/six-screen-workflow-optional-isolation.test.ts", "testName": "fully validates current Screen 6 IDs and bounds historical wires", "class": "EXECUTABLE" }
+      ],
+      "gap": "Add one FX17 large-history test spanning response, compact display, and private paged/reference storage, with no evidence loss or response mismatch and explicit limit reporting."
+    },
+    {
+      "id": "AC073",
+      "level": "controlled",
+      "status": "FULL_AUTOMATED",
+      "evidence": [
+        { "path": "tests/worker/screen03-workflow-runtime.test.ts", "testName": "filters hostile source instructions before the host packet without exposing secrets or changing the tool boundary", "class": "EXECUTABLE" },
+        { "path": "tests/worker/screen04-govinfo-event-search.test.ts", "testName": "reports upstream failures and rejects redirects and oversized bodies", "class": "EXECUTABLE" },
+        { "path": "tests/worker/screen01-webpage-identity.test.ts", "testName": "rejects private or credential-bearing destinations and redirects", "class": "EXECUTABLE" }
+      ],
+      "gap": null
+    },
+    {
+      "id": "AC074",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/browser/six-screen-screen01-screen02.spec.ts", "testName": "CCPA supplied-source journey preserves study semantics, opens retained-evidence Screen 2, and keeps responsive navigation state", "class": "DISCOVERED_NOT_RUN" },
+        { "path": "tests/browser/screen5-openai-runtime.spec.ts", "testName": "same saved host run migrates through the normal direct UI and renders mechanisms", "class": "DISCOVERED_NOT_RUN" },
+        { "path": "tests/browser/screen56-current-plan.spec.ts", "testName": "Screen 6 withholds details until one generated plan is saved, then exports it", "class": "DISCOVERED_NOT_RUN" }
+      ],
+      "gap": "Run one continuous CCPA-shaped browser journey across all six screens with before/running/result/recovery/reopen captures and no policy-memory filler."
+    },
+    {
+      "id": "AC075",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/browser/six-screen-screen01-screen02.spec.ts", "testName": "Order 841 opens the study-first Screen 2 handoff and restores useful Screen 3 guidance", "class": "DISCOVERED_NOT_RUN" }
+      ],
+      "gap": "Extend and execute the FERC/Order-841 journey through Screens 4–6, assert no CCPA defaults or special generation path, and verify policy-bound evidence plus study-specific guidance on every screen."
+    },
+    {
+      "id": "AC076",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/worker/screen04-study-first-investigation.test.ts", "testName": "SRC4-11 reviews synthetic precision and recall separately across policy, hazard, and sector cases", "class": "EXECUTABLE" }
+      ],
+      "gap": "Run held-out FX18/FX19/FX20/FX27 variants through every affected browser screen and assert exact context, conditional usefulness, and no manufactured certainty or quota filling."
+    },
+    {
+      "id": "AC077",
+      "level": "browser_controlled",
+      "status": "BROWSER_BLOCKED",
+      "evidence": [
+        { "path": "tests/browser/six-screen-screen01-screen02.spec.ts", "testName": "uses the actual embedded width for the sidebar, compact rail, and phone selector", "class": "DISCOVERED_NOT_RUN" }
+      ],
+      "gap": "Execute desktop and narrow layouts plus actual browser 200% zoom; deviceScaleFactor or CSS-width simulation alone cannot satisfy this case."
+    },
+    {
+      "id": "AC078",
+      "level": "local_persistence",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/scripts/local-persistence-restart.test.ts", "testName": "uses one guarded temporary persistence root across two Wrangler processes", "class": "STATIC_SUPPORT" },
+        { "path": "tests/scripts/local-persistence-restart.test.ts", "testName": "uses the production Durable Object, store, runtime and registered MCP tools", "class": "STATIC_SUPPORT" },
+        { "path": "tests/worker/six-screen-workflow-store.test.ts", "testName": "rejects stale state writes while a status read remains mutation-free", "class": "IN_MEMORY_ONLY" },
+        { "path": "tests/worker/screen5-openai-ledger.test.ts", "testName": "keeps an unknown outcome held across store recreation", "class": "IN_MEMORY_ONLY" }
+      ],
+      "executionIds": ["local-persistence-restart-2026-09-25"],
+      "gap": "The real restart gate proves baseline canonical workflow persistence only. Add actual receipt, partial-search, proposal-checkpoint, and hold mutations across restart, with invocation counts proving zero duplicate dispatch; also cover an in-flight restart/two-tab race."
+    },
+    {
+      "id": "AC079",
+      "level": "local_persistence",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/scripts/local-persistence-restart.test.ts", "testName": "uses one guarded temporary persistence root across two Wrangler processes", "class": "STATIC_SUPPORT" },
+        { "path": "tests/worker/six-screen-research-task-store.test.ts", "testName": "retains a bounded ambiguous source hold without consuming unrelated step budget", "class": "IN_MEMORY_ONLY" },
+        { "path": "tests/worker/host-reasoning-task-workflow.test.ts", "testName": "coexists on one Durable Object backend and follows cleanup retirement order", "class": "IN_MEMORY_ONLY" }
+      ],
+      "executionIds": ["local-persistence-restart-2026-09-25"],
+      "gap": "The real restart gate did not schedule task work. Add due cleanup plus eligible work, callback redelivery, lease expiry, and restart assertions proving no overwritten alarm, no resurrection, and exactly one start for eligible undispatched work."
+    },
+    {
+      "id": "AC080",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/scripts/release-gate-evidence.test.ts", "testName": "binds the exact inventory, report, HEAD, and Axe evidence to the release", "class": "STATIC_SUPPORT" },
+        { "path": "tests/scripts/release-gate-evidence.test.ts", "testName": "rejects discovery-only, grep-filtered, and file-selected invocations", "class": "STATIC_SUPPORT" },
+        { "path": "tests/scripts/integrated-repair-runner.test.ts", "testName": "tracks the exact 60 discovered browser tests without claiming execution", "class": "STATIC_SUPPORT" }
+      ],
+      "gap": "Freeze the final clean commit/tree, run the complete prescribed suite including browser and local restart gates, and record exact commands, exit codes, logs, and explicit skip reasons."
+    },
+    {
+      "id": "AC081",
+      "level": "owner_host",
+      "status": "OWNER_BLOCKED",
+      "evidence": [],
+      "gap": "Use the real original owner study and authenticated store to prove recovery without model calls, .wrangler reset, accounting loss, or unexplained mutation."
+    },
+    {
+      "id": "AC082",
+      "level": "owner_host",
+      "status": "OWNER_BLOCKED",
+      "evidence": [
+        { "path": "tests/ui/six-screen-host-task-bridge.test.ts", "testName": "accepts a delayed compatibility globals result and removes its listener", "class": "EXECUTABLE" },
+        { "path": "tests/ui/six-screen-host-task-bridge.test.ts", "testName": "registers standards-host result and cancellation handlers before connect", "class": "EXECUTABLE" }
+      ],
+      "gap": "Run the signed-in original panel through the existing tunnel; a direct browser/control harness cannot substitute for this owner-host acceptance."
+    },
+    {
+      "id": "AC083",
+      "level": "live_quality",
+      "status": "LIVE_NOT_RUN",
+      "evidence": [],
+      "gap": "After separate authorization, execute bounded logged live calls and semantic review; stop on unknown outcomes and keep every untested task explicitly not run."
+    },
+    {
+      "id": "AC084",
+      "level": "delivery",
+      "status": "DELIVERY_NOT_AUTHORIZED",
+      "evidence": [
+        { "path": "tests/scripts/integrated-repair-runner.test.ts", "testName": "binds verification to a clean exact published branch, commit, and tree", "class": "STATIC_SUPPORT" },
+        { "path": "tests/scripts/local-chatgpt-preview.test.ts", "testName": "keeps every helper free of deployment and production mutation commands", "class": "STATIC_SUPPORT" }
+      ],
+      "gap": "Obtain authorization for the exact new tree, publish only to preview, verify the served build, and then provide an owner update that does not instruct pulling an unpublished commit."
+    },
+    {
+      "id": "AC085",
+      "level": "controlled",
+      "status": "PARTIAL",
+      "evidence": [
+        { "path": "tests/scripts/integrated-repair-runner.test.ts", "testName": "binds verification to a clean exact published branch, commit, and tree", "class": "STATIC_SUPPORT" }
+      ],
+      "gap": "Add a meta-test for the durable progress record that resumes at the next exact command without rerunning completed work, overwriting newer commits, duplicating a paid probe, or hiding unfinished gates."
+    }
+  ]
+}

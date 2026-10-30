@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "shockaudit-screen2-production-expansion-evaluation-v0404",
+  "candidateCommit": "FULL_CANDIDATE_COMMIT",
+  "appVersion": "PACKAGE_VERSION",
+  "reviewer": "SEARCH_REVIEWER",
+  "reviewedAt": null,
+  "endpointClass": "production",
+  "productionEndpoint": "PRODUCTION_ENDPOINT_REFERENCE",
+  "screen2ExpansionMode": "on",
+  "exactHeadVerified": false,
+  "caseCount": 0,
+  "findAndAuditCovered": false,
+  "protectedBaselineParity": false,
+  "baselineZeroResultRegressions": 0,
+  "auditAnchorChanges": 0,
+  "unreachableContinuations": 0,
+  "recallDeltaPercentagePoints": 0,
+  "p95AddedLatencyMilliseconds": 0,
+  "latencyBudgetMilliseconds": 0,
+  "p95AddedCostUnits": 0,
+  "costBudgetUnits": 0
+}
