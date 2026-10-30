@@ -1,0 +1,15 @@
+interface:
+  display_name: "Screen 3 Shock Briefing"
+  short_description: "Compatibility for historical Screen 3 briefings"
+  default_prompt: "Use $screen3-shock-briefing only to continue a retained v0.3.14 or v0.3.15 Screen 3 host-briefing workflow."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "shockaudit"
+      description: "Existing ShockAudit production MCP server"
+      transport: "streamable_http"
+      url: "https://shockaudit.ainp-research.workers.dev/mcp"
+
+policy:
+  allow_implicit_invocation: false
