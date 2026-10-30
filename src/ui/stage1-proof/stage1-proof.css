@@ -1,0 +1,341 @@
+.stage1-proof-shell {
+  min-height: 100vh;
+  padding: clamp(20px, 4vw, 52px);
+  color: #18231f;
+  background:
+    radial-gradient(circle at 90% 5%, rgba(31, 126, 91, 0.09), transparent 30%),
+    #f7f9f7;
+}
+
+.stage1-proof-shell button,
+.stage1-proof-shell a {
+  font: inherit;
+}
+
+.stage1-proof-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto 22px;
+}
+
+.stage1-proof-header h1 {
+  margin: 7px 0 8px;
+  font-size: clamp(28px, 4vw, 46px);
+  letter-spacing: -0.035em;
+}
+
+.stage1-proof-header p {
+  max-width: 760px;
+  margin: 0;
+  color: #53625c;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.stage1-proof-kicker,
+.stage1-proof-section-heading > span,
+.stage1-proof-judgment > span,
+.stage1-proof-gate > span {
+  color: #1d6c50;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.stage1-proof-secondary,
+.stage1-proof-status button {
+  align-self: flex-start;
+  border: 1px solid #226d53;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  background: #226d53;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.stage1-proof-secondary {
+  color: #226d53;
+  background: transparent;
+}
+
+.stage1-proof-shell button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.stage1-proof-boundary,
+.stage1-proof-study,
+.stage1-proof-status,
+.stage1-proof-assessment,
+.stage1-proof-errors,
+.stage1-proof-receipt {
+  max-width: 1100px;
+  margin: 0 auto 18px;
+  border: 1px solid #dae2dd;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 32px rgba(30, 52, 43, 0.055);
+}
+
+.stage1-proof-boundary {
+  display: flex;
+  gap: 12px;
+  padding: 14px 17px;
+  color: #43534d;
+  background: #edf5f1;
+}
+
+.stage1-proof-boundary strong {
+  flex: 0 0 auto;
+  color: #1d5f49;
+}
+
+.stage1-proof-study,
+.stage1-proof-assessment,
+.stage1-proof-errors {
+  padding: clamp(20px, 3vw, 32px);
+}
+
+.stage1-proof-section-heading h2,
+.stage1-proof-errors h2 {
+  margin: 5px 0 20px;
+  font-size: 24px;
+}
+
+.stage1-proof-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.stage1-proof-facts > div {
+  padding: 13px 14px;
+  border-radius: 11px;
+  background: #f5f7f5;
+}
+
+.stage1-proof-facts dt,
+.stage1-proof-receipt dt {
+  margin-bottom: 4px;
+  color: #65736d;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.stage1-proof-facts dd,
+.stage1-proof-receipt dd {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.stage1-proof-claims {
+  margin-top: 22px;
+}
+
+.stage1-proof-claims h3,
+.stage1-proof-concern h3 {
+  margin: 0 0 9px;
+  font-size: 15px;
+}
+
+.stage1-proof-claims ul,
+.stage1-proof-concern ol,
+.stage1-proof-errors ul {
+  margin: 0;
+  padding-left: 21px;
+  color: #46564f;
+  line-height: 1.55;
+}
+
+.stage1-proof-sources {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.stage1-proof-sources a {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border: 1px solid #d9e5df;
+  border-radius: 10px;
+  padding: 12px 13px;
+  color: #155e45;
+  text-decoration: none;
+}
+
+.stage1-proof-sources a:hover {
+  background: #f1f7f4;
+}
+
+.stage1-proof-sources span {
+  color: #6a7872;
+  font-size: 12px;
+}
+
+.stage1-proof-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 20px;
+}
+
+.stage1-proof-status > div {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.stage1-proof-status strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.stage1-proof-status p {
+  margin: 0;
+  color: #596860;
+  line-height: 1.45;
+}
+
+.stage1-proof-status-dot {
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: #b48420;
+  box-shadow: 0 0 0 5px rgba(180, 132, 32, 0.12);
+}
+
+.stage1-proof-status-completed .stage1-proof-status-dot {
+  background: #1c875f;
+  box-shadow: 0 0 0 5px rgba(28, 135, 95, 0.12);
+}
+
+.stage1-proof-status-rejected .stage1-proof-status-dot,
+.stage1-proof-status-delivery-rejected .stage1-proof-status-dot,
+.stage1-proof-status-timed-out .stage1-proof-status-dot {
+  background: #b24848;
+  box-shadow: 0 0 0 5px rgba(178, 72, 72, 0.12);
+}
+
+.stage1-proof-judgment {
+  margin-bottom: 18px;
+  border: 1px solid #cfe1d8;
+  border-radius: 12px;
+  padding: 16px;
+  background: #eff7f3;
+}
+
+.stage1-proof-judgment strong,
+.stage1-proof-gate strong {
+  display: block;
+  margin: 5px 0;
+  font-size: 21px;
+}
+
+.stage1-proof-judgment p,
+.stage1-proof-gate p {
+  margin: 0;
+  color: #57665f;
+}
+
+.stage1-proof-components {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stage1-proof-components article {
+  border: 1px solid #e0e6e2;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.stage1-proof-components article > span {
+  display: block;
+  color: #69766f;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.stage1-proof-components article > strong {
+  display: block;
+  margin: 6px 0 9px;
+  font-size: 18px;
+}
+
+.stage1-proof-components p,
+.stage1-proof-concern p {
+  margin: 0;
+  color: #46564f;
+  line-height: 1.52;
+}
+
+.stage1-proof-concern {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.stage1-proof-concern h3:nth-of-type(2) {
+  margin-top: 10px;
+}
+
+.stage1-proof-gate {
+  margin-top: 20px;
+  border-top: 1px solid #e1e6e3;
+  padding-top: 18px;
+}
+
+.stage1-proof-errors {
+  border-color: #e8caca;
+  background: #fff8f8;
+}
+
+.stage1-proof-receipt {
+  padding: 14px 18px;
+}
+
+.stage1-proof-receipt summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.stage1-proof-receipt dl {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 0;
+}
+
+.stage1-proof-receipt dd {
+  overflow-wrap: anywhere;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .stage1-proof-header,
+  .stage1-proof-status {
+    flex-direction: column;
+  }
+
+  .stage1-proof-facts,
+  .stage1-proof-sources,
+  .stage1-proof-components {
+    grid-template-columns: 1fr;
+  }
+
+  .stage1-proof-status button {
+    width: 100%;
+  }
+}

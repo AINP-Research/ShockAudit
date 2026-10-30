@@ -1,0 +1,47 @@
+.host-task {
+  align-items: center;
+  background: color-mix(in srgb, var(--color-background-secondary, #f5f5f3) 88%, transparent);
+  border: 1px solid var(--color-border-secondary, #d8d8d2);
+  border-radius: 12px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-block: 16px;
+  padding: 16px;
+}
+
+.host-task h2,
+.host-task p {
+  margin: 0;
+}
+
+.host-task h2 {
+  font-size: 1rem;
+}
+
+.host-task p {
+  margin-top: 4px;
+}
+
+.host-task__actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.host-task button {
+  min-height: 44px;
+}
+
+.host-task button:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .host-task {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
