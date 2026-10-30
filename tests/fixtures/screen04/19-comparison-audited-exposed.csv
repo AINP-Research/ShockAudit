@@ -1,9 +1,0 @@
-unit_id,year,group,covered
-A,2019,T,no
-A,2020,T,yes
-B,2019,C,no
-B,2020,C,yes
-C,2019,C,no
-C,2020,C,yes
-D,2019,C,no
-D,2020,C,no

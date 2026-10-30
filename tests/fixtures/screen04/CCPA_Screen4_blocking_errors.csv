@@ -1,6 +1,0 @@
-GVKEY,Year,ProposedGroup,DoesBusinessCA,Revenue2017M,DataVolumeThousands,Exempt,CCPAApplicabilityStatus,OrganizationLevel
-A,2019,T,yes,30,60,no,Eligible,parent-company
-A,2020,T,yes,30,60,no,Eligible,parent-company
-A,2020,T,yes,30,60,no,Eligible,parent-company
-B,2019,C,no,10,10,no,Not eligible,parent-company
-B,2020,T,no,10,10,no,Not eligible,parent-company
