@@ -1,0 +1,35 @@
+{
+  "description": "Actual public official responses captured during bounded v0.4.06 source review, retained losslessly as deterministic gzip offline fixtures. Each sha256 and bytes field describes the original HTTP response body after decompression; encodedSha256 and encodedBytes describe the stored gzip file. They are not live or signed-in host evidence.",
+  "sources": [
+    {
+      "file": "utah-bill.html.gz",
+      "url": "https://le.utah.gov/~2022/bills/static/SB0227.html",
+      "sha256": "ab25e563b494bf928efd9fdb594feb11e570fd99a61dc5af6f6c202a5a89e563",
+      "bytes": 54777,
+      "encoding": "gzip",
+      "gzipMtime": 0,
+      "encodedBytes": 9859,
+      "encodedSha256": "fc679fd495b3f5221e8bf266e375fc3efc6f1e94455a5a0ad7d7619474ccf091"
+    },
+    {
+      "file": "harvey-advisory.html.gz",
+      "url": "https://www.nhc.noaa.gov/archive/2017/al09/al092017.public_a.023.shtml",
+      "sha256": "cdedd83f8cebcf321605a90359091da1bd4f22462a3836e46baf8423c705253f",
+      "bytes": 28008,
+      "encoding": "gzip",
+      "gzipMtime": 0,
+      "encodedBytes": 7110,
+      "encodedSha256": "f46274dbc1d72f6a56e221d4a40229c416e9b38788661bbf1c6cdd6dafbed825"
+    },
+    {
+      "file": "gdpr-eurlex.html.gz",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+      "sha256": "1f3d70cfc94ff30cd1821aa2e40ed6359861c20aa143ada4767ebfd1e96c1d6d",
+      "bytes": 1069265,
+      "encoding": "gzip",
+      "gzipMtime": 0,
+      "encodedBytes": 131652,
+      "encodedSha256": "a894ffb9ade33c62df3c3a4a6b0a20737f6aa0dfb77ca6ac747a08259d9b95ed"
+    }
+  ]
+}

@@ -1,0 +1,808 @@
+{
+  "schema_version": "shockaudit-action-policy-traceability-spec-v1",
+  "package_id": "shockaudit-local-handoff-recovery-2026-09-25-r1",
+  "status": "NOT_RUN",
+  "requirement_count": 32,
+  "requirements": [
+    {
+      "id": "RQ01",
+      "requirement": "Preserve current local preview baseline and unpublished work",
+      "spec_file": "00_READ_FIRST.md",
+      "acceptance_case_ids": [
+        "AC073",
+        "AC078",
+        "AC079"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ02",
+      "requirement": "Separate screenshot observations, reported findings and the unverified initiating exception",
+      "spec_file": "02_DIAGNOSIS_AND_EVIDENCE_REGISTER.md",
+      "acceptance_case_ids": [
+        "AC011",
+        "AC075"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ03",
+      "requirement": "Real ordinary 2020 handoff reaches Screen 3 without model or new source work",
+      "spec_file": "04_HANDOFF_RECOVERY_AND_CONCURRENCY.md",
+      "acceptance_case_ids": [
+        "AC001",
+        "AC002",
+        "AC003",
+        "AC004",
+        "AC006",
+        "AC022",
+        "AC053",
+        "AC055",
+        "AC070",
+        "AC074"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ04",
+      "requirement": "Strict schema-aware payload serialization and valid alternate timing branches",
+      "spec_file": "04_HANDOFF_RECOVERY_AND_CONCURRENCY.md",
+      "acceptance_case_ids": [
+        "AC001",
+        "AC003",
+        "AC004",
+        "AC005",
+        "AC006",
+        "AC007",
+        "AC008",
+        "AC009",
+        "AC010",
+        "AC011",
+        "AC012"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ05",
+      "requirement": "Classify typed errors before presentation; bounded legacy adaptation",
+      "spec_file": "03_STRUCTURED_ERROR_AND_OPERATION_CONTRACT.md",
+      "acceptance_case_ids": [
+        "AC013",
+        "AC014",
+        "AC015",
+        "AC016",
+        "AC017",
+        "AC018",
+        "AC042"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ06",
+      "requirement": "Cover registered pre-handler and post-commit output error surfaces",
+      "spec_file": "05_PROJECTION_ISOLATION_AND_COMPATIBILITY.md",
+      "acceptance_case_ids": [
+        "AC011",
+        "AC012",
+        "AC013",
+        "AC014",
+        "AC017",
+        "AC042"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ07",
+      "requirement": "Complete action-policy registry drives all consequential callers",
+      "spec_file": "03_STRUCTURED_ERROR_AND_OPERATION_CONTRACT.md",
+      "acceptance_case_ids": [
+        "AC002",
+        "AC019",
+        "AC020",
+        "AC058",
+        "AC060",
+        "AC077"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ08",
+      "requirement": "Authorized durable operation receipts reflect atomic or tested staged effects",
+      "spec_file": "03_STRUCTURED_ERROR_AND_OPERATION_CONTRACT.md",
+      "acceptance_case_ids": [
+        "AC001",
+        "AC014",
+        "AC021",
+        "AC022",
+        "AC023",
+        "AC024",
+        "AC028",
+        "AC031",
+        "AC036",
+        "AC037",
+        "AC038",
+        "AC041",
+        "AC043",
+        "AC071"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ09",
+      "requirement": "Idempotent exact replay, semantic payload identity and rejected-attempt lineage",
+      "spec_file": "04_HANDOFF_RECOVERY_AND_CONCURRENCY.md",
+      "acceptance_case_ids": [
+        "AC021",
+        "AC022",
+        "AC023",
+        "AC024",
+        "AC025",
+        "AC031",
+        "AC032",
+        "AC040"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ10",
+      "requirement": "At most one safe local revision rebase; no silent conflicting overwrite",
+      "spec_file": "04_HANDOFF_RECOVERY_AND_CONCURRENCY.md",
+      "acceptance_case_ids": [
+        "AC015",
+        "AC025",
+        "AC026",
+        "AC027",
+        "AC032"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ11",
+      "requirement": "Unknown commit and external outcomes remain unknown until authoritative resolution",
+      "spec_file": "03_STRUCTURED_ERROR_AND_OPERATION_CONTRACT.md",
+      "acceptance_case_ids": [
+        "AC028",
+        "AC029",
+        "AC030",
+        "AC056",
+        "AC060",
+        "AC063",
+        "AC071",
+        "AC079"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ12",
+      "requirement": "Draft/view generations, duplicate actions, late responses and widget persistence stay independent",
+      "spec_file": "04_HANDOFF_RECOVERY_AND_CONCURRENCY.md",
+      "acceptance_case_ids": [
+        "AC006",
+        "AC010",
+        "AC026",
+        "AC031",
+        "AC032",
+        "AC033",
+        "AC034",
+        "AC035",
+        "AC036",
+        "AC047",
+        "AC061",
+        "AC069"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ13",
+      "requirement": "Committed study and available guidance are separate; local idempotent rebuild",
+      "spec_file": "05_PROJECTION_ISOLATION_AND_COMPATIBILITY.md",
+      "acceptance_case_ids": [
+        "AC022",
+        "AC037",
+        "AC040",
+        "AC041",
+        "AC056",
+        "AC065"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ14",
+      "requirement": "Optional projection failure is isolated; critical canonical corruption fails closed",
+      "spec_file": "05_PROJECTION_ISOLATION_AND_COMPATIBILITY.md",
+      "acceptance_case_ids": [
+        "AC037",
+        "AC038",
+        "AC039",
+        "AC045",
+        "AC046",
+        "AC047",
+        "AC065"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ15",
+      "requirement": "Compact status read is authorized, reliable and free of task side effects",
+      "spec_file": "05_PROJECTION_ISOLATION_AND_COMPATIBILITY.md",
+      "acceptance_case_ids": [
+        "AC020",
+        "AC028",
+        "AC037",
+        "AC039",
+        "AC040",
+        "AC043",
+        "AC046",
+        "AC047",
+        "AC054"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ16",
+      "requirement": "Both bridge paths and supported historical schemas preserve strict bindings",
+      "spec_file": "05_PROJECTION_ISOLATION_AND_COMPATIBILITY.md",
+      "acceptance_case_ids": [
+        "AC009",
+        "AC015",
+        "AC029",
+        "AC035",
+        "AC042",
+        "AC044",
+        "AC045",
+        "AC047"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ17",
+      "requirement": "Checkout, backend, widget and response build identity are separately verified",
+      "spec_file": "11_WINDOWS_HANDOFF_AND_PUBLICATION.md",
+      "acceptance_case_ids": [
+        "AC044",
+        "AC073",
+        "AC074",
+        "AC078"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ18",
+      "requirement": "Immediate task-local handoff feedback separates field errors and technical failures",
+      "spec_file": "06_CROSS_SCREEN_PRESERVATION_AND_UI.md",
+      "acceptance_case_ids": [
+        "AC001",
+        "AC007",
+        "AC008",
+        "AC012",
+        "AC030",
+        "AC031",
+        "AC033",
+        "AC034",
+        "AC044",
+        "AC048",
+        "AC049",
+        "AC050",
+        "AC062",
+        "AC080"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ19",
+      "requirement": "Same-location recovery action clears only the matching error after verified recovery",
+      "spec_file": "06_CROSS_SCREEN_PRESERVATION_AND_UI.md",
+      "acceptance_case_ids": [
+        "AC013",
+        "AC030",
+        "AC034",
+        "AC036",
+        "AC041",
+        "AC048",
+        "AC049",
+        "AC050",
+        "AC080"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ20",
+      "requirement": "Screens 1–2 identity, evidence, partial handoff and read-only return are preserved",
+      "spec_file": "17_PRIOR_REPAIR_PRESERVATION_SPEC.md",
+      "acceptance_case_ids": [
+        "AC004",
+        "AC052",
+        "AC053",
+        "AC054",
+        "AC070"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ21",
+      "requirement": "Screen 3 conditional guidance, separate critique and source/version clarity are preserved",
+      "spec_file": "17_PRIOR_REPAIR_PRESERVATION_SPEC.md",
+      "acceptance_case_ids": [
+        "AC003",
+        "AC005",
+        "AC051",
+        "AC053",
+        "AC055",
+        "AC056",
+        "AC057",
+        "AC070",
+        "AC076",
+        "AC080"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ22",
+      "requirement": "Screen 4 current-version start/resume, partial evidence and separate relevance are preserved",
+      "spec_file": "17_PRIOR_REPAIR_PRESERVATION_SPEC.md",
+      "acceptance_case_ids": [
+        "AC051",
+        "AC058",
+        "AC059",
+        "AC060",
+        "AC070",
+        "AC076",
+        "AC080"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ23",
+      "requirement": "Screen 5 focal text, direct-task progress, hypothesis/evidence distinction and accounting are preserved",
+      "spec_file": "17_PRIOR_REPAIR_PRESERVATION_SPEC.md",
+      "acceptance_case_ids": [
+        "AC051",
+        "AC061",
+        "AC062",
+        "AC063",
+        "AC068",
+        "AC070",
+        "AC076",
+        "AC080"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ24",
+      "requirement": "Screen 6 no-extra-input compact baseline, one current plan and truthful gaps are preserved",
+      "spec_file": "17_PRIOR_REPAIR_PRESERVATION_SPEC.md",
+      "acceptance_case_ids": [
+        "AC051",
+        "AC064",
+        "AC065",
+        "AC066",
+        "AC070",
+        "AC076",
+        "AC080"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ25",
+      "requirement": "Only true scientific dependencies invalidate outputs; unchanged evidence is reusable",
+      "spec_file": "06_CROSS_SCREEN_PRESERVATION_AND_UI.md",
+      "acceptance_case_ids": [
+        "AC010",
+        "AC026",
+        "AC027",
+        "AC035",
+        "AC045",
+        "AC052",
+        "AC059",
+        "AC061",
+        "AC067",
+        "AC068",
+        "AC069"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ26",
+      "requirement": "Readable export parity and private data/source provenance protections remain intact",
+      "spec_file": "06_CROSS_SCREEN_PRESERVATION_AND_UI.md",
+      "acceptance_case_ids": [
+        "AC018",
+        "AC038",
+        "AC043",
+        "AC052",
+        "AC057",
+        "AC066",
+        "AC067",
+        "AC077"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ27",
+      "requirement": "Offline tests deny unexpected egress and protect secrets and owner storage",
+      "spec_file": "07_REPRODUCTION_AND_TEST_EXECUTION.md",
+      "acceptance_case_ids": [
+        "AC002",
+        "AC016",
+        "AC018",
+        "AC020",
+        "AC039",
+        "AC043",
+        "AC054",
+        "AC056",
+        "AC063",
+        "AC072",
+        "AC073",
+        "AC076",
+        "AC077"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ28",
+      "requirement": "Real browser button, narrow layout, keyboard/focus and actual 200% zoom are exercised",
+      "spec_file": "07_REPRODUCTION_AND_TEST_EXECUTION.md",
+      "acceptance_case_ids": [
+        "AC001",
+        "AC048",
+        "AC050",
+        "AC051",
+        "AC062",
+        "AC064",
+        "AC070",
+        "AC074",
+        "AC077",
+        "AC080"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ29",
+      "requirement": "Real local durable restart preserves committed/pending receipt semantics",
+      "spec_file": "07_REPRODUCTION_AND_TEST_EXECUTION.md",
+      "acceptance_case_ids": [
+        "AC021",
+        "AC029",
+        "AC060",
+        "AC063",
+        "AC071",
+        "AC072"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ30",
+      "requirement": "Full final-candidate tests/build/release evidence is executed and accurately scoped",
+      "spec_file": "07_REPRODUCTION_AND_TEST_EXECUTION.md",
+      "acceptance_case_ids": [
+        "AC019",
+        "AC046",
+        "AC077",
+        "AC079"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ31",
+      "requirement": "Owner and live gates use applicable bounded consent and honest status",
+      "spec_file": "11_WINDOWS_HANDOFF_AND_PUBLICATION.md",
+      "acceptance_case_ids": [
+        "AC072",
+        "AC074",
+        "AC075",
+        "AC076",
+        "AC078"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    },
+    {
+      "id": "RQ32",
+      "requirement": "Checkpoint, exact-tree private publication and usable safe Windows delivery",
+      "spec_file": "11_WINDOWS_HANDOFF_AND_PUBLICATION.md",
+      "acceptance_case_ids": [
+        "AC073",
+        "AC078",
+        "AC079"
+      ],
+      "implementation_status": "NOT_STARTED",
+      "actual_code_paths": [],
+      "evidence": []
+    }
+  ],
+  "action_inventory": {
+    "status": "INCOMPLETE_SEED_REQUIRES_CURRENT_REPOSITORY_ENUMERATION",
+    "is_exhaustive": false,
+    "seed_count": 22,
+    "seeds": [
+      {
+        "id": "AP01",
+        "action_anchor": "create_six_screen_workflow_v1",
+        "classification_seed": "local_state",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Exactly one intended new run under its authenticated idempotent creation policy",
+        "recovery_requirement": "Recover matching creation identity; do not silently create a replacement run on delivery loss",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP02",
+        "action_anchor": "get_six_screen_workflow_v1",
+        "classification_seed": "read_only",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Validated compatible saved state or explicit unavailable modules",
+        "recovery_requirement": "No source/model dispatch or hidden repair; compact status must not depend on failed optional modules",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP03",
+        "action_anchor": "update_study",
+        "classification_seed": "local_state",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Exact submitted fields and relevant bindings saved once",
+        "recovery_requirement": "Typed conflict and matching committed receipt; preserve newer draft",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP04",
+        "action_anchor": "open_screen_2",
+        "classification_seed": "inspect_compound_effects",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Correct confirmed identity and saved entry state",
+        "recovery_requirement": "Classify current explicit research arming separately from read-only sidebar navigation",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP05",
+        "action_anchor": "open_screen_3",
+        "classification_seed": "local_state_no_model_or_new_source",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Exact study/timing/clarifications saved and compatible deterministic guidance available",
+        "recovery_requirement": "Operation-specific receipt lookup, at most one compatible local rebase, or explicit local rebuild",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP06",
+        "action_anchor": "open_screen_4",
+        "classification_seed": "inspect_compound_effects",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Entry/investigation prepared with accurate source-step state",
+        "recovery_requirement": "Do not equate entry with completed source discovery or replay unknown source dispatch",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP07",
+        "action_anchor": "refresh_study_first_events",
+        "classification_seed": "inspect_source_and_local_phases",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Current investigation lineage/step updated with actual checkpoint",
+        "recovery_requirement": "Bounded explicit source continuation and preserved unknown outcomes",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP08",
+        "action_anchor": "open_screen_5",
+        "classification_seed": "inspect_local_entry_effects",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Correct policy/outcome/focal context available with upstream gaps",
+        "recovery_requirement": "No hidden model request from entry/status; local receipt recovery",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP09",
+        "action_anchor": "open_screen_6",
+        "classification_seed": "inspect_local_entry_effects",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Current conditional baseline available; missing upstream work explicit",
+        "recovery_requirement": "Optional plan projection must not block core status; model generation separate",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP10",
+        "action_anchor": "personalize_screen3_advice",
+        "classification_seed": "model_or_saved_local_recovery",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Valid critique saved for exact frozen study/evidence",
+        "recovery_requirement": "Receipt/local validation before new model request; unknown dispatch conservative",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP11",
+        "action_anchor": "analyze_study_first_events",
+        "classification_seed": "model_or_saved_local_recovery",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Valid relevance results bound to current saved occurrences/study",
+        "recovery_requirement": "Preserve occurrence list and partial batches; no unknown redispatch",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP12",
+        "action_anchor": "compare_study_first_mechanisms",
+        "classification_seed": "inspect_current_local_focal_save",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Exact finalized focal input version and correct job context",
+        "recovery_requirement": "Do not infer from historical name that model must dispatch; inspect actual side effects",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP13",
+        "action_anchor": "ensure_study_first_mechanism_job",
+        "classification_seed": "inspect_local_job_preparation",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "One compatible job for exact saved input",
+        "recovery_requirement": "Idempotent ensure; no policy-changing job-ID workaround",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP14",
+        "action_anchor": "authorize_study_first_mechanism_job",
+        "classification_seed": "local_authorization_with_budget_policy",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Scoped authorization/hold recorded as current policy requires",
+        "recovery_requirement": "No automatic renewal or new consent inferred from status",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP15",
+        "action_anchor": "advance_study_first_mechanism_job",
+        "classification_seed": "compound_phase_specific",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Correct proposal/receipt/retrieval/assessment checkpoint for actual stage",
+        "recovery_requirement": "Classify local versus external phase; preserve holds/unknown outcomes",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP16",
+        "action_anchor": "personalize_screen6_plan",
+        "classification_seed": "model_or_saved_local_recovery",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "One valid current plan for compatible input snapshot",
+        "recovery_requirement": "Local receipt/validation restoration; baseline is not generated result",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP17",
+        "action_anchor": "decide_study_design_advice",
+        "classification_seed": "local_researcher_decision",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Exact explicit selection/no-selection and rationale saved",
+        "recovery_requirement": "Never manufacture a user decision from fallback or rebase",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP18",
+        "action_anchor": "refine_study_design_advice",
+        "classification_seed": "local_deterministic_guidance",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Explicit clarifications and compatible method guidance",
+        "recovery_requirement": "Preserve original study/evidence and invalidate only dependent results",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP19",
+        "action_anchor": "research_policy",
+        "classification_seed": "source_and_local_checkpoints",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Actual initial source/evidence step with identity binding",
+        "recovery_requirement": "No replay from read-only screen return; preserve source limits",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP20",
+        "action_anchor": "continue_policy_research",
+        "classification_seed": "source_and_local_checkpoints",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Next eligible bounded source step committed",
+        "recovery_requirement": "Honor uncertainty/checkpoint/allowance; no hidden full rerun",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP21",
+        "action_anchor": "decide_policy_treatment_clock",
+        "classification_seed": "local_researcher_decision_historical_path",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Explicit authorized timing decision only where supported",
+        "recovery_requirement": "Do not reintroduce this historical decision as mandatory current handoff gate",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      },
+      {
+        "id": "AP22",
+        "action_anchor": "review_policy_event_card_claim",
+        "classification_seed": "local_researcher_decision_historical_path",
+        "inventory_status": "RECHECK_CURRENT_CODE",
+        "completion_requirement": "Exact reviewed decision and evidence binding where supported",
+        "recovery_requirement": "Preserve history; ordinary 2020 handoff requires no new claim approvals",
+        "actual_handler_paths": [],
+        "actual_tests": []
+      }
+    ],
+    "must_discover": [
+      "All additional registered mutation discriminants including the current Screen 4 start/resume action(s)",
+      "All consequential UI callbacks and alternate/historical handlers",
+      "Actual compact operation-status and local rebuild operation names after implementation",
+      "Their supported bridge/tool schema and version adapters"
+    ],
+    "guard": "Repository tests must fail for a registered action/UI mutation caller without a policy or with side effects inconsistent with it. Documentation alone does not satisfy RQ07."
+  }
+}

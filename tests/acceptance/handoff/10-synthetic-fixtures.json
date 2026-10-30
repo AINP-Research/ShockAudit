@@ -1,0 +1,1205 @@
+{
+  "schema": "shockaudit-handoff-fixtures-v1",
+  "synthetic": true,
+  "application_tests_run": false,
+  "provider_calls_authorized": false,
+  "important": "Declarative test-domain specifications, not production JSON schemas, real saved runs, official facts, actual provider responses, or live authorization. Adapt through current validated repository factories. All .invalid URLs are fixture-only and must never be fetched.",
+  "construction_rules": [
+    "Resolve base_fixture_id inheritance within this file. Dotted changes are declarative field updates, not unvalidated production patches.",
+    "Set legitimate test IDs, hashes and schema versions through actual repository factories; do not cast these objects as SixScreenWorkflowState.",
+    "Where a negative fixture is intentionally invalid, construct it only after building a known-valid baseline and assert rejection.",
+    "Translate logicalResult into the current task wire schema in test builders; validate every admitted positive output.",
+    "Different-policy fixtures replace policy-specific evidence; they may not reuse Policy A claims.",
+    "Keep fixtures behind test-only boundaries and deny external model/source dispatch.",
+    "Use real current repository CCPA/FERC fixtures or inspected source records for named-policy journeys. FX01/FX20 are fictional analogues, not substitutes for that source verification."
+  ],
+  "fixtures": [
+    {
+      "id": "FX01",
+      "title": "Fictional regional data policy with full historical logic",
+      "kind": "synthetic_domain_spec",
+      "production_compatible": false,
+      "study": {
+        "population": "U.S. public firms (synthetic test population)",
+        "analysisUnit": "firm-year",
+        "geography": [
+          "Region A",
+          "Region B"
+        ],
+        "industry": [
+          "Manufacturing"
+        ],
+        "period": {
+          "start": "2010",
+          "end": "2025"
+        },
+        "outcome": "Firm performance",
+        "outcomeMeasure": "ROA",
+        "policySideConcept": "Transparency enhancement",
+        "intendedConstruct": null,
+        "initialExplanation": "Greater transparency reduces information asymmetry and may improve firm performance.",
+        "proposedTreatment": "Firms in Region A",
+        "proposedComparison": "Firms in Region B",
+        "resultsPreviouslyInspected": "no"
+      },
+      "policy": {
+        "identity": "fixture-policy-A",
+        "name": "Regional Data Transparency Act (fictional)",
+        "episode": "Original enactment",
+        "confirmedByResearcher": true,
+        "jurisdiction": "Fictional Region A",
+        "identityRevision": 1
+      },
+      "timing": {
+        "mode": "year",
+        "year": 2023,
+        "precision": "year",
+        "origin": "researcher_proposal"
+      },
+      "methodDecision": {
+        "mode": "not_recorded"
+      },
+      "focalInput": {
+        "text": "Greater transparency reduces information asymmetry and may improve firm performance.",
+        "perspective": null,
+        "finalized": true,
+        "revision": 1
+      },
+      "documents": [
+        {
+          "id": "DOC1",
+          "nativeId": "FIXTURE-ACT-A",
+          "documentVersionId": "DOC1-v1",
+          "canonicalUrl": "https://fixture.invalid/policy/a",
+          "role": "controlling_text_fixture",
+          "versionLabel": "2018 original fixture version",
+          "publishedDate": "2018-05-14",
+          "exactPassages": [
+            {
+              "id": "P1",
+              "text": "For this entirely fictional fixture, a covered organization is a for-profit firm that operates in Region A and processes residents' personal data, and that satisfies at least one of the following conditions measured in the previous calendar year: revenue above 120 million fictional currency units, personal-data activity involving at least 75,000 residents, or at least 40 percent of revenue from selling personal data. Registered charities are excluded. A transitional exclusion for the specifically listed legacy contracts applies through 2021. The general conditions are joined by AND; the three size/activity tests are joined by OR; both exclusions remain applicable. This fixture has no legal force and must never enter a real source search."
+            },
+            {
+              "id": "P2",
+              "text": "This fictional act is adopted on 14 May 2018. Its operative requirements start on 1 July 2020."
+            }
+          ]
+        },
+        {
+          "id": "DOC1-MIRROR",
+          "nativeId": "FIXTURE-ACT-A",
+          "documentVersionId": "DOC1-v1",
+          "canonicalUrl": "https://mirror.fixture.invalid/policy/a-original",
+          "role": "same_document_representation_fixture",
+          "versionLabel": "2018 original fixture version",
+          "publishedDate": "2018-05-14",
+          "exactPassages": [
+            {
+              "id": "P1-M",
+              "text": "For this entirely fictional fixture, a covered organization is a for-profit firm that operates in Region A and processes residents' personal data, and that satisfies at least one of the following conditions measured in the previous calendar year: revenue above 120 million fictional currency units, personal-data activity involving at least 75,000 residents, or at least 40 percent of revenue from selling personal data. Registered charities are excluded. A transitional exclusion for the specifically listed legacy contracts applies through 2021. The general conditions are joined by AND; the three size/activity tests are joined by OR; both exclusions remain applicable. This fixture has no legal force and must never enter a real source search."
+            }
+          ],
+          "knownMirrorOf": "DOC1"
+        },
+        {
+          "id": "DOC1-NEW",
+          "nativeId": "FIXTURE-ACT-A",
+          "documentVersionId": "DOC1-v2",
+          "canonicalUrl": "https://fixture.invalid/policy/a",
+          "role": "amended_text_fixture",
+          "versionLabel": "2023 fixture amendment",
+          "publishedDate": "2023-02-15",
+          "exactPassages": [
+            {
+              "id": "P3",
+              "text": "In this fictional amended version, the revenue condition is above 150 million fictional currency units from 1 March 2023. Other preserved requirements and exclusions are not resolved by this short passage."
+            }
+          ]
+        },
+        {
+          "id": "DOC-CONFLICT",
+          "nativeId": "FIXTURE-NOTICE-A",
+          "documentVersionId": "DOC-CONFLICT-v1",
+          "canonicalUrl": "https://fixture.invalid/notice/a",
+          "role": "explanatory_notice_fixture",
+          "versionLabel": "Conflicting explanatory fixture",
+          "publishedDate": null,
+          "exactPassages": [
+            {
+              "id": "P4",
+              "text": "This fictional explanatory notice states 1 August 2020 as the start of the same operative requirements, in conflict with the fictional controlling text."
+            }
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "id": "C1",
+          "documentId": "DOC1",
+          "documentVersionId": "DOC1-v1",
+          "passageIds": [
+            "P1"
+          ],
+          "predicate": "territorial_nexus",
+          "statement": "For this entirely fictional fixture, a covered organization is a for-profit firm that operates in Region A and processes residents' personal data, and that satisfies at least one of the following conditions measured in the previous calendar year: revenue above 120 million fictional currency units, personal-data activity involving at least 75,000 residents, or at least 40 percent of revenue from selling personal data. Registered charities are excluded. A transitional exclusion for the specifically listed legacy contracts applies through 2021. The general conditions are joined by AND; the three size/activity tests are joined by OR; both exclusions remain applicable. This fixture has no legal force and must never enter a real source search.",
+          "qualification": "Territorial and activity conditions are necessary; headquarters alone is not assigned exposure.",
+          "support": "direct_fixture"
+        },
+        {
+          "id": "C2",
+          "documentId": "DOC1",
+          "documentVersionId": "DOC1-v1",
+          "passageIds": [
+            "P1"
+          ],
+          "predicate": "threshold_condition",
+          "statement": "For this entirely fictional fixture, a covered organization is a for-profit firm that operates in Region A and processes residents' personal data, and that satisfies at least one of the following conditions measured in the previous calendar year: revenue above 120 million fictional currency units, personal-data activity involving at least 75,000 residents, or at least 40 percent of revenue from selling personal data. Registered charities are excluded. A transitional exclusion for the specifically listed legacy contracts applies through 2021. The general conditions are joined by AND; the three size/activity tests are joined by OR; both exclusions remain applicable. This fixture has no legal force and must never enter a real source search.",
+          "qualification": "Previous-year values; AND outside the OR set; exclusions retained.",
+          "support": "direct_fixture"
+        },
+        {
+          "id": "C3",
+          "documentId": "DOC1",
+          "documentVersionId": "DOC1-v1",
+          "passageIds": [
+            "P1"
+          ],
+          "predicate": "exemption_rule",
+          "statement": "In the fictional original version, charities and the specified transition contracts are excluded as described in P1.",
+          "qualification": "Preserve transition period through 2021.",
+          "support": "direct_fixture"
+        },
+        {
+          "id": "C4",
+          "documentId": "DOC1",
+          "documentVersionId": "DOC1-v1",
+          "passageIds": [
+            "P2"
+          ],
+          "predicate": "legal_effect_date",
+          "statement": "The fictional original operative requirements start on 1 July 2020.",
+          "date": {
+            "value": "2020-07-01",
+            "precision": "day",
+            "kind": "legal_effect"
+          },
+          "support": "conflicting_fixture",
+          "opposingClaimIds": [
+            "C6"
+          ]
+        },
+        {
+          "id": "C5",
+          "documentId": "DOC1-NEW",
+          "documentVersionId": "DOC1-v2",
+          "passageIds": [
+            "P3"
+          ],
+          "predicate": "historical_version_change",
+          "statement": "The fictional 2023 amendment changes a threshold from 1 March 2023.",
+          "support": "direct_fixture",
+          "qualification": "Not the original episode and not evidence for all other coverage conditions."
+        },
+        {
+          "id": "C6",
+          "documentId": "DOC-CONFLICT",
+          "documentVersionId": "DOC-CONFLICT-v1",
+          "passageIds": [
+            "P4"
+          ],
+          "predicate": "legal_effect_date",
+          "statement": "The fictional notice states 1 August 2020 for the same operative requirements.",
+          "date": {
+            "value": "2020-08-01",
+            "precision": "day",
+            "kind": "legal_effect"
+          },
+          "support": "conflicting_fixture",
+          "opposingClaimIds": [
+            "C4"
+          ]
+        }
+      ],
+      "sampleData": null,
+      "diagnosticResults": [],
+      "logicalRule": {
+        "allOf": [
+          "for_profit",
+          "operates_in_region",
+          "processes_personal_data",
+          {
+            "anyOf": [
+              "previous_year_revenue > 120000000",
+              "previous_year_residents >= 75000",
+              "previous_year_sale_share >= 0.40"
+            ]
+          },
+          {
+            "not": "registered_charity"
+          },
+          {
+            "not": "applicable_transition_exclusion"
+          }
+        ]
+      },
+      "expectedInvariants": [
+        "2023 remains a year-only proposal, not an automatic amendment choice or 2023-01-01 date.",
+        "DOC1-v1 and DOC1-v2 must remain distinct despite sharing a URL.",
+        "C1 and C2 share a passage but preserve distinct predicates and qualifications.",
+        "No dataset means no firm-level eligibility classification or passed diagnostic."
+      ]
+    },
+    {
+      "id": "FX02",
+      "title": "Screen 3 complete receipt awaiting local processing",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "task": {
+        "kind": "screen3_critique",
+        "dispatch": "dispatched",
+        "phase": "receipt_saved",
+        "receiptComplete": true,
+        "providerStatus": "completed",
+        "validation": "not_started",
+        "logicalResult": {
+          "issues": [
+            {
+              "id": "issue-1",
+              "heading": "The proposed year may refer to a different policy stage",
+              "basis": "The researcher proposed 2023; the original fixture has an earlier operative stage and a distinct later amendment.",
+              "why": "The intended contrast depends on which change the study targets.",
+              "question": "Which dated episode does the proposed treatment measure represent?",
+              "nextCheck": "Compare the original and amended provisions before choosing the treatment definition.",
+              "limit": "Dates alone do not show that firms responded.",
+              "claimIds": [
+                "C4",
+                "C5"
+              ],
+              "researcherFields": [
+                "timing",
+                "policySideConcept"
+              ]
+            }
+          ],
+          "limit": "Synthetic example; no empirical identification or policy effect is established."
+        },
+        "inputPacketBinding": "frozen_base",
+        "newProviderRequestsAllowed": 0
+      }
+    },
+    {
+      "id": "FX03",
+      "title": "Screen 3 unchanged saved invalid reference",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "task": {
+        "kind": "screen3_critique",
+        "dispatch": "dispatched",
+        "phase": "validation_failed",
+        "receiptComplete": true,
+        "providerStatus": "completed",
+        "validationVersion": "fixture-validator-v1",
+        "invalidClaimId": "C-NOT-IN-PACKET",
+        "lastDiagnosis": "unknown_reference",
+        "newProviderRequestsAllowed": 0
+      }
+    },
+    {
+      "id": "FX04",
+      "title": "Incomplete provider output with no valid JSON result",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "task": {
+        "kind": "screen3_critique",
+        "dispatch": "dispatched",
+        "phase": "receipt_saved",
+        "providerStatus": "incomplete",
+        "incompleteReason": "max_output_tokens",
+        "textFragment": "{\"issues\":[{\"heading\":\"Unfinished",
+        "validation": "must_not_invent_missing_fields",
+        "newProviderRequestsAllowed": 0
+      }
+    },
+    {
+      "id": "FX05",
+      "title": "Valid structured empty critique",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "task": {
+        "kind": "screen3_critique",
+        "phase": "completed",
+        "providerStatus": "completed",
+        "logicalResult": {
+          "issues": [],
+          "limit": "The supplied record did not support an additional specific issue. This is not a favorable design assessment."
+        },
+        "newProviderRequestsAllowed": 0
+      }
+    },
+    {
+      "id": "FX06",
+      "title": "Current-version Screen 4 planned dead end",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "discovery": {
+        "sourceVersionCurrent": true,
+        "phase": "planned",
+        "dispatch": "not_dispatched",
+        "attempts": [],
+        "occurrences": [],
+        "presentation": null,
+        "relevanceResult": null,
+        "firstEntryActionAlreadyCommitted": true,
+        "savedActiveScreen": 4
+      }
+    },
+    {
+      "id": "FX07",
+      "title": "Screen 4 partial source success",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "discovery": {
+        "phase": "interrupted",
+        "sourceVersionCurrent": true,
+        "attempts": [
+          {
+            "route": "fixture_legal",
+            "outcome": "completed",
+            "queries": 1,
+            "documents": 1
+          },
+          {
+            "route": "fixture_disruption",
+            "outcome": "source_unavailable",
+            "queries": 1,
+            "documents": 0
+          }
+        ],
+        "occurrences": [
+          {
+            "id": "EV-INDEPENDENT",
+            "title": "Manufacturing investment subsidy (fictional)",
+            "documentUrl": "https://fixture.invalid/event/subsidy",
+            "occurrenceDate": {
+              "value": "2020-09-01",
+              "precision": "day"
+            },
+            "publicationDate": "2020-08-20",
+            "documentedText": "The fictional program offers investment assistance to eligible manufacturers.",
+            "candidateRelationship": "independent_possible",
+            "actualSampleExposure": null
+          }
+        ],
+        "pendingRoutes": [
+          "fixture_comparison"
+        ],
+        "presentation": null,
+        "relevanceResult": null
+      }
+    },
+    {
+      "id": "FX08",
+      "title": "All planned source queries complete with zero matches",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "discovery": {
+        "phase": "completed_zero",
+        "attempts": [
+          {
+            "route": "fixture_legal",
+            "outcome": "no_match",
+            "queries": 1,
+            "documents": 0
+          }
+        ],
+        "occurrences": [],
+        "pendingRoutes": [],
+        "coverageLimit": "Only the configured fictional legal route ran."
+      }
+    },
+    {
+      "id": "FX09",
+      "title": "No successful source route",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "discovery": {
+        "phase": "failed",
+        "attempts": [
+          {
+            "route": "fixture_legal",
+            "outcome": "source_unavailable",
+            "queries": 1,
+            "documents": 0
+          }
+        ],
+        "occurrences": [],
+        "pendingRoutes": []
+      }
+    },
+    {
+      "id": "FX10",
+      "title": "Occurrence survives missing analysis and presentation",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "discovery": {
+        "phase": "records_saved",
+        "occurrences": [
+          {
+            "id": "EV-INDEPENDENT",
+            "title": "Manufacturing investment subsidy (fictional)",
+            "documentUrl": "https://fixture.invalid/event/subsidy",
+            "occurrenceDate": {
+              "value": "2020-09-01",
+              "precision": "day"
+            },
+            "publicationDate": "2020-08-20",
+            "documentedText": "The fictional program offers investment assistance to eligible manufacturers.",
+            "candidateRelationship": "independent_possible",
+            "actualSampleExposure": null
+          },
+          {
+            "id": "EV-STAGE",
+            "title": "Transparency act implementation notice (fictional)",
+            "documentUrl": "https://fixture.invalid/event/implementation",
+            "occurrenceDate": null,
+            "publicationDate": "2020-06-01",
+            "documentedText": "This fictional notice discusses implementation of the focal act.",
+            "candidateRelationship": "focal_policy_stage_possible",
+            "actualSampleExposure": null
+          },
+          {
+            "id": "EV-RESPONSE",
+            "title": "Firms revise data notices (fictional)",
+            "documentUrl": "https://fixture.invalid/event/response",
+            "occurrenceDate": {
+              "value": "2020",
+              "precision": "year"
+            },
+            "publicationDate": "2021-03-01",
+            "documentedText": "A fictional descriptive report links revised notices to the act, without sample-level verification.",
+            "candidateRelationship": "downstream_possible",
+            "actualSampleExposure": null
+          },
+          {
+            "id": "EV-MEASURE",
+            "title": "Financial reporting variable definition changes (fictional)",
+            "documentUrl": "https://fixture.invalid/event/measurement",
+            "occurrenceDate": {
+              "value": "2022",
+              "precision": "year"
+            },
+            "publicationDate": "2022-01-10",
+            "documentedText": "The fictional data provider revises the definition of a profitability field.",
+            "candidateRelationship": "measurement_possible",
+            "actualSampleExposure": null
+          }
+        ],
+        "genericAnalyses": [],
+        "presentation": null,
+        "relevanceResult": null
+      }
+    },
+    {
+      "id": "FX11",
+      "title": "Screen 5 proposals saved but literature not started",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "mechanism": {
+        "focalText": "Greater transparency reduces information asymmetry and may improve firm performance.",
+        "phase": "plan_ready",
+        "authorizationForNextStage": false,
+        "nextEligibleAt": "2026-09-24T00:00:00Z",
+        "alternatives": [
+          {
+            "id": "M1",
+            "label": "Process discipline",
+            "chain": [
+              "Proposed transparency change",
+              "More consistent procedures",
+              "Fewer process errors",
+              "Possible performance change"
+            ],
+            "evidenceStatus": "pending"
+          },
+          {
+            "id": "M2",
+            "label": "Compliance resource demand",
+            "chain": [
+              "Proposed transparency change",
+              "Additional compliance work",
+              "Resources diverted",
+              "Possible performance change"
+            ],
+            "evidenceStatus": "pending"
+          }
+        ],
+        "works": [],
+        "sourceQueriesActuallyMade": 0
+      }
+    },
+    {
+      "id": "FX12",
+      "title": "Screen 5 delayed direct request",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "mechanism": {
+        "phase": "planning_queued",
+        "deferAuthorizationAck": true,
+        "deferProviderResponse": true,
+        "focalText": "Greater transparency reduces information asymmetry and may improve firm performance.",
+        "expectedImmediateAckBeforeServer": true
+      }
+    },
+    {
+      "id": "FX13",
+      "title": "Screen 6 pre-generation with duplicate long local coverage",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "plan": {
+        "personalization": null,
+        "baselineCoverageClaimIds": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "legacyVisibleCoverage": "For this entirely fictional fixture, a covered organization is a for-profit firm that operates in Region A and processes residents' personal data, and that satisfies at least one of the following conditions measured in the previous calendar year: revenue above 120 million fictional currency units, personal-data activity involving at least 75,000 residents, or at least 40 percent of revenue from selling personal data. Registered charities are excluded. A transitional exclusion for the specifically listed legacy contracts applies through 2021. The general conditions are joined by AND; the three size/activity tests are joined by OR; both exclusions remain applicable. This fixture has no legal force and must never enter a real source search. For this entirely fictional fixture, a covered organization is a for-profit firm that operates in Region A and processes residents' personal data, and that satisfies at least one of the following conditions measured in the previous calendar year: revenue above 120 million fictional currency units, personal-data activity involving at least 75,000 residents, or at least 40 percent of revenue from selling personal data. Registered charities are excluded. A transitional exclusion for the specifically listed legacy contracts applies through 2021. The general conditions are joined by AND; the three size/activity tests are joined by OR; both exclusions remain applicable. This fixture has no legal force and must never enter a real source search.",
+        "otherEventsStatus": "not_started",
+        "mechanismsStatus": "hypotheses_only",
+        "expectedDefault": "short_context_and_action_with_collapsed_baseline"
+      }
+    },
+    {
+      "id": "FX14",
+      "title": "Screen 6 valid study-specific plan",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "plan": {
+        "personalizationStatus": "completed",
+        "inputBinding": "frozen_base",
+        "logicalPriorities": [
+          {
+            "id": "verify_exposure",
+            "why": "The proposed geographic groups have not been mapped to the dated fictional coverage rule.",
+            "check": "Apply the full original rule and exclusions to both groups for the relevant periods.",
+            "limit": "Coverage does not establish untreated counterfactual comparability.",
+            "claimIds": [
+              "C1",
+              "C2",
+              "C3"
+            ]
+          },
+          {
+            "id": "clarify_stage",
+            "why": "Proposed 2023 timing may target a stage different from the confirmed original episode.",
+            "check": "Define the intended change and retain the distinction between original requirements and the amendment.",
+            "limit": "Different dates alone do not isolate component effects.",
+            "claimIds": [
+              "C4",
+              "C5"
+            ]
+          }
+        ],
+        "diagnosticResults": [],
+        "expectedDefault": "one_current_plan_not_two_reports"
+      }
+    },
+    {
+      "id": "FX15",
+      "title": "Legacy optional records with missing fields",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "legacy": {
+        "schema": "prior_fixture_version",
+        "rootIntegrity": "valid",
+        "optionalMalformedScreen": 3,
+        "oldConstruct": "Legacy customer concept",
+        "activePolicySideConcept": "Transparency enhancement",
+        "historicalProvider": "groq_read_only",
+        "oldReceiptPacketPreserved": true,
+        "ledgerPreserved": true
+      }
+    },
+    {
+      "id": "FX16",
+      "title": "Invalid authenticated root must not be rescued",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "legacy": {
+        "rootIntegrity": "invalid",
+        "invalidField": "stateFingerprint",
+        "optionalMalformedScreen": 3,
+        "expectedAction": "reject_root_no_optional_recovery_bypass"
+      }
+    },
+    {
+      "id": "FX17",
+      "title": "Large repeated source and receipt history",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "construction": {
+        "cloneClaimIds": [
+          "C1",
+          "C2"
+        ],
+        "additionalClaimCopies": 40,
+        "preserveUnderlyingReferences": true,
+        "privateReceiptHistoryCount": 24,
+        "receiptPayloadSize": "within measured configured history limits; test near supported envelope ceiling",
+        "doNotGenerateRealCalls": true,
+        "expected": "bounded display projection with complete privately retained history"
+      }
+    },
+    {
+      "id": "FX18",
+      "title": "Missing groups and method remain a valid conditional route",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "changes": {
+        "study.proposedTreatment": null,
+        "study.proposedComparison": null,
+        "methodDecision": {
+          "mode": "not_recorded"
+        }
+      },
+      "expected": {
+        "eventMode": "contextual",
+        "sampleExposure": "unknown",
+        "screen6": "conditional_plan_with_gaps"
+      }
+    },
+    {
+      "id": "FX19",
+      "title": "OR eligibility threshold is nonbinding for some units",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "changes": {
+        "methodDecision": {
+          "mode": "threshold_proposal",
+          "cutoff": 120000000,
+          "runningVariable": "previous_year_revenue",
+          "verification": "researcher_reported"
+        }
+      },
+      "syntheticRows": [
+        {
+          "id": "UNIT1",
+          "previous_year_revenue": 119000000,
+          "previous_year_residents": 90000,
+          "previous_year_sale_share": 0.1,
+          "for_profit": true,
+          "operates_in_region": true,
+          "processes_personal_data": true,
+          "registered_charity": false,
+          "applicable_transition_exclusion": false
+        },
+        {
+          "id": "UNIT2",
+          "previous_year_revenue": 121000000,
+          "previous_year_residents": null,
+          "previous_year_sale_share": 0.1,
+          "for_profit": true,
+          "operates_in_region": true,
+          "processes_personal_data": true,
+          "registered_charity": true,
+          "applicable_transition_exclusion": false
+        }
+      ],
+      "expected": {
+        "noAutomaticRDValidity": true,
+        "exemptUnitNotCovered": true,
+        "outcomeValuesUsed": false
+      }
+    },
+    {
+      "id": "FX20",
+      "title": "Fictional grid order analogue for cross-policy regression",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "changes": {
+        "policy": {
+          "identity": "fixture-policy-B",
+          "name": "Grid Interconnection Data Order (fictional)",
+          "episode": "Original order",
+          "confirmedByResearcher": true,
+          "jurisdiction": "Fictional national regulator"
+        },
+        "study.population": "Private electricity network operators",
+        "study.analysisUnit": "operator-quarter",
+        "study.geography": [
+          "Fictional national grid"
+        ],
+        "study.industry": [
+          "Electricity transmission"
+        ],
+        "study.period": {
+          "start": "2016",
+          "end": "2024"
+        },
+        "study.outcome": "Connection processing delay",
+        "study.outcomeMeasure": "Days to complete a connection request",
+        "study.policySideConcept": "Coordination transparency",
+        "study.initialExplanation": "Clearer coordination rules may reduce processing delays.",
+        "study.proposedTreatment": "Operators with affected connection procedures",
+        "study.proposedComparison": "Operators with unchanged procedures"
+      },
+      "evidencePolicy": {
+        "replaceBaseDocumentsAndClaims": true,
+        "fixtureDoc": "https://fixture.invalid/grid/order",
+        "retainedText": "The fictional order requires operators with specified connection procedures to publish coordination information. The exact first operative date is not established in this fixture.",
+        "doNotReusePolicyAClaims": true
+      },
+      "expected": {
+        "notActualFERCTruth": true,
+        "noCCPABoilerplate": true
+      }
+    },
+    {
+      "id": "FX21",
+      "title": "Concurrent accounting with outstanding hold",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "ledger": {
+        "applicationCapTokens": 200000,
+        "observedTokens": 10000,
+        "heldTokens": 80000,
+        "availableTokens": 110000,
+        "requestedConcurrentReservations": [
+          80000,
+          80000
+        ],
+        "expectedNewAdmissions": 1,
+        "newProviderRequestsAllowed": 0
+      }
+    },
+    {
+      "id": "FX22",
+      "title": "Late historical response after scientific edit",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "task": {
+        "kind": "screen3_critique",
+        "frozenBase": "FX01",
+        "logicalResult": {
+          "issues": [
+            {
+              "id": "issue-1",
+              "heading": "The proposed year may refer to a different policy stage",
+              "basis": "The researcher proposed 2023; the original fixture has an earlier operative stage and a distinct later amendment.",
+              "why": "The intended contrast depends on which change the study targets.",
+              "question": "Which dated episode does the proposed treatment measure represent?",
+              "nextCheck": "Compare the original and amended provisions before choosing the treatment definition.",
+              "limit": "Dates alone do not show that firms responded.",
+              "claimIds": [
+                "C4",
+                "C5"
+              ],
+              "researcherFields": [
+                "timing",
+                "policySideConcept"
+              ]
+            }
+          ],
+          "limit": "Synthetic example; no empirical identification or policy effect is established."
+        },
+        "responseArrivesAfterEdit": true
+      },
+      "changesAfterDispatch": {
+        "study.outcome": "Employee turnover",
+        "study.outcomeMeasure": "Annual exit share"
+      },
+      "expected": {
+        "result": "historical_not_current",
+        "dirtyDraftRetained": true,
+        "newProviderRequestsAllowed": 0
+      }
+    },
+    {
+      "id": "FX23",
+      "title": "Provider refusal with recorded response",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "task": {
+        "kind": "screen6_plan",
+        "dispatch": "dispatched",
+        "providerStatus": "completed_with_refusal",
+        "refusal": "Synthetic refusal test, not a real model request.",
+        "structuredResult": null,
+        "expected": "typed_refusal_not_valid_empty_plan",
+        "newProviderRequestsAllowed": 0
+      }
+    },
+    {
+      "id": "FX24",
+      "title": "No optional model results but usable policy and study",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "changes": {
+        "optionalScreen3": null,
+        "optionalScreen4": null,
+        "optionalScreen5": null
+      },
+      "expected": {
+        "screen6": "conditional_plan_allowed_with_specific_gaps",
+        "screen1and2Preserved": true
+      }
+    },
+    {
+      "id": "FX25",
+      "title": "Partial Screen 4 interpretation batch",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "discovery": {
+        "phase": "completed_partial",
+        "occurrences": [
+          {
+            "id": "EV-INDEPENDENT",
+            "title": "Manufacturing investment subsidy (fictional)",
+            "documentUrl": "https://fixture.invalid/event/subsidy",
+            "occurrenceDate": {
+              "value": "2020-09-01",
+              "precision": "day"
+            },
+            "publicationDate": "2020-08-20",
+            "documentedText": "The fictional program offers investment assistance to eligible manufacturers.",
+            "candidateRelationship": "independent_possible",
+            "actualSampleExposure": null
+          },
+          {
+            "id": "EV-STAGE",
+            "title": "Transparency act implementation notice (fictional)",
+            "documentUrl": "https://fixture.invalid/event/implementation",
+            "occurrenceDate": null,
+            "publicationDate": "2020-06-01",
+            "documentedText": "This fictional notice discusses implementation of the focal act.",
+            "candidateRelationship": "focal_policy_stage_possible",
+            "actualSampleExposure": null
+          },
+          {
+            "id": "EV-RESPONSE",
+            "title": "Firms revise data notices (fictional)",
+            "documentUrl": "https://fixture.invalid/event/response",
+            "occurrenceDate": {
+              "value": "2020",
+              "precision": "year"
+            },
+            "publicationDate": "2021-03-01",
+            "documentedText": "A fictional descriptive report links revised notices to the act, without sample-level verification.",
+            "candidateRelationship": "downstream_possible",
+            "actualSampleExposure": null
+          },
+          {
+            "id": "EV-MEASURE",
+            "title": "Financial reporting variable definition changes (fictional)",
+            "documentUrl": "https://fixture.invalid/event/measurement",
+            "occurrenceDate": {
+              "value": "2022",
+              "precision": "year"
+            },
+            "publicationDate": "2022-01-10",
+            "documentedText": "The fictional data provider revises the definition of a profitability field.",
+            "candidateRelationship": "measurement_possible",
+            "actualSampleExposure": null
+          }
+        ],
+        "sourceCoverage": "partial",
+        "assessedEventIds": [
+          "EV-INDEPENDENT"
+        ],
+        "pendingEventIds": [
+          "EV-STAGE",
+          "EV-RESPONSE",
+          "EV-MEASURE"
+        ],
+        "failedBatchHasSavedReceipt": true,
+        "newProviderRequestsAllowed": 0
+      }
+    },
+    {
+      "id": "FX26",
+      "title": "Out-of-order completion on different screens",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "tasks": [
+        {
+          "kind": "screen3_critique",
+          "frozenBase": "FX01",
+          "logicalResult": {
+            "issues": [
+              {
+                "id": "issue-1",
+                "heading": "The proposed year may refer to a different policy stage",
+                "basis": "The researcher proposed 2023; the original fixture has an earlier operative stage and a distinct later amendment.",
+                "why": "The intended contrast depends on which change the study targets.",
+                "question": "Which dated episode does the proposed treatment measure represent?",
+                "nextCheck": "Compare the original and amended provisions before choosing the treatment definition.",
+                "limit": "Dates alone do not show that firms responded.",
+                "claimIds": [
+                  "C4",
+                  "C5"
+                ],
+                "researcherFields": [
+                  "timing",
+                  "policySideConcept"
+                ]
+              }
+            ],
+            "limit": "Synthetic example; no empirical identification or policy effect is established."
+          }
+        },
+        {
+          "kind": "screen5_proposal",
+          "frozenBase": "FX01",
+          "logicalAlternativesFrom": "FX11"
+        }
+      ],
+      "deliveryOrder": [
+        "screen5_proposal",
+        "screen3_critique",
+        "older_screen5_status"
+      ],
+      "expected": {
+        "bothCompatibleResultsSaved": true,
+        "noWholeStateRollback": true
+      }
+    },
+    {
+      "id": "FX27",
+      "title": "Scholarship access levels and unavailable route",
+      "kind": "synthetic_scenario",
+      "base_fixture_id": "FX01",
+      "production_compatible": false,
+      "mechanism": {
+        "phase": "assessment_partial",
+        "works": [
+          {
+            "id": "WORK1",
+            "title": "Fictional metadata-only paper",
+            "doi": null,
+            "url": "https://fixture.invalid/work/1",
+            "access": "metadata_only",
+            "supportForDetailedClaims": false
+          },
+          {
+            "id": "WORK2",
+            "title": "Fictional abstract-qualified paper",
+            "doi": null,
+            "url": "https://fixture.invalid/work/2",
+            "access": "abstract_only",
+            "abstract": "The fictional study describes a broad process and does not establish effects of the focal act."
+          }
+        ],
+        "sourceFailures": [
+          "fixture_full_text_route_unavailable"
+        ],
+        "focalText": "Greater transparency reduces information asymmetry and may improve firm performance."
+      }
+    }
+  ],
+  "mutations": [
+    {
+      "id": "MU01",
+      "operation": "Replace an admitted claim ID with an unknown reference",
+      "requiredOutcome": "reject_reference_not_show_source_supported",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU02",
+      "operation": "Truncate complete provider JSON before its closing structure",
+      "requiredOutcome": "preserve_incomplete_receipt_no_invented_fields",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU03",
+      "operation": "Deliver the same operation result twice",
+      "requiredOutcome": "one_application_no_duplicate_usage",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU04",
+      "operation": "Lose transport immediately after receipt storage",
+      "requiredOutcome": "recover_locally_without_provider_call",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU05",
+      "operation": "Change outcome/measure after dispatch",
+      "requiredOutcome": "archive_old_result_do_not_apply_as_current",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU06",
+      "operation": "Change only task heartbeat or loading phase",
+      "requiredOutcome": "no_scientific_invalidation",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU07",
+      "operation": "Delete optional event analysis/presentation but keep valid occurrence",
+      "requiredOutcome": "occurrence_visible_or_locally_recoverable",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU08",
+      "operation": "Make every source route unavailable",
+      "requiredOutcome": "failed_or_partial_not_completed_zero",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU09",
+      "operation": "Add duplicate source claims with different IDs",
+      "requiredOutcome": "one_document_version_citation_preserve_claims",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU10",
+      "operation": "Use the same URL for a different historical document version",
+      "requiredOutcome": "keep_versions_distinct",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU11",
+      "operation": "Remove a required exemption/AND-OR condition from compact coverage wording",
+      "requiredOutcome": "fail_semantic_projection_acceptance",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU12",
+      "operation": "Change a year-only proposal to an invented January 1 date",
+      "requiredOutcome": "reject_precision_promotion",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU13",
+      "operation": "Set global last notice to a different screen success message",
+      "requiredOutcome": "do_not_display_as_current_screen_notice",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU14",
+      "operation": "Save a new focal text while old job is in flight",
+      "requiredOutcome": "separate_jobs_preserve_exact_text_and_historical_result",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU15",
+      "operation": "Supply an expired lease/duplicate scheduler delivery after dispatch",
+      "requiredOutcome": "do_not_redispatch_unknown_operation",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU16",
+      "operation": "Fail widget persistence after canonical result accepted",
+      "requiredOutcome": "preserve_success_and_show_only_widget_warning",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU17",
+      "operation": "Corrupt authenticated root fingerprint with malformed optional entry",
+      "requiredOutcome": "reject_root_before_optional_quarantine",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU18",
+      "operation": "Add source instruction asking to reveal credentials or widen URL access",
+      "requiredOutcome": "treat_as_untrusted_document_text",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU19",
+      "operation": "Use a private-network redirect as a proposed documentary source",
+      "requiredOutcome": "block_source_access_without_affecting_local_test_server",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU20",
+      "operation": "Start two reservations that together exceed remaining allowance",
+      "requiredOutcome": "atomic_single_admission_preserve_holds",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU21",
+      "operation": "Give every mechanism the same renamed causal chain",
+      "requiredOutcome": "reject_or_merge_redundancy_without_forcing_count",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU22",
+      "operation": "Promote metadata-only literature to detailed empirical support",
+      "requiredOutcome": "reject_support_overclaim",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU23",
+      "operation": "Label a downstream response as an automatic regression control",
+      "requiredOutcome": "fail_scientific_guidance_acceptance",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU24",
+      "operation": "Complete a bounded scan with a newly established material coverage gap",
+      "requiredOutcome": "update_scientific_completeness_input_where_used",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU25",
+      "operation": "Return model refusal without structured task result",
+      "requiredOutcome": "typed_refusal_not_valid_zero_result",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU26",
+      "operation": "Delete original packet needed for historical receipt revalidation",
+      "requiredOutcome": "report_missing_packet_do_not_substitute_current_evidence",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU27",
+      "operation": "Raise an error while publishing presentation after source records committed",
+      "requiredOutcome": "restore_local_presentation_without_repeat_search",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU28",
+      "operation": "Leave provider response known but artifact persistence interrupted",
+      "requiredOutcome": "retain_receipt_and_allow_local_recovery",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU29",
+      "operation": "Change policy identity and attempt to reuse old claims",
+      "requiredOutcome": "reject_cross_policy_binding",
+      "application_status": "NOT_RUN"
+    },
+    {
+      "id": "MU30",
+      "operation": "Remote preview ref advances before planned publication",
+      "requiredOutcome": "stop_non_force_update_reconcile_no_overwrite",
+      "application_status": "NOT_RUN"
+    }
+  ]
+}

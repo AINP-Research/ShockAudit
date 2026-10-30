@@ -1,0 +1,3333 @@
+{
+  "schema": "shockaudit-handoff-acceptance-v1",
+  "definition_count": 85,
+  "application_tests_run": false,
+  "note": "These are executable acceptance specifications, not implemented repository tests or test results. Parameterized cases may expand to multiple runtime tests. PASS must be established by the development conversation with actual code and evidence.",
+  "cases": [
+    {
+      "id": "AC001",
+      "title": "Baseline branch, worktree and served identity separation",
+      "requirement_ids": [
+        "R01",
+        "R32"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX01"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Inspect current local and preview refs, dirty worktree and serving metadata.",
+        "Simulate a newer remote ref and an older running process."
+      ],
+      "assertions": [
+        "Do not reset newer work or infer served build from HEAD.",
+        "Identify source/UI/response build mismatch explicitly."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC002",
+      "title": "Preserve current study and historical accounting during repair",
+      "requirement_ids": [
+        "R02",
+        "R08",
+        "R11"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX15",
+        "FX21"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Migrate a copy of the saved fixture twice.",
+        "Compare researcher fields, receipts, legacy records and ledger before/after."
+      ],
+      "assertions": [
+        "Second migration is idempotent.",
+        "No lost focal text, historical charge, uncertain hold or scientific field."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC003",
+      "title": "All long actions enter operation-specific recovery",
+      "requirement_ids": [
+        "R03",
+        "R05"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX02",
+        "FX06",
+        "FX14"
+      ],
+      "mutation_ids": [
+        "MU04"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Parameterize source discovery open/start/resume/refresh and each model task.",
+        "Inject final delivery failure after a saved checkpoint."
+      ],
+      "assertions": [
+        "Recovery classifies the original operation rather than only four model strings.",
+        "A newer unrelated revision is not counted as task completion."
+      ],
+      "parameterization": {
+        "bridges": [
+          "mcp_app",
+          "chatgpt_compatibility"
+        ],
+        "tasks": [
+          "policy_source_step",
+          "screen3_critique",
+          "screen4_discovery",
+          "screen4_relevance",
+          "screen5_proposal",
+          "screen5_evidence",
+          "screen6_plan"
+        ]
+      },
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC004",
+      "title": "Task facts distinguish complete zero from absent output",
+      "requirement_ids": [
+        "R03",
+        "R13",
+        "R16",
+        "R21",
+        "R23"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX05",
+        "FX06",
+        "FX08",
+        "FX23"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Project each terminal and nonterminal task state.",
+        "Compare absent/null result with a valid structured empty result."
+      ],
+      "assertions": [
+        "Only valid completed-empty result is complete_zero.",
+        "Waiting, failed and stale states are not green completion."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC005",
+      "title": "Structured error stage and meaningful safe reference",
+      "requirement_ids": [
+        "R04",
+        "R12"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX03",
+        "FX09"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Raise separate invalid-argument, source failure, parse, validation and transport exceptions.",
+        "Inspect the task-local message and diagnostic."
+      ],
+      "assertions": [
+        "Distinct causes remain diagnosable.",
+        "No raw private payload/key appears; reference maps to saved authorized diagnosis."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC006",
+      "title": "Recover a complete saved Screen 3 response locally",
+      "requirement_ids": [
+        "R06",
+        "R13"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3
+      ],
+      "fixture_ids": [
+        "FX02"
+      ],
+      "mutation_ids": [
+        "MU04"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Stop after durable receipt and reopen.",
+        "Invoke local processing recovery with the original packet."
+      ],
+      "assertions": [
+        "A valid critique becomes current and visible.",
+        "Exactly zero new provider calls and no new token reservation."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC007",
+      "title": "Unchanged invalid receipt does not enter a recheck loop",
+      "requirement_ids": [
+        "R06",
+        "R13"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        6
+      ],
+      "fixture_ids": [
+        "FX03"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Reopen an already failed validation tuple.",
+        "Attempt repeated recheck with unchanged hash/packet/validator, then use an explicitly revised validator."
+      ],
+      "assertions": [
+        "Unchanged error is shown without repeated work or provider call.",
+        "A changed validator can run once with retained original provenance."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC008",
+      "title": "Incomplete provider output is not fabricated into a result",
+      "requirement_ids": [
+        "R06",
+        "R25"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX04"
+      ],
+      "mutation_ids": [
+        "MU02"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Pass an incomplete status and truncated text through current provider parser and local validator."
+      ],
+      "assertions": [
+        "Typed incomplete outcome and safe diagnosis.",
+        "No invented missing fields, no valid-zero fallback, no automatic retry."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC009",
+      "title": "Provider refusal is a distinct response outcome",
+      "requirement_ids": [
+        "R06",
+        "R25"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX23"
+      ],
+      "mutation_ids": [
+        "MU25"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Pass a refusal with no task object through result processing."
+      ],
+      "assertions": [
+        "Refusal is retained and shown distinctly.",
+        "No empty plan/critique labeled complete and no uncontrolled new request."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC010",
+      "title": "Missing original packet blocks unsafe historical revalidation",
+      "requirement_ids": [
+        "R06",
+        "R10",
+        "R11"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX02",
+        "FX22"
+      ],
+      "mutation_ids": [
+        "MU26"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Remove frozen packet references and offer a changed current evidence set."
+      ],
+      "assertions": [
+        "No validation against substituted current claims.",
+        "Original receipt remains retained with missing-packet limitation."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC011",
+      "title": "Transport loss after each durable model checkpoint",
+      "requirement_ids": [
+        "R05",
+        "R06",
+        "R07"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX02",
+        "FX14"
+      ],
+      "mutation_ids": [
+        "MU04",
+        "MU28"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Inject failure after receipt, validation, artifact and canonical result.",
+        "Recover through both supported bridges."
+      ],
+      "assertions": [
+        "Recoverable complete results appear once.",
+        "Partial/unknown stages remain explicit with no automatic dispatch replay."
+      ],
+      "parameterization": {
+        "bridges": [
+          "mcp_app",
+          "chatgpt_compatibility"
+        ],
+        "failure_points": [
+          "receipt_saved",
+          "validated",
+          "artifact_saved",
+          "canonical_reply_lost"
+        ]
+      },
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC012",
+      "title": "Widget write failure does not negate canonical success",
+      "requirement_ids": [
+        "R05",
+        "R12"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX14"
+      ],
+      "mutation_ids": [
+        "MU16"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Accept current canonical result then fail widget-state save."
+      ],
+      "assertions": [
+        "Saved result stays visible/current.",
+        "Only panel-reopen persistence warning is shown; no provider failure claim."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC013",
+      "title": "Double clicks and duplicate deliveries have one effect",
+      "requirement_ids": [
+        "R07",
+        "R20"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX12"
+      ],
+      "mutation_ids": [
+        "MU03"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Double-submit before acknowledgement and deliver result twice."
+      ],
+      "assertions": [
+        "One reservation, one provider invocation, one result application.",
+        "Conflicting button disabled immediately without locking all navigation."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC014",
+      "title": "Unknown outcome and expired lease never auto-redispatch",
+      "requirement_ids": [
+        "R07",
+        "R08"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX21"
+      ],
+      "mutation_ids": [
+        "MU15"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Expire lease after simulated dispatch but before receipt.",
+        "Deliver scheduler wakeup twice."
+      ],
+      "assertions": [
+        "Outstanding hold retained and outcome marked unknown.",
+        "No automatic redispatch from lease expiry or alarm replay."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC015",
+      "title": "Two concurrent task reservations respect the shared cap",
+      "requirement_ids": [
+        "R08",
+        "R09"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        6
+      ],
+      "fixture_ids": [
+        "FX21"
+      ],
+      "mutation_ids": [
+        "MU20"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Start two distinct screen operations each requesting 80,000 under 110,000 available."
+      ],
+      "assertions": [
+        "Only one new reservation admitted atomically.",
+        "Prior observed use and 80,000 hold stay intact."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC016",
+      "title": "Status reads and local recovery do not spend or search",
+      "requirement_ids": [
+        "R03",
+        "R06",
+        "R08"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX02",
+        "FX06"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Read status repeatedly, focus/reopen and navigate.",
+        "Perform eligible local receipt/application recovery."
+      ],
+      "assertions": [
+        "Reads cause no source/model dispatch, reservation or scientific mutation.",
+        "Local processing may save its result as an explicit task step but sends no new inference."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC017",
+      "title": "Shared model readiness works without a Screen 5 job",
+      "requirement_ids": [
+        "R09"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX24"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Create valid configured model/ledger state and no S5 mechanism run.",
+        "Open S3 and S6 readiness."
+      ],
+      "assertions": [
+        "Readiness does not depend on S5 job creation/success.",
+        "Key presence is not relabeled live credential verification."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC018",
+      "title": "Insufficient allowance is not missing configuration",
+      "requirement_ids": [
+        "R08",
+        "R09"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX21"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Reduce remaining task allowance below profile while credentials/configuration remain present."
+      ],
+      "assertions": [
+        "Accurate allowance blocker and needed reservation.",
+        "No account/billing reset or no-results message."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC019",
+      "title": "Polling is bounded, non-overlapping and resumable",
+      "requirement_ids": [
+        "R03",
+        "R05"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX12"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Delay a status read, trigger focus, navigate and simulate transient failure.",
+        "Complete/cancel task."
+      ],
+      "assertions": [
+        "At most one overlapping read per channel.",
+        "Backoff/stop behavior and no hidden work on read; compatible state restored on focus."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC020",
+      "title": "Cancellation preserves in-flight uncertainty and partial work",
+      "requirement_ids": [
+        "R03",
+        "R07",
+        "R08"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX07",
+        "FX12"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Cancel future steps while one request is in flight.",
+        "Deliver a late receipt."
+      ],
+      "assertions": [
+        "No later unstarted step runs.",
+        "In-flight usage/receipt retained; cancellation is not claimed free."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC021",
+      "title": "Strict response validation survives compatibility repair",
+      "requirement_ids": [
+        "R05",
+        "R11"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX16"
+      ],
+      "mutation_ids": [
+        "MU17"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Mutate public/private envelope agreement, schema and run authorization."
+      ],
+      "assertions": [
+        "Invalid root/transport response rejected on both bridges.",
+        "Optional recovery does not authorize accepting a convenient mismatched object."
+      ],
+      "parameterization": {
+        "bridges": [
+          "mcp_app",
+          "chatgpt_compatibility"
+        ]
+      },
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC022",
+      "title": "Out-of-order results preserve both compatible tasks",
+      "requirement_ids": [
+        "R07",
+        "R10"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX26"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Complete S5 then S3 against compatible task packets.",
+        "Deliver older S5 status last."
+      ],
+      "assertions": [
+        "Both valid outputs persist with no whole-state rollback.",
+        "Old status does not regress accepted revision."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC023",
+      "title": "Scientific edit archives late response rather than applying it",
+      "requirement_ids": [
+        "R10",
+        "R26"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        6
+      ],
+      "fixture_ids": [
+        "FX22"
+      ],
+      "mutation_ids": [
+        "MU05"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Edit outcome and measure while S3 result is pending.",
+        "Finish old task."
+      ],
+      "assertions": [
+        "Old output validates against its frozen packet and stays historical.",
+        "Current result region does not impersonate the new outcome."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC024",
+      "title": "Operational changes do not invalidate scientific results",
+      "requirement_ids": [
+        "R10"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX14"
+      ],
+      "mutation_ids": [
+        "MU06"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Change heartbeat, receipt ID, local view, progress phase and presentation expansion with scientific packet unchanged."
+      ],
+      "assertions": [
+        "No new semantic fingerprint/model generation.",
+        "Strict transport state remains valid."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC025",
+      "title": "Material completion gaps still affect dependent plans",
+      "requirement_ids": [
+        "R10",
+        "R24",
+        "R26"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        4,
+        6
+      ],
+      "fixture_ids": [
+        "FX07",
+        "FX14"
+      ],
+      "mutation_ids": [
+        "MU24"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Finish a scan with a newly established missing source route/partial-coverage boundary.",
+        "Compare S6 dependencies."
+      ],
+      "assertions": [
+        "Relevant completeness/coverage change retained as plan input or update.",
+        "The fix does not blindly ignore every status/completeness field."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC026",
+      "title": "Finalized focal edit changes only dependent work",
+      "requirement_ids": [
+        "R10",
+        "R22"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX11"
+      ],
+      "mutation_ids": [
+        "MU14"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Save a genuinely changed focal mechanism while retaining policy/groups/outcome."
+      ],
+      "assertions": [
+        "New S5 job/input binding and dependent S6 outdated marker.",
+        "S1–S4 source research is not reset; old focal and output retained."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC027",
+      "title": "Comparator edit reuses occurrences but refreshes relevance",
+      "requirement_ids": [
+        "R10",
+        "R19"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX25"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Change proposed comparator and preserve event documents."
+      ],
+      "assertions": [
+        "Occurrence evidence reusable.",
+        "Old comparison-specific assessments/predictions remain historical where dependent."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC028",
+      "title": "Population and outcome edits affect only actual query inputs",
+      "requirement_ids": [
+        "R10",
+        "R18",
+        "R26"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX01",
+        "FX20"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Change population/industry, then outcome/measure, with controlled query signatures."
+      ],
+      "assertions": [
+        "Dependent explanatory fields change.",
+        "Unchanged source bytes retained; discovery reruns only for changed search inputs under authorization."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC029",
+      "title": "Policy identity change rejects cross-policy citations",
+      "requirement_ids": [
+        "R10",
+        "R25",
+        "R28"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX01",
+        "FX20"
+      ],
+      "mutation_ids": [
+        "MU29"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Confirm fictional Policy B in a new explicit revision.",
+        "Attempt to apply Policy A result."
+      ],
+      "assertions": [
+        "Policy A claims not presented as Policy B evidence.",
+        "Earlier output remains archived; new confirmation not inferred."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC030",
+      "title": "Optional malformed entries are isolated after valid root",
+      "requirement_ids": [
+        "R11",
+        "R26"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX15"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Read valid root with one malformed optional S3 record."
+      ],
+      "assertions": [
+        "Original record retained privately and affected gaps labeled.",
+        "Unrelated usable study/source records stay available; no fabricated completion."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC031",
+      "title": "Invalid root cannot use optional quarantine bypass",
+      "requirement_ids": [
+        "R11"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX16"
+      ],
+      "mutation_ids": [
+        "MU17"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Read corrupted root plus optional corrupt record."
+      ],
+      "assertions": [
+        "Root/authentication/integrity failure stops unsafe restoration."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC032",
+      "title": "Screen-scoped notices do not leak across navigation",
+      "requirement_ids": [
+        "R12"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        3,
+        4,
+        6
+      ],
+      "fixture_ids": [
+        "FX06",
+        "FX14"
+      ],
+      "mutation_ids": [
+        "MU13"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Show S6 success and S3 task error.",
+        "Navigate to S4 and back."
+      ],
+      "assertions": [
+        "S4 does not display S6 success as its status.",
+        "Unresolved S3 failure remains accessible on S3; global connection messages remain global."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC033",
+      "title": "Dirty form survives status recovery and navigation",
+      "requirement_ids": [
+        "R10",
+        "R12",
+        "R26"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX22"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Edit unsaved study and focal drafts.",
+        "Return a newer compatible status response while user changes screen."
+      ],
+      "assertions": [
+        "Dirty drafts and viewed screen preserved.",
+        "No automatic silent draft submission."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC034",
+      "title": "Screen 3 baseline is not the generated result",
+      "requirement_ids": [
+        "R13",
+        "R25"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        3
+      ],
+      "fixture_ids": [
+        "FX02"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Capture before click, delayed response, recovered critique and expanded preliminary checks."
+      ],
+      "assertions": [
+        "One distinct result region updates.",
+        "Baseline clearly labeled and readable even expanded."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC035",
+      "title": "Screen 3 discovers an issue absent from generic rules",
+      "requirement_ids": [
+        "R14"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3
+      ],
+      "fixture_ids": [
+        "FX02"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Provide admitted amendment/timing facts with no matching preliminary rule ID.",
+        "Validate/render a specific critique referencing those facts."
+      ],
+      "assertions": [
+        "Issue can be retained under category-based critique, not restricted to old rule IDs.",
+        "Source and proposal references remain separate."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC036",
+      "title": "Screen 3 valid empty result is not approval",
+      "requirement_ids": [
+        "R13",
+        "R14",
+        "R25"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        3
+      ],
+      "fixture_ids": [
+        "FX05"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Render completed zero-issue critique alongside incomplete evidence."
+      ],
+      "assertions": [
+        "No hidden missing-output state.",
+        "No statement that design is valid or has no threats."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC037",
+      "title": "Document-version citation grouping preserves full lineage",
+      "requirement_ids": [
+        "R15",
+        "R25"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        2,
+        3,
+        6
+      ],
+      "fixture_ids": [
+        "FX01",
+        "FX17"
+      ],
+      "mutation_ids": [
+        "MU09",
+        "MU10"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Render C1/C2 and duplicate/mirror claims.",
+        "Expand document details and inspect versions."
+      ],
+      "assertions": [
+        "No repeated top-level citation for the same known document/version.",
+        "All distinct predicates/passages/qualifications retained; DOC1-v2 separate."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC038",
+      "title": "Screen 3 controls retain method meaning and explicit decisions",
+      "requirement_ids": [
+        "R14",
+        "R26",
+        "R28"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        3,
+        4,
+        6
+      ],
+      "fixture_ids": [
+        "FX19"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "View comparison recipes/assumptions; enter decision rationale and choose an option.",
+        "Navigate and reopen."
+      ],
+      "assertions": [
+        "No auto-selection from generated critique.",
+        "Meaningful specification remains available after compact-layout repair."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC039",
+      "title": "Screen 4 current-version planned task can start",
+      "requirement_ids": [
+        "R16"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        4
+      ],
+      "fixture_ids": [
+        "FX06"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Reopen saved Screen 4 with sourceVersionCurrent=true and planned task.",
+        "Click source action."
+      ],
+      "assertions": [
+        "Visible runnable start/resume not gated by older-version flag.",
+        "Successful controlled discovery publishes records without deleting study."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC040",
+      "title": "Screen 4 interrupted current-version task resumes missing work",
+      "requirement_ids": [
+        "R16",
+        "R17"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX07"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Resume remaining source steps after one success and one failed route."
+      ],
+      "assertions": [
+        "Successful source/doc/occurrence retained.",
+        "Only eligible pending work executes with same lineage/cumulative counts."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC041",
+      "title": "Screen 4 first entry versus sidebar viewing",
+      "requirement_ids": [
+        "R16",
+        "R28"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4
+      ],
+      "fixture_ids": [
+        "FX06"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Execute explicit first transition then repeated sidebar visits.",
+        "Test a saved activeScreen=4 with no dispatched task."
+      ],
+      "assertions": [
+        "First transition starts only authorized standard work.",
+        "Sidebar/status reads do not search; a missing planned-task action remains available."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC042",
+      "title": "Screen 4 presentation failure recovers without source refetch",
+      "requirement_ids": [
+        "R05",
+        "R17"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        4
+      ],
+      "fixture_ids": [
+        "FX10"
+      ],
+      "mutation_ids": [
+        "MU27"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Save source records then fail final presentation build.",
+        "Restore locally."
+      ],
+      "assertions": [
+        "Records appear after local repair with zero new source/model calls."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC043",
+      "title": "Documented occurrence does not require optional analysis",
+      "requirement_ids": [
+        "R17",
+        "R19"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        4
+      ],
+      "fixture_ids": [
+        "FX10"
+      ],
+      "mutation_ids": [
+        "MU07"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Remove generic/relevance analysis objects and show saved source occurrence."
+      ],
+      "assertions": [
+        "Occurrence and accurate provenance stay inspectable.",
+        "Relevance is labeled not assessed, not no event."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC044",
+      "title": "Completed zero and source outage are distinct",
+      "requirement_ids": [
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        4,
+        6
+      ],
+      "fixture_ids": [
+        "FX08",
+        "FX09"
+      ],
+      "mutation_ids": [
+        "MU08"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Render and export completed zero, all-source failure and partial coverage."
+      ],
+      "assertions": [
+        "Each status/coverage boundary is distinct.",
+        "Failure is never zero verified threats."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC045",
+      "title": "Search quality expands independent and comparison-side queries",
+      "requirement_ids": [
+        "R18"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        4
+      ],
+      "fixture_ids": [
+        "FX01",
+        "FX20"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Compare old/new planner under frozen source fixtures.",
+        "Include independent event documents without focal title and comparison-side event."
+      ],
+      "assertions": [
+        "Independent branches can retrieve relevant fixtures.",
+        "No policy-name hardcoding; counts record actual executed requests, not listed routes."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC046",
+      "title": "Search scope preserves industry period geography and unknowns",
+      "requirement_ids": [
+        "R18",
+        "R26"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        4
+      ],
+      "fixture_ids": [
+        "FX18",
+        "FX20"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Build queries for distinct industries/outcomes/geographies and missing-group variant."
+      ],
+      "assertions": [
+        "No copied CCPA/manufacturing/ROA default in grid or unknown case.",
+        "Declared and extended windows recorded separately; no automatic date invention."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC047",
+      "title": "Search pagination deduplication and overflow remain inspectable",
+      "requirement_ids": [
+        "R17",
+        "R18"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        4
+      ],
+      "fixture_ids": [
+        "FX17"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Return duplicate pages, mirrors and more valid events than the initial display ceiling."
+      ],
+      "assertions": [
+        "Unique occurrences not counted twice.",
+        "Retained overflow inspectable and no claim that display count equals total discovery."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC048",
+      "title": "Finite index and missing provider are accurately disclosed",
+      "requirement_ids": [
+        "R09",
+        "R18"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        4
+      ],
+      "fixture_ids": [
+        "FX07"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Supply finite reviewed index route, unconfigured broad search and one live-shaped fixture route."
+      ],
+      "assertions": [
+        "Coverage labels say what ran and what could not run.",
+        "No live all-state claim from finite index."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC049",
+      "title": "Publication date is not automatically occurrence date",
+      "requirement_ids": [
+        "R18",
+        "R25"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        2,
+        4,
+        6
+      ],
+      "fixture_ids": [
+        "FX10"
+      ],
+      "mutation_ids": [
+        "MU12"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Use retrospective report and undated implementation notice."
+      ],
+      "assertions": [
+        "Publication and occurrence dates labeled separately.",
+        "Unknown occurrence date not imputed from document date."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC050",
+      "title": "Focal stage and downstream response are not automatic controls",
+      "requirement_ids": [
+        "R18",
+        "R19",
+        "R25"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        2,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX10"
+      ],
+      "mutation_ids": [
+        "MU23"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Assess focal implementation notice, downstream response and independent subsidy."
+      ],
+      "assertions": [
+        "Relationships stay conditional and source-based.",
+        "No automatic control variable or silent Screen 2 mutation."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC051",
+      "title": "Screen 4 assessed/pending counts update the same entries",
+      "requirement_ids": [
+        "R19"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        4
+      ],
+      "fixture_ids": [
+        "FX25"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Complete first relevance batch, interrupt the next and reopen."
+      ],
+      "assertions": [
+        "Saved assessment on its original event; unassessed events still visible.",
+        "Assessed and pending counts match validated saved results."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC052",
+      "title": "Relevance model failure does not erase source results",
+      "requirement_ids": [
+        "R17",
+        "R19"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX25"
+      ],
+      "mutation_ids": [
+        "MU01",
+        "MU02"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Return invalid reference/incomplete payload for one relevance batch."
+      ],
+      "assertions": [
+        "Source occurrence records and earlier good batches remain.",
+        "Typed local recovery/failure, no duplicate provider call."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC053",
+      "title": "Groups without selected method remain usable conditionally",
+      "requirement_ids": [
+        "R19",
+        "R26"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        6
+      ],
+      "fixture_ids": [
+        "FX01",
+        "FX18"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Open events/plan with groups but no method; repeat without groups."
+      ],
+      "assertions": [
+        "Saved proposals and not-recorded versus explicit no-selection stay distinct.",
+        "No verified exposure or mandatory method gate."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC054",
+      "title": "Screen 5 immediate direct-task acknowledgement",
+      "requirement_ids": [
+        "R20"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        5
+      ],
+      "fixture_ids": [
+        "FX12"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Delay authorization and provider promises.",
+        "Click Generate and immediately inspect UI before resolving either promise."
+      ],
+      "assertions": [
+        "Visible preparing state and disabled conflicting action within controlled target.",
+        "No claim dispatch already happened before acknowledgement."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC055",
+      "title": "Screen 5 distinguishes ready waiting retrieving and rate limit",
+      "requirement_ids": [
+        "R20",
+        "R21"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        5
+      ],
+      "fixture_ids": [
+        "FX11"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Project plan_ready, retrieving, waiting_authorization, future rate limit and past-due-but-unauthorized states."
+      ],
+      "assertions": [
+        "Only actual retrieval says Searching supporting literature.",
+        "Next eligible time is not mistaken for consent."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC056",
+      "title": "Screen 5 hypotheses appear before literature completion",
+      "requirement_ids": [
+        "R21",
+        "R22"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX11"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Save valid alternatives with zero works.",
+        "Begin delayed literature retrieval."
+      ],
+      "assertions": [
+        "Alternatives remain visible and evidence pending.",
+        "Focal reference not counted as an alternative."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC057",
+      "title": "Changed focal mechanism needs no manual job-ID configuration",
+      "requirement_ids": [
+        "R22",
+        "R10"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX11",
+        "FX12"
+      ],
+      "mutation_ids": [
+        "MU14"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Finalize changed text and authorize new eligible job through normal UI action.",
+        "Deliver late prior job result."
+      ],
+      "assertions": [
+        "Exact new text and correct job binding.",
+        "No PowerShell ID requirement; prior job remains historical."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC058",
+      "title": "Screen 5 literature access level and source failure survive",
+      "requirement_ids": [
+        "R21",
+        "R25"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX27"
+      ],
+      "mutation_ids": [
+        "MU22"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Assess metadata-only/abstract-only records and unavailable full-text route."
+      ],
+      "assertions": [
+        "No invented detailed support or no-scholarship claim.",
+        "Partial literature/predictions retain access limitations."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC059",
+      "title": "Redundant or ambiguous mechanism output is not filler",
+      "requirement_ids": [
+        "R21",
+        "R25"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX11"
+      ],
+      "mutation_ids": [
+        "MU21"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Rename the same chain twice and introduce ambiguous sign conditions."
+      ],
+      "assertions": [
+        "No artificial unique alternative count; duplicates merged/rejected with history.",
+        "No forced sign or true-mechanism claim."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC060",
+      "title": "Screen 6 pre-generation has one clear action and no full report",
+      "requirement_ids": [
+        "R23",
+        "R25"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        6
+      ],
+      "fixture_ids": [
+        "FX13"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Render fresh and reopened not-generated S6 at desktop/narrow.",
+        "Open baseline details."
+      ],
+      "assertions": [
+        "Main view short and action meaningful.",
+        "Full local baseline not shown as model result; expanded evidence remains accessible/readable."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC061",
+      "title": "Screen 6 replaces empty region with one current plan",
+      "requirement_ids": [
+        "R24",
+        "R25"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        6
+      ],
+      "fixture_ids": [
+        "FX14"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Complete plan task and inspect report plus uncertainty profile."
+      ],
+      "assertions": [
+        "No second near-duplicate baseline report in default view.",
+        "Current saved priorities and concise dimensions visible with proper limits."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC062",
+      "title": "Screen 6 local builder does not repeat statutory blocks",
+      "requirement_ids": [
+        "R24",
+        "R25"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        6
+      ],
+      "fixture_ids": [
+        "FX13",
+        "FX17"
+      ],
+      "mutation_ids": [
+        "MU09"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Generate local effective guidance and readable export from repeated source claims."
+      ],
+      "assertions": [
+        "Long complete source passages remain in evidence details.",
+        "Main guidance does not join/repeat them in multiple columns."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC063",
+      "title": "Screen 6 preserves complete legal logic while concise",
+      "requirement_ids": [
+        "R25"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        6
+      ],
+      "fixture_ids": [
+        "FX01",
+        "FX19"
+      ],
+      "mutation_ids": [
+        "MU11"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Trace compact guidance to original complete rule.",
+        "Mutate AND/OR, historical reference period and exemption in projection."
+      ],
+      "assertions": [
+        "Semantic-loss mutation is detected or concise summary falls back to an honest gap.",
+        "No unknown eligibility becomes false/zero."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC064",
+      "title": "Screen 6 retains incomplete upstream work as gaps",
+      "requirement_ids": [
+        "R24",
+        "R26"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX24"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Generate/render conditional plan with S3 not generated, S4 not searched and S5 incomplete."
+      ],
+      "assertions": [
+        "Each missing area remains explicit.",
+        "No fabricated co-event assessment, mechanism finding or passed diagnostic."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC065",
+      "title": "Screen 6 cannot use old personalization as current",
+      "requirement_ids": [
+        "R10",
+        "R24",
+        "R27"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        6
+      ],
+      "fixture_ids": [
+        "FX14",
+        "FX22"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Change a plan dependency then restore old personalization."
+      ],
+      "assertions": [
+        "Historical label and original binding retained.",
+        "Current plan not reported complete from stale artifact."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC066",
+      "title": "Screen 6 readiness separates proposed groups and decision",
+      "requirement_ids": [
+        "R23",
+        "R26"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        3,
+        4,
+        6
+      ],
+      "fixture_ids": [
+        "FX01",
+        "FX18"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Render no method recorded, explicit no-selection and selected-for-review variants."
+      ],
+      "assertions": [
+        "Wording accurately differentiates these choices and group proposals.",
+        "No implied sample exposure or forced method choice."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC067",
+      "title": "Readable export equals the effective current UI guidance",
+      "requirement_ids": [
+        "R27"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX14",
+        "FX22"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Export current and historical/partial variants.",
+        "Compare displayed guidance fields and referenced source versions."
+      ],
+      "assertions": [
+        "Same current priorities, origins, gaps and claim boundary.",
+        "No private coordinate/key/raw reasoning leaks; historical output labeled."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC068",
+      "title": "Screen 1 confirmation and wrong-policy gates preserved",
+      "requirement_ids": [
+        "R28",
+        "R26"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2
+      ],
+      "fixture_ids": [
+        "FX01",
+        "FX20"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Resolve two similarly named fictional stages and reject/confirm one explicitly.",
+        "Attempt later wrong-policy handoff."
+      ],
+      "assertions": [
+        "Only confirmed identity enters policy research.",
+        "Exact researcher study fields preserved; no implicit confirmation."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC069",
+      "title": "Screen 2 first research and read-only revisits preserved",
+      "requirement_ids": [
+        "R28",
+        "R03"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3
+      ],
+      "fixture_ids": [
+        "FX01"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Confirm policy and explicitly enter S2.",
+        "Pause a step, revisit through sidebar and use explicit continuation."
+      ],
+      "assertions": [
+        "Initial standard plan starts as authorized.",
+        "Reads/revisits do not replay search; partial evidence preserved."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC070",
+      "title": "Screen 2 chronology, sources and partial S3 handoff preserved",
+      "requirement_ids": [
+        "R28",
+        "R25",
+        "R26"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        2,
+        3
+      ],
+      "fixture_ids": [
+        "FX01"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Render conflicting/date-precision policy evidence and complete study/timing fields.",
+        "Continue without mandatory individual claim approval."
+      ],
+      "assertions": [
+        "Chronology/version distinctions and evidence intact.",
+        "No newly imposed Event Card lock, dataset upload or automatic legal date choice."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC071",
+      "title": "Legacy construct never replaces active shock construct",
+      "requirement_ids": [
+        "R26",
+        "R11"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX15"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Read legacy intendedConstruct alongside policySideConcept and change focal text."
+      ],
+      "assertions": [
+        "Active construct unchanged unless researcher explicitly transfers wording.",
+        "All downstream packets use correct current meaning and exact focal."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC072",
+      "title": "Large histories stay within tested response/display budgets",
+      "requirement_ids": [
+        "R05",
+        "R15",
+        "R25"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX17"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Construct near-supported-size source/receipt history.",
+        "Measure server envelope, serialization/restoration, render and export."
+      ],
+      "assertions": [
+        "No silent evidence loss or response mismatch.",
+        "Compact projection and private paged/reference storage where needed; limits accurately reported."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC073",
+      "title": "Document instructions and unsafe source redirects remain blocked",
+      "requirement_ids": [
+        "R25",
+        "R28"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX01"
+      ],
+      "mutation_ids": [
+        "MU18",
+        "MU19"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Insert hostile instructions in fixture source and an unsafe proposed redirect."
+      ],
+      "assertions": [
+        "Text cannot change permissions/model settings or reveal credentials.",
+        "Existing source-access validation remains intact."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC074",
+      "title": "End-to-end CCPA-shaped source-to-screen controlled journey",
+      "requirement_ids": [
+        "R13",
+        "R16",
+        "R19",
+        "R20",
+        "R23",
+        "R24",
+        "R27",
+        "R28",
+        "R29"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Use current inspected repository CCPA evidence fixtures and the screenshot study shape, not old visual-example values.",
+        "Run S1 through S6 with controlled provider responses, interruptions, back navigation and export."
+      ],
+      "assertions": [
+        "Actual app pathways produce correct state/content for every screen.",
+        "Capture before, running/waiting, result, recovery and reopen; no policy-memory filler."
+      ],
+      "parameterization": {
+        "required_source_basis": "Current validated real-policy fixture or newly inspected allowed records; do not substitute fictional FX01 as legal evidence."
+      },
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC075",
+      "title": "End-to-end FERC-shaped substantively different journey",
+      "requirement_ids": [
+        "R18",
+        "R24",
+        "R26",
+        "R28",
+        "R29"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Use current inspected repository FERC policy fixtures.",
+        "Run S1–S6 with different industry, unit/outcome and timing structure."
+      ],
+      "assertions": [
+        "No CCPA-specific defaults or special-case generation path.",
+        "Correct policy-bound evidence and study-specific guidance on every screen."
+      ],
+      "parameterization": {
+        "required_source_basis": "Current validated real-policy fixture or newly inspected allowed records; FX20 is only a fictional analogue."
+      },
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC076",
+      "title": "Held-out synthetic variants exercise generality",
+      "requirement_ids": [
+        "R14",
+        "R18",
+        "R25",
+        "R26",
+        "R29"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX18",
+        "FX19",
+        "FX20",
+        "FX27"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Run unfamiliar fictional variants with missing groups, OR eligibility/exemptions, unknown operative date and weak scholarship."
+      ],
+      "assertions": [
+        "Conditional useful results without manufactured certainty or quota filling.",
+        "Exact context preserved through all affected screens."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC077",
+      "title": "Desktop narrow and true 200 percent zoom visual acceptance",
+      "requirement_ids": [
+        "R25",
+        "R29"
+      ],
+      "level": "browser_controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX02",
+        "FX06",
+        "FX11",
+        "FX13",
+        "FX14"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Execute captures at normal desktop, narrow and true browser zoom.",
+        "Open long evidence sections and traverse all primary actions via keyboard."
+      ],
+      "assertions": [
+        "No clipped or composer-covered controls, unreadable repeated blocks or page-wide overflow.",
+        "DeviceScaleFactor-only coverage is not mislabeled true zoom."
+      ],
+      "parameterization": {
+        "viewports": [
+          "1440x900",
+          "390x844"
+        ],
+        "browser_zoom": [
+          100,
+          200
+        ],
+        "details": [
+          "collapsed",
+          "expanded"
+        ]
+      },
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC078",
+      "title": "Actual local durable persistence survives process restart",
+      "requirement_ids": [
+        "R03",
+        "R11",
+        "R30"
+      ],
+      "level": "local_persistence",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX02",
+        "FX07",
+        "FX11"
+      ],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Run the actual local persistent worker against isolated data.",
+        "Stop/restart after receipt, partial search and proposal checkpoint."
+      ],
+      "assertions": [
+        "Saved records/holds restored; no duplicate dispatch.",
+        "Not satisfied by memory-store or toy-server tests."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC079",
+      "title": "Scheduler progress coexists with expiry and cleanup",
+      "requirement_ids": [
+        "R03",
+        "R07",
+        "R30"
+      ],
+      "level": "local_persistence",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [
+        "FX07",
+        "FX12"
+      ],
+      "mutation_ids": [
+        "MU15"
+      ],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Use supported existing scheduler with due cleanup and task work.",
+        "Redeliver due callback and simulate restart."
+      ],
+      "assertions": [
+        "No overwritten cleanup schedule or resurrection of expired job.",
+        "Only eligible undispatched work starts once."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC080",
+      "title": "Full final-tree suite and guard evidence",
+      "requirement_ids": [
+        "R29",
+        "R30",
+        "R32"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Run actual applicable build/typecheck/full suite/contract/security and release guards on final tree."
+      ],
+      "assertions": [
+        "Exact commands/exit codes/logs and skip reasons recorded.",
+        "No production deployment, ignored regression or discovered-only test counted as pass."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC081",
+      "title": "Original owner study recovers without destructive reset",
+      "requirement_ids": [
+        "R02",
+        "R06",
+        "R16",
+        "R31"
+      ],
+      "level": "owner_host",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [],
+      "mutation_ids": [],
+      "preconditions": [
+        "Follow Gate E6/E7 or exact-tree publication authorization as applicable; no authority is conferred by this test definition."
+      ],
+      "steps": [
+        "Read authenticated original study and served build through available owner access.",
+        "Recover saved S3 response and current-version S4 planned/interrupted state without deleting records."
+      ],
+      "assertions": [
+        "Real original state, not a fabricated run, is tested.",
+        "No extra model call, .wrangler reset, charge loss or unexplained state alteration."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC082",
+      "title": "Signed-in original panel and existing tunnel journey",
+      "requirement_ids": [
+        "R05",
+        "R12",
+        "R29",
+        "R31"
+      ],
+      "level": "owner_host",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [],
+      "mutation_ids": [],
+      "preconditions": [
+        "Follow Gate E6/E7 or exact-tree publication authorization as applicable; no authority is conferred by this test definition."
+      ],
+      "steps": [
+        "Use actual Windows local app and existing tunnel in signed-in ChatGPT.",
+        "Observe task-local progress, result recovery, navigation and reopen."
+      ],
+      "assertions": [
+        "Same original panel shows compatible results and correct notices.",
+        "Direct browser/control harness is not substituted for signed-in acceptance."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC083",
+      "title": "Authorized live task quality review",
+      "requirement_ids": [
+        "R14",
+        "R18",
+        "R21",
+        "R24",
+        "R31"
+      ],
+      "level": "live_quality",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [],
+      "mutation_ids": [],
+      "preconditions": [
+        "Follow Gate E6/E7 or exact-tree publication authorization as applicable; no authority is conferred by this test definition."
+      ],
+      "steps": [
+        "Read current request outcome and allowance; obtain exact scope where needed.",
+        "Execute only the approved task/stage count and review actual content/source links."
+      ],
+      "assertions": [
+        "Bounded logged calls and semantic review, not just schema success.",
+        "Unknown outcome stops dispatch; untested tasks remain NOT_RUN."
+      ],
+      "parameterization": {
+        "tasks_to_authorize_separately": [
+          "screen3_design_critique",
+          "screen4_discovery_and_relevance",
+          "screen5_proposal_and_evidence",
+          "screen6_challenge_plan"
+        ],
+        "authorization_in_this_package": false
+      },
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC084",
+      "title": "Exact preview publication and owner update",
+      "requirement_ids": [
+        "R01",
+        "R32"
+      ],
+      "level": "delivery",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [],
+      "mutation_ids": [
+        "MU30"
+      ],
+      "preconditions": [
+        "Follow Gate E6/E7 or exact-tree publication authorization as applicable; no authority is conferred by this test definition."
+      ],
+      "steps": [
+        "Use applicable new-tree authorization, check current remote ref and publish non-force to existing preview branch only.",
+        "Read back tree/ref and instantiate novice-safe stop/fetch/fast-forward/start verification instructions."
+      ],
+      "assertions": [
+        "No main/production/new app/tunnel changes or private data upload.",
+        "Do not tell owner to pull an unpublished commit; verify served build after update."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    },
+    {
+      "id": "AC085",
+      "title": "Resume interrupted implementation from durable progress record",
+      "requirement_ids": [
+        "R32"
+      ],
+      "level": "controlled",
+      "screen_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixture_ids": [],
+      "mutation_ids": [],
+      "preconditions": [
+        "Use an isolated validated baseline and deny real provider/source dispatch unless this case is explicitly live-authorized."
+      ],
+      "steps": [
+        "Stop implementation after a tested phase and save progress record.",
+        "Resume with newer worktree preserved."
+      ],
+      "assertions": [
+        "No repeated completed work, overwritten newer commit, duplicate paid probe or unreported unfinished gate.",
+        "Next exact command and remaining requirements are available."
+      ],
+      "parameterization": {},
+      "required_evidence": [
+        "Exact tested code tree and executed test command/case",
+        "Assertions, invocation counts and relevant sanitized state/trace or browser captures"
+      ],
+      "status": "NOT_RUN",
+      "repository_test_paths": [],
+      "run_evidence": []
+    }
+  ]
+}

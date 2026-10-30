@@ -1,0 +1,7 @@
+unit_id,year,group,narrow_covered,broad_covered
+A,2019,T,no,no
+A,2020,T,no,yes
+B,2019,C,no,no
+B,2020,C,no,no
+C,2019,T,no,no
+C,2020,T,no,yes
